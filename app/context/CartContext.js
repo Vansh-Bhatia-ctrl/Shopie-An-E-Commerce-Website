@@ -43,11 +43,11 @@ export function CartProvider({ children }) {
 
       let updatedData;
       if (existingItem.quantity > 1) {
-        updatedData = prev.map((item) =>
-          item.id === item.id ? { ...item, quantity: item.quantity - 1 } : item
+        updatedData = prev.map((items) =>
+          items.id === item.id ? { ...items, quantity: items.quantity - 1 } : items
         );
       } else {
-        updatedData = prev.filter((item) => item.id !== item.id);
+        updatedData = prev.filter((cartItems) => cartItems.id !== item.id);
       }
 
       localStorage.setItem("cart", JSON.stringify(updatedData));
