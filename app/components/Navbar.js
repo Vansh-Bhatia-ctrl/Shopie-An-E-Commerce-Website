@@ -27,7 +27,7 @@ export default function Navbar() {
 
           <Link href="">My Orders</Link>
           <Link href="">Support</Link>
-          <Link href="">
+          <Link href="/login">
             <User size={24} className="text-gray-700" />
           </Link>
           <Link href="">About us</Link>

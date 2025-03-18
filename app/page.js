@@ -1,20 +1,12 @@
 import Image from "next/image";
 import RecentlyViewed from "./components/RecentlyViewed";
 import Categories from "./components/Categories";
+import BannerImages from "./components/BannerImages";
 
 export default function Home() {
   return (
     <>
-      <div className="w-full h-auto md:w-full md:h-auto md:object-cover">
-        <Image
-          src="/fashion-banner.jpg"
-          alt="Banner Image"
-          width={1920}
-          height={1080}
-          quality={100}
-          className="md:w-full"
-        />
-      </div>
+    <BannerImages />
 
       <div className="overflow-hidden">
         <Categories />

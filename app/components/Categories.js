@@ -1,4 +1,6 @@
+"use client";
 import { Raleway } from "next/font/google";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["300", "700"] });
@@ -6,16 +8,12 @@ const raleway = Raleway({ subsets: ["latin"], weight: ["300", "700"] });
 export default function Categories() {
   const categories = [
     {
-      title: "Fashion Sale",
+      title: "Fashion",
       items: [
         { src: "/jackets.jpg", alt: "Jacket", label: "Jackets" },
         { src: "/jean.jpg", alt: "Jeans", label: "Jeans" },
         { src: "/informalshirt.jpg", alt: "Shirts", label: "Shirts" },
-        {
-          src: "/glasses.jpg",
-          alt: "Sunglasses",
-          label: "Sunglasses",
-        },
+        { src: "/glasses.jpg", alt: "Sunglasses", label: "Sunglasses" },
       ],
     },
     {
@@ -28,11 +26,7 @@ export default function Categories() {
           alt: "Dual shock controller",
           label: "Controllers",
         },
-        {
-          src: "/headset.jpg",
-          alt: "Gaming headphones",
-          label: "Headphones",
-        },
+        { src: "/headset.jpg", alt: "Gaming headphones", label: "Headphones" },
       ],
     },
     {
@@ -65,7 +59,7 @@ export default function Categories() {
         {
           src: "/coffeemachine.jpg",
           alt: "Coffee machine",
-          label: "Coffee machines",
+          label: "Coffee maker",
         },
         { src: "/microwave.jpg", alt: "Micro wave", label: "Micro waves" },
       ],
@@ -92,46 +86,49 @@ export default function Categories() {
       ],
     },
   ];
+
   return (
-    <>
+    <div className="relative">
       <div className="my-3 p-1 mb-[2px] mx-1 md:mx-3 md:mt-8 md:flex md:items-center">
-        <p className="font-bold text-orange-50 text-xl md:text-xl lg:text-2xl">
+        <p className="font-bold text-orange-500 text-xl md:text-xl lg:text-2xl">
           Choose by category
         </p>
       </div>
 
-      <div className="w-[1100px] h-[310px] flex flex-row justify-center md:h-[450px] md:w-[1500px] lg:w-[2200px] lg:justify-center">
-        {categories.map((category, index) => (
-          <section
-            key={index}
-            className="bg-white-300 h-[290px] w-[1000px] my-3 mx-1.5 border-2 rounded p-1 md:h-[425px] md:w-[400px] lg:w-[400px] lg:h-[400px]"
-          >
-            <h1
-              className={`text-blue-500 font-bold ${raleway.className} md:text-lg md:p-3 lg:text-xl`}
-            >
-              {category.title}
-            </h1>
+      <div className="relative flex items-center overflow-hidden">
+  <div className="w-full h-[297px] flex flex-row overflow-x-auto scroll-smooth md:h-[480px] md:w-[1500px] lg:w-[2200px] lg:justify-start no-scrollbar xl:h-[470px]">
+    {categories.map((category, index) => (
+      <section
+        key={index}
+        className={`bg-white-300 h-[270px] w-[250px] my-3 mx-2 border-2 rounded p-2 md:h-[440px] md:w-[300px] lg:w-[350px] lg:h-[450px] flex-shrink-0 ${
+          index === 0 ? "ml-3" : ""
+        } xl:h-[430px]`}
+      >
+        <h1
+          className={`text-blue-500 font-bold ${raleway.className} md:text-lg md:p-3 lg:text-xl`}
+        >
+          {category.title}
+        </h1>
 
-            <div className="grid grid-cols-2 gap-5">
-              {category.items.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="p-1 flex items-center flex-col md:p-1"
-                >
-                  <Image
-                    src={item.src}
-                    width={270}
-                    height={270}
-                    alt={item.alt}
-                    className="rounded p-0.5 h-[70px] md:w-[270px] md:h-[120px] lg:w-[270px]"
-                  />
-                  <p className="text-sm md:text-lg">{item.label}</p>
-                </div>
-              ))}
+        <div className="grid grid-cols-2 gap-5 sm:gap-4">
+          {category.items.map((item, idx) => (
+            <div key={idx} className="p-1 flex items-center flex-col md:p-1">
+              <Image
+                src={item.src}
+                width={270}
+                height={270}
+                alt={item.alt}
+                className="rounded p-0.5 h-[70px] md:w-[270px] md:h-[120px] lg:w-[270px]"
+              />
+              <p className="text-sm md:text-lg">{item.label}</p>
             </div>
-          </section>
-        ))}
-      </div>
-    </>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</div>
+
+    </div>
   );
 }
