@@ -1,34 +1,41 @@
 "use client";
 
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { useEffect, useState } from "react";
 import { auth } from "../lib/firebaseconfig";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   async function handleSignIn(e) {
     e.preventDefault();
     try {
-      const userCredentials = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      const user = userCredentials.user;
+      await signInWithEmailAndPassword(auth, email, password);
       console.log("user signed in");
+    
     } catch (error) {
       console.error("Error sigining in", error.message);
     }
   }
+
+  if (loading) return <p>Loading...</p>;
 
   return (
     <form onSubmit={handleSignIn}>
       <input
         placeholder="Enter emailId"
         type="email"
-        name="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="border-2"
@@ -37,7 +44,6 @@ export default function Login() {
       <br />
       <input
         placeholder="Enter password"
-        name="password"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
