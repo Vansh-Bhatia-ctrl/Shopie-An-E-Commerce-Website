@@ -5,13 +5,16 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { auth } from "../lib/firebaseconfig";
+import { auth, db } from "../lib/firebaseconfig";
 import { useRouter } from "next/navigation";
+import { doc, setDoc } from "firebase/firestore";
 
 export default function SingUp() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   useEffect(() => {
@@ -26,9 +29,20 @@ export default function SingUp() {
   async function handleSignUp(e) {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
       console.log("User signed up");
       router.push("/login");
+
+      await setDoc(doc(db, "users", user.uid), {
+        email,
+        phone,
+        name,
+      });
     } catch (error) {
       console.error("Error adding user to the system", error.message);
     }
@@ -39,6 +53,26 @@ export default function SingUp() {
   return (
     <>
       <form onSubmit={handleSignUp}>
+        <input
+          placeholder="Enter Name"
+          type="text"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="border-2"
+        />
+        <br />
+        <br />
+        <input
+          placeholder="Enter Phone Number"
+          type="number"
+          name="phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          className="border-2"
+        />
+        <br />
+        <br />
         <input
           placeholder="Enter emailId"
           type="email"
@@ -64,5 +98,3 @@ export default function SingUp() {
     </>
   );
 }
-
-

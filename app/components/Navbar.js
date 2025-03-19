@@ -1,7 +1,8 @@
-import { User, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Great_Vibes } from "next/font/google";
 import Link from "next/link";
 import CartIcon from "./CartIcon";
+import UserIcon from "./UserDetails";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 
@@ -27,9 +28,7 @@ export default function Navbar() {
 
           <Link href="">My Orders</Link>
           <Link href="">Support</Link>
-          <Link href="/signup">
-            <User size={24} className="text-gray-700" />
-          </Link>
+          <UserIcon />
           <Link href="">About us</Link>
         </div>
       </header>
