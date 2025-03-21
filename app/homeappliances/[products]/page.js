@@ -1,4 +1,5 @@
 import AddToCart from "@/app/components/AddToCart";
+import WishList from "@/app/components/WishListIcon";
 import { db } from "@/app/lib/firebaseAdmin";
 import Image from "next/image";
 
@@ -54,6 +55,9 @@ export default async function ProductsPage({ params }) {
           <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold shadow-md transition">
             Buy now
           </button>
+          <div className="">
+          <WishList />
+          </div>
         </div>
       </div>
     </div>
