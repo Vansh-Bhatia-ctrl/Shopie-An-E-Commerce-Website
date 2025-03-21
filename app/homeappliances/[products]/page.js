@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ProductsPage({ params }) {
-  const { products } = params;
+  const { products } = await params;
   const productsSnapshot = await db.collection("products").doc(products).get();
   const product_data = productsSnapshot.data();
 
@@ -55,9 +55,8 @@ export default async function ProductsPage({ params }) {
           <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold shadow-md transition">
             Buy now
           </button>
-          <div className="">
-          <WishList />
-          </div>
+
+          <WishList itemID={product_data} />
         </div>
       </div>
     </div>
