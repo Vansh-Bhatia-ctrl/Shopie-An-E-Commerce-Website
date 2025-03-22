@@ -3,17 +3,16 @@
 import { Heart } from "lucide-react";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { auth } from "../lib/firebaseconfig";
 
-export default function WishList({ itemID }) {
-  const { addToWishlist, wishlisted } = useContext(CartContext);
+export default function WishList({ item }) {
+  const { addToWishlist, wishlist, deleteWishlist } = useContext(CartContext);
 
   return (
     <>
-      <button onClick={() => addToWishlist(itemID)}>
+      <button onClick={() => deleteWishlist(item)}>
         <Heart
-          className={`w-6 h-6  text-red-500 mt-2 cursor-pointer ${
-            wishlisted ? "fill-red-500" : ""
+          className={`w-6 h-6 text-red-500 mt-2 cursor-pointer ${
+            wishlist.some((wish) => wish.id === item.id) ? "fill-red-500" : ""
           }`}
         />
       </button>

@@ -56,7 +56,7 @@ export default async function ProductsPage({ params }) {
             Buy now
           </button>
 
-          <WishList itemID={product_data} />
+          <WishList item={product_data} />
         </div>
       </div>
     </div>
