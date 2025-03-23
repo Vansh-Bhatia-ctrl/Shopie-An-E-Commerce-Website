@@ -18,6 +18,10 @@ export function CartProvider({ children }) {
   }, []);
 
   useEffect(() => {
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  }, [wishlist]);
+
+  useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       async function fetchWishlist() {
         if (!user) return;
@@ -40,7 +44,7 @@ export function CartProvider({ children }) {
     });
 
     return () => unsubscribe();
-  }, [auth.currentUser]);
+  }, [auth]);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
@@ -87,73 +91,63 @@ export function CartProvider({ children }) {
     });
   }
 
-  async function addToWishlist(selectedItem) {
+  async function toggleWishlist(selectedItem) {
     const user = auth.currentUser;
     if (!user) {
       alert("You must be signed in to Wishlist products");
       return;
     }
 
-    try {
-      const res = await fetch("/api/addwishlist", {
-        method: "POST",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify({
-          uid: user.uid,
-          productName: selectedItem.productName,
-          id: selectedItem.id,
-        }),
-      });
+    const existingItem = wishlist.find((item) => item.id === selectedItem.id);
+    if (existingItem) {
+      try {
+        const res = await fetch(
+          "/api/removewishlist",
+          {
+            method: "DELETE",
+            headers:{'Content-type': 'application/json'},
+            body:JSON.stringify({
+              id: selectedItem.id,
+              uid: user.uid,
+              name: selectedItem.productName
+            })
+          }
+        );
 
-      if (!res.ok) {
-        throw new Error("Failed to add item to wishlist");
-      }
-      setWishlist((prev) => {
-        const existingItem = prev.find((item) => item.id === selectedItem.id);
-
-        if (existingItem) {
-          return prev;
+        if (!res.ok) {
+          throw new Error("Failed to remove item from wishlist");
         }
 
-        const updatedWishlist = [...prev, { ...selectedItem, quantity: 1 }];
-
-        localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
-        return updatedWishlist;
-      });
-    } catch (error) {
-      console.error("Error adding product to wishlist", error.message);
-    }
-  }
-
-  async function deleteWishlist(Item) {
-    const user = auth.currentUser;
-
-    if (!Item) {
-      console.log("Item invalid, please try again!");
-    }
-
-    try {
-      const res = await fetch("/api/removewishlist", {
-        method: "DELETE",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify({
-          uid: user.uid,
-          id: Item.id,
-        }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Error deleting item from wishlist");
+        const data = await res.json();
+        setWishlist((prev) =>
+          prev.filter((item) => item.id !== selectedItem.id)
+        );
+      } catch (error) {
+        console.error("Error removing item from wishlist", error.message);
       }
+    }
 
-      setWishlist((prev) => {
-        const updatedData = prev.filter((item) => item.id !== Item.id);
-        localStorage.setItem("wishlist", JSON.stringify(updatedData));
-        return updatedData;
-      });
-      console.log("Item successfully removed from wishlist.");
-    } catch (error) {
-      console.error("Error removing product from wishlist", error.message);
+    if (!existingItem) {
+      try {
+        const resp = await fetch("/api/addwishlist", {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify({
+            uid: user.uid,
+            name:selectedItem.productName,
+            id: selectedItem.id,
+          }),
+        });
+
+        if (!resp.ok) {
+          throw new Error("Failed to add item to wishlist");
+        }
+
+        const data = await resp.json();
+        setWishlist((prev) => [...prev, selectedItem]);
+      } catch (error) {
+        console.error("Error adding item to wishlist", error.message);
+      }
     }
   }
 
@@ -165,8 +159,7 @@ export function CartProvider({ children }) {
         setCartItems,
         addToCart,
         removeFromCart,
-        addToWishlist,
-        deleteWishlist,
+        toggleWishlist,
       }}
     >
       {children}
