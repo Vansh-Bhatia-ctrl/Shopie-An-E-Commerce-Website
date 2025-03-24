@@ -10,6 +10,7 @@ export const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+
   useEffect(() => {
     const storedData = localStorage.getItem("cart");
     if (storedData) {
@@ -37,6 +38,7 @@ export function CartProvider({ children }) {
           setWishlist(data);
         } catch (error) {
           console.error("Failed to fetch wishlist", error.message);
+        } finally {
         }
       }
 
@@ -99,21 +101,21 @@ export function CartProvider({ children }) {
     }
 
     const existingItem = wishlist.find((item) => item.id === selectedItem.id);
+
     if (existingItem) {
       try {
-        const res = await fetch(
-          "/api/removewishlist",
-          {
-            method: "DELETE",
-            headers:{'Content-type': 'application/json'},
-            body:JSON.stringify({
-              id: selectedItem.id,
-              uid: user.uid,
-              name: selectedItem.productName
-            })
-          }
-        );
-
+        const res = await fetch("/api/removewishlist", {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            image: selectedItem.imageURL,
+            id: selectedItem.id,
+            uid: user.uid,
+            name: selectedItem.productName,
+            description: selectedItem.description,
+            price: selectedItem.price,
+          }),
+        });
         if (!res.ok) {
           throw new Error("Failed to remove item from wishlist");
         }
@@ -131,11 +133,14 @@ export function CartProvider({ children }) {
       try {
         const resp = await fetch("/api/addwishlist", {
           method: "POST",
-          headers: { "Content-type": "application/json" },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
+            image: selectedItem.imageURL,
             uid: user.uid,
-            name:selectedItem.productName,
+            name: selectedItem.productName,
             id: selectedItem.id,
+            description: selectedItem.description,
+            price: selectedItem.price,
           }),
         });
 
@@ -156,6 +161,7 @@ export function CartProvider({ children }) {
       value={{
         wishlist,
         cartItems,
+        setWishlist,
         setCartItems,
         addToCart,
         removeFromCart,

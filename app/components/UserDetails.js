@@ -6,7 +6,7 @@ import { auth, db } from "../lib/firebaseconfig";
 import { User } from "lucide-react";
 import Link from "next/link";
 import { doc, getDoc } from "firebase/firestore";
-import * as Popover from "@radix-ui/react-popover"; // Import Popover
+import * as Popover from "@radix-ui/react-popover";
 
 export default function UserIcon() {
   const [user, setUser] = useState(null);
@@ -58,8 +58,18 @@ export default function UserIcon() {
           <Popover.Content
             side="bottom"
             align="center"
-            className="bg-gray-400 shadow-lg rounded-md border border-gray-200 p-2 w-32"
+            className="bg-gray-400 shadow-lg rounded-md border border-gray-200 p-2 w-32 z-50"
           >
+            <Link href="/wishlist">
+              <button className="w-full text-left px-3 py-2 text-sm text-black font-semibold bg-white hover:bg-gray-100 rounded-md transition">
+                My Wishlist
+              </button>
+            </Link>
+            <Link href="/myprofile">
+              <button className="w-full text-left px-3 py-2 text-sm text-black font-semibold bg-white hover:bg-gray-100 rounded-md transition">
+                My Profile
+              </button>
+            </Link>
             <button
               className="w-full text-left px-3 py-2 text-sm text-black font-semibold bg-white hover:bg-gray-100 rounded-md transition"
               onClick={handleSingOut}

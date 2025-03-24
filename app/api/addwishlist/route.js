@@ -4,18 +4,18 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const { uid, id, name } = await request.json();
+    const { uid, id, name, description, price, image } = await request.json();
 
-    if (!uid || !id || !name) {
-      return NextResponse.json(
-        { error: "Invalid request" },
-        { status: 400 }
-      );
+    if (!uid || !id || !name || !description || !price || !image) {
+      return NextResponse.json({ error: "Invalid request" }, { status: 400 });
     }
 
     await db.collection("users").doc(uid).collection("wishlist").doc(id).set({
       id: id,
+      image: image,
       name: name,
+      description: description,
+      price: price,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
@@ -31,7 +31,3 @@ export async function POST(request) {
     );
   }
 }
-
-
-
-
