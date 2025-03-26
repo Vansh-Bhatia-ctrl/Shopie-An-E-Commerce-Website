@@ -3,7 +3,8 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const { image, description, name, price, uid, id } = await request.json();
+    const { image, description, name, price, uid, id, quantity } =
+      await request.json();
 
     if (!image || !id || !description || !name || !price || !uid) {
       return NextResponse.json(
@@ -12,13 +13,19 @@ export async function POST(request) {
       );
     }
 
-    await db.collection("users").doc(uid).collection("cart").doc(id).set({
-      id: id,
-      name: name,
-      image: image,
-      description: description,
-      price: price,
-    });
+    await db
+      .collection("users")
+      .doc(uid)
+      .collection("cart")
+      .doc(id)
+      .set({
+        id: id,
+        name: name,
+        image: image,
+        description: description,
+        price: price,
+        quantity: quantity > 0 ? quantity + 1 : 1,
+      });
 
     return NextResponse.json(
       { message: "Item added to cart successfully" },

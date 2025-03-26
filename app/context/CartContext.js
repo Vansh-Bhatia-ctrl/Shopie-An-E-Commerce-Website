@@ -69,6 +69,7 @@ export function CartProvider({ children }) {
           description: item.description,
           name: item.productName,
           price: item.price,
+          quantity: item.quantity,
         }),
       });
 
@@ -94,27 +95,49 @@ export function CartProvider({ children }) {
     }
   }
 
-  function removeFromCart(item) {
-    setCartItems((prev) => {
-      const existingItem = prev.find((cartItem) => cartItem.id === item.id);
-      if (!existingItem) {
-        return prev;
-      }
+  async function removeFromCart(item) {
+    const user = auth.currentUser;
+    const uid = user.uid;
 
-      let updatedData;
-      if (existingItem.quantity > 1) {
-        updatedData = prev.map((items) =>
-          items.id === item.id
-            ? { ...items, quantity: items.quantity - 1 }
-            : items
-        );
-      } else {
-        updatedData = prev.filter((cartItems) => cartItems.id !== item.id);
-      }
-
-      localStorage.setItem("cart", JSON.stringify(updatedData));
-      return updatedData;
+    const resp = await fetch("/api/removefromcart", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        uid: uid,
+        id: item.id,
+        quantity: item.quantity,
+      }),
     });
+
+    if (!resp.ok) {
+      throw new Error("Failed to delete item from cart");
+    }
+
+    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+
+    try {
+      setCartItems((prev) => {
+        if (!existingItem) {
+          return prev;
+        }
+
+        let updatedData;
+        if (existingItem.quantity > 1) {
+          updatedData = prev.map((items) =>
+            items.id === item.id
+              ? { ...items, quantity: items.quantity - 1 }
+              : items
+          );
+        } else {
+          updatedData = prev.filter((cartItems) => cartItems.id !== item.id || cartItems.quantity > 1);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(updatedData));
+        return updatedData;
+      });
+    } catch (error) {
+      console.error("Error deleting item from cart", error.message);
+    }
   }
 
   async function toggleWishlist(selectedItem) {

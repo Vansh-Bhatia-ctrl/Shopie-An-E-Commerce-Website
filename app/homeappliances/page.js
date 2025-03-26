@@ -17,12 +17,10 @@ export default async function HomeAppliances() {
 
   return (
     <>
-      <div className="flex items-center justify-center mt-6">
-        <h1
-          className={`font-bold text-2xl text-[#B68C2D] shadow-lg px-4 py-2 rounded-lg ${merriweather.className}`}
-        >
-          Shop for Home Appliances
-        </h1>
+   <div className="flex flex-col items-center pt-4">
+        <div className="inline-block border-b-4">
+          <h1 className="text-2xl font-semibold">Shop for Home Appliances</h1>
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-6 px-20 mt-5 md:grid md:grid-cols-3 md:gap-4 lg:grid lg:grid-cols-4 lg:gap-4">

@@ -40,12 +40,10 @@ export default function Wishlists() {
 
   return (
     <>
-      <div className="flex items-center justify-center mt-6">
-        <h1
-          className={`font-bold text-2xl text-[#B68C2D] shadow-lg px-4 py-2 rounded-lg ${merriweather.className}`}
-        >
-          My Wishlist
-        </h1>
+       <div className="flex flex-col items-center pt-4">
+        <div className="inline-block border-b-4">
+          <h1 className="text-2xl font-semibold">My Wishlist</h1>
+        </div>
       </div>
 
       <div className="flex flex-col gap-4 mt-2 p-2">
