@@ -7,8 +7,10 @@ import { User } from "lucide-react";
 import Link from "next/link";
 import { doc, getDoc } from "firebase/firestore";
 import * as Popover from "@radix-ui/react-popover";
+import { useRouter } from "next/navigation";
 
 export default function UserIcon() {
+  const router = useRouter();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -37,6 +39,7 @@ export default function UserIcon() {
     try {
       await signOut(auth);
       setUser(null);
+      router.push("/login");
       console.log("User signed-out");
     } catch (error) {
       console.error("Error signing-out", error.message);

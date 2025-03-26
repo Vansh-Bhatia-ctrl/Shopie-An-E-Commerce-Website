@@ -1,4 +1,3 @@
-import Image from "next/image";
 import RecentlyViewed from "./components/RecentlyViewed";
 import Categories from "./components/Categories";
 import BannerImages from "./components/BannerImages";
@@ -13,7 +12,7 @@ export default function Home() {
       </div>
 
       <div className="w-full h-auto md:w-full md:h-auto md:object-cover">
-        <Image
+        <img
           src="/home-banner.jpg"
           width={782}
           height={370}

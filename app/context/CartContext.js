@@ -52,22 +52,46 @@ export function CartProvider({ children }) {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  function addToCart(item) {
-    setCartItems((prev) => {
-      const existingItem = prev.find((cartItem) => cartItem.id === item.id);
-      let updatedData;
-      if (existingItem) {
-        updatedData = prev.map((cartItem) =>
-          cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem
-        );
-      } else {
-        updatedData = [...prev, { ...item, quantity: 1 }];
+  async function addToCart(item) {
+    const user = auth.currentUser;
+    const uid = user.uid;
+
+    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+
+    try {
+      const resp = await fetch("/api/addtocart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          uid: uid,
+          id: item.id,
+          image: item.imageURL,
+          description: item.description,
+          name: item.productName,
+          price: item.price,
+        }),
+      });
+
+      if (!resp.ok) {
+        throw new Error("Failed to add item to cart");
       }
-      localStorage.setItem("cart", JSON.stringify(updatedData));
-      return updatedData;
-    });
+      setCartItems((prev) => {
+        let updatedData;
+        if (existingItem) {
+          updatedData = prev.map((cartItem) =>
+            cartItem.id === item.id
+              ? { ...cartItem, quantity: cartItem.quantity + 1 }
+              : cartItem
+          );
+        } else {
+          updatedData = [...prev, { ...item, quantity: 1 }];
+        }
+        localStorage.setItem("cart", JSON.stringify(updatedData));
+        return updatedData;
+      });
+    } catch (error) {
+      console.error("Error adding item to cart", error.message);
+    }
   }
 
   function removeFromCart(item) {
