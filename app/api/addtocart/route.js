@@ -24,7 +24,7 @@ export async function POST(request) {
         image: image,
         description: description,
         price: price,
-        quantity: quantity > 0 ? quantity + 1 : 1,
+        quantity: quantity ? quantity + 1 : 1,
       });
 
     return NextResponse.json(

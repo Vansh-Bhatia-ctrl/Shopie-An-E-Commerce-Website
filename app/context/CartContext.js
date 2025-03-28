@@ -54,6 +54,10 @@ export function CartProvider({ children }) {
 
   async function addToCart(item) {
     const user = auth.currentUser;
+    if (!user) {
+      alert("You must be signed in to add to cart");
+      return;
+    }
     const uid = user.uid;
 
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
@@ -61,7 +65,7 @@ export function CartProvider({ children }) {
     try {
       const resp = await fetch("/api/addtocart", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify({
           uid: uid,
           id: item.id,
@@ -97,6 +101,10 @@ export function CartProvider({ children }) {
 
   async function removeFromCart(item) {
     const user = auth.currentUser;
+    if (!user) {
+      alert("You must be signed in to add to cart");
+      return;
+    }
     const uid = user.uid;
 
     const resp = await fetch("/api/removefromcart", {
@@ -129,7 +137,9 @@ export function CartProvider({ children }) {
               : items
           );
         } else {
-          updatedData = prev.filter((cartItems) => cartItems.id !== item.id || cartItems.quantity > 1);
+          updatedData = prev.filter(
+            (cartItems) => cartItems.id !== item.id || cartItems.quantity > 1
+          );
         }
 
         localStorage.setItem("cart", JSON.stringify(updatedData));

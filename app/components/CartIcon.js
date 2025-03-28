@@ -1,13 +1,34 @@
 "use client";
 import Link from "next/link";
 import { ShoppingCart } from "lucide-react";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
-import { auth } from "../lib/firebaseconfig";
+import { auth, db } from "../lib/firebaseconfig";
+import { onAuthStateChanged } from "firebase/auth";
+import { collection, getDocs } from "firebase/firestore";
 
 export default function CartIcon() {
-  const { cartItems } = useContext(CartContext);
-  const user = auth.currentUser;
+  const { cartItems, setCartItems } = useContext(CartContext);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      if (!currentUser) {
+        setUser(null);
+        return;
+      }
+
+      setUser(currentUser);
+
+      const userRef = collection(db, "users", currentUser.uid, "cart");
+      const userDoc = await getDocs(userRef);
+
+      const userCartData = userDoc.docs.map((doc) => doc.data());
+      setCartItems(userCartData);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,

@@ -1,11 +1,39 @@
 "use client";
 import Image from "next/image";
 import ProceedToBuy from "../components/ProceedToBuy";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth, db } from "../lib/firebaseconfig";
+import { collection, getDocs } from "firebase/firestore";
 
 export default function Cart() {
-  const { cartItems, removeFromCart, addToCart } = useContext(CartContext);
+  const { cartItems, removeFromCart, addToCart, setCartItems } =
+    useContext(CartContext);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      if (!currentUser) {
+        setUser(null);
+        return;
+      }
+
+      setUser(currentUser);
+
+      const userRef = collection(db, "users", currentUser.uid, "cart");
+      const userData = await getDocs(userRef);
+      const userCartData = userData.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setCartItems(userCartData);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex flex-col items-center pt-4">
@@ -21,8 +49,8 @@ export default function Cart() {
               key={item.id}
               className="w-[90%] max-w-[800px] border-2 flex flex-col gap-4 p-3 rounded-lg mx-auto md:w-[90%] md:max-w-[2000px] md:flex-row md:items-center"
             >
-              <Image
-                src={item.imageURL}
+              <img
+                src={item.image}
                 width={200}
                 height={200}
                 alt="Product image"
@@ -31,7 +59,7 @@ export default function Cart() {
 
               <div className="flex flex-col flex-1 md:ml-auto">
                 <h2 className="text-2xl font-bold text-gray-800">
-                  {item.productName}
+                  {item.nme}
                 </h2>
                 <p className="text-md font-semibold text-gray-700 mt-2">
                   {item.description}
