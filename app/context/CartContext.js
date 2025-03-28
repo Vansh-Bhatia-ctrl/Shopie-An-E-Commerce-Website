@@ -213,6 +213,38 @@ export function CartProvider({ children }) {
     }
   }
 
+  async function addReview(event, item) {
+    event.preventDefault();
+    const user = auth.currentUser;
+    if (!user) {
+      alert("You must be signed in to add reviews");
+      return;
+    }
+    const uid = user.uid;
+
+    const formData = new FormData(event.target);
+    const comment = formData.get("review");
+
+    try {
+      const resp = await fetch("/api/addreview", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+          uid: uid,
+          id: item.id,
+          comment: comment,
+        }),
+      });
+
+      if (!resp.ok) {
+        throw new Error("Failed to add review");
+      }
+
+    } catch (error) {
+      console.error("Error adding review", error.message);
+    }
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -223,6 +255,7 @@ export function CartProvider({ children }) {
         addToCart,
         removeFromCart,
         toggleWishlist,
+        addReview,
       }}
     >
       {children}
