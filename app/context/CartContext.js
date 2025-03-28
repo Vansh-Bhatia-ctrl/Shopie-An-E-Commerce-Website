@@ -69,9 +69,9 @@ export function CartProvider({ children }) {
         body: JSON.stringify({
           uid: uid,
           id: item.id,
-          image: item.imageURL,
+          image: item.image,
           description: item.description,
-          name: item.productName,
+          name: item.name,
           price: item.price,
           quantity: item.quantity,
         }),

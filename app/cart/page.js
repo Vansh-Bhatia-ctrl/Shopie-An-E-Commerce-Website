@@ -59,7 +59,7 @@ export default function Cart() {
 
               <div className="flex flex-col flex-1 md:ml-auto">
                 <h2 className="text-2xl font-bold text-gray-800">
-                  {item.nme}
+                  {item.name}
                 </h2>
                 <p className="text-md font-semibold text-gray-700 mt-2">
                   {item.description}

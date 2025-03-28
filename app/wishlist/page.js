@@ -1,14 +1,13 @@
 "use client";
 
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { Merriweather } from "next/font/google";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import { collection, onSnapshot } from "firebase/firestore";
 import { auth, db } from "../lib/firebaseconfig";
 import Link from "next/link";
 
-const merriweather = Merriweather({ subsets: ["latin"], weight: "400" });
+
 
 export default function Wishlists() {
   const { wishlist, setWishlist } = useContext(CartContext);
@@ -46,7 +45,7 @@ export default function Wishlists() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 mt-2 p-2">
+      <div className="flex flex-col gap-4 mt-2 p-6">
         {wishlist.length > 0 ? (
           wishlist.map((item, index) => (
             <div key={item.id || index} className="flex flex-col gap-4">
