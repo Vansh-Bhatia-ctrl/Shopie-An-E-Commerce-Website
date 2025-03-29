@@ -24,6 +24,9 @@ export default function Home() {
       <section className="md:flex md:flex-row md:gap-4">
         <RecentlyViewed />
       </section>
+
+ 
+
     </>
   );
 }
