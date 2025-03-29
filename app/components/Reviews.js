@@ -1,11 +1,29 @@
 "use client";
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "../lib/firebaseconfig";
 
 export default function Reviews({ item }) {
   const { addReview } = useContext(CartContext);
   const [reviews, setReviews] = useState("");
+  const [fetchedReviews, setFetchedReviews] = useState([]);
+
+  useEffect(() => {
+    if (!item?.id) return;
+
+    const reviewRef = doc(db, "reviews", item.id);
+    const unsubscribe = onSnapshot(reviewRef, (snapshot) => {
+      if (snapshot.exists()) {
+        setFetchedReviews(snapshot.data().reviews || []);
+      } else {
+        setFetchedReviews([]);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [item]);
 
   function handleChange(event) {
     setReviews(event.target.value);
@@ -32,7 +50,16 @@ export default function Reviews({ item }) {
         >
           Add review
         </button>
-        <p>{reviews}</p>
+        {fetchedReviews.length > 0 ? (
+          fetchedReviews.map((review, index) => (
+            <div key={`${review.productId}-${index}`} className="flex flex-col">
+              <p className="font-semibold">{review.name}</p>
+              <p>{review.comment}</p>
+            </div>
+          ))
+        ) : (
+          <p>No reviews yet.</p>
+        )}
       </form>
     </>
   );

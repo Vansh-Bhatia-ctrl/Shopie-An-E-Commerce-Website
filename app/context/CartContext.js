@@ -10,6 +10,7 @@ export const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+ 
 
   useEffect(() => {
     const storedData = localStorage.getItem("cart");
@@ -38,7 +39,6 @@ export function CartProvider({ children }) {
           setWishlist(data);
         } catch (error) {
           console.error("Failed to fetch wishlist", error.message);
-        } finally {
         }
       }
 
@@ -51,6 +51,8 @@ export function CartProvider({ children }) {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
+
+
 
   async function addToCart(item) {
     const user = auth.currentUser;
@@ -215,6 +217,7 @@ export function CartProvider({ children }) {
 
   async function addReview(event, item) {
     event.preventDefault();
+    
     const user = auth.currentUser;
     if (!user) {
       alert("You must be signed in to add reviews");
@@ -239,7 +242,6 @@ export function CartProvider({ children }) {
       if (!resp.ok) {
         throw new Error("Failed to add review");
       }
-
     } catch (error) {
       console.error("Error adding review", error.message);
     }
