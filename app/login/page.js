@@ -4,7 +4,8 @@ import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "../lib/firebaseconfig";
 import { useRouter } from "next/navigation";
-import { Link } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function Login() {
   const router = useRouter();
@@ -38,36 +39,61 @@ export default function Login() {
   }
 
   if (loading) return <p>Loading...</p>;
-
   return (
     <>
-      <form onSubmit={handleSignIn}>
-        <input
-          placeholder="Enter emailId"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="border-2"
-        />
-        <br />
-        <br />
-        <input
-          placeholder="Enter password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="border-2"
-        />
-        <br />
-        <br />
-        <button type="submit" className="border-4">
-          Sign-in
-        </button>
-      </form>
-      <Link href='/signup'>
-      
-        Sign-up
-      </Link>
+      <div className="flex items-center justify-center mt-16">
+        <div className="border-2 w-96 rounded-lg lg:w-[500px] lg:h-[320px]">
+          <div className="flex flex-col items-center pt-4">
+            <div className="inline-block border-b-4">
+              <h1 className="text-2xl font-semibold">
+                Sign in or create account
+              </h1>
+            </div>
+          </div>
+
+          <div className="p-6">
+            <form
+              onSubmit={handleSignIn}
+              className="flex flex-col items-center justify-center gap-4"
+            >
+              <div>
+                <label htmlFor="email">Email</label>
+                <Input
+                  placeholder="Enter email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-[300px]"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="password">Password</label>
+                <Input
+                  placeholder="Enter password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-[300px]"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-[306px] p-2 bg-yellow-400 hover:bg-yellow-500 rounded-lg"
+              >
+                Sign-in
+              </button>
+              <div className="flex gap-2 md:">
+                <p>Don't have an account?</p>
+                <Link href="/signup">
+                  <button className="text-blue-600 hover:border-b-2 hover:border-blue-400">Sign-up</button>
+                </Link>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
