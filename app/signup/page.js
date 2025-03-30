@@ -8,8 +8,9 @@ import { useEffect, useState } from "react";
 import { auth, db } from "../lib/firebaseconfig";
 import { useRouter } from "next/navigation";
 import { doc, setDoc } from "firebase/firestore";
+import { Input } from "@/components/ui/input";
 
-export default function SingUp() {
+export default function SignUp() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,6 +18,7 @@ export default function SingUp() {
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -48,53 +50,72 @@ export default function SingUp() {
     }
   }
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p className="text-center text-gray-600">Loading...</p>;
 
   return (
-    <>
-      <form onSubmit={handleSignUp}>
-        <input
-          placeholder="Enter Name"
-          type="text"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="border-2"
-        />
-        <br />
-        <br />
-        <input
-          placeholder="Enter Phone Number"
-          type="number"
-          name="phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="border-2"
-        />
-        <br />
-        <br />
-        <input
-          placeholder="Enter emailId"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="border-2"
-        />
-        <br />
-        <br />
-        <input
-          placeholder="Enter password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="border-2"
-        />
-        <br />
-        <br />
-        <button type="submit" className="border-4">
-          Sign-up
-        </button>
-      </form>
-    </>
+    <div className="flex items-center justify-center mt-16">
+      <div className="border-2 w-96 rounded-lg lg:w-[500px] lg:h-auto p-6 bg-white">
+        <div className="flex flex-col items-center pt-2">
+          <h1 className="text-2xl font-semibold border-b-4 pb-1">Sign Up</h1>
+        </div>
+
+        <form onSubmit={handleSignUp} className="flex flex-col gap-4 mt-6">
+          <div className="flex flex-col">
+            <label className="text-gray-600 font-medium">Name</label>
+            <Input
+              placeholder="Enter Name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400"
+              required
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label className="text-gray-600 font-medium">Phone Number</label>
+            <Input
+              placeholder="Enter Phone Number"
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400"
+              required
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label className="text-gray-600 font-medium">Email</label>
+            <Input
+              placeholder="Enter Email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400"
+              required
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label className="text-gray-600 font-medium">Password</label>
+            <Input
+              placeholder="Enter Password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full p-2 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500"
+          >
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
