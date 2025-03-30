@@ -9,6 +9,7 @@ import { auth, db } from "../lib/firebaseconfig";
 import { useRouter } from "next/navigation";
 import { doc, setDoc } from "firebase/firestore";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function SignUp() {
   const router = useRouter();
@@ -108,12 +109,14 @@ export default function SignUp() {
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full p-2 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500"
-          >
-            Sign Up
-          </button>
+          <Link href={user ? "/" : "/signup"}>
+            <button
+              type="submit"
+              className="w-full p-2 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500"
+            >
+              Sign Up
+            </button>
+          </Link>
         </form>
       </div>
     </div>
