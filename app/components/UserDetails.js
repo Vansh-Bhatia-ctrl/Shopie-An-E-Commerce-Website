@@ -46,7 +46,7 @@ export default function UserIcon() {
     }
   }
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p className="animate-pulse text-blue-500">Loading...</p>;
 
   return (
     <div className="relative">
