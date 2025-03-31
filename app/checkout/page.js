@@ -1,11 +1,17 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 
 export default function CheckoutPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [storedProduct, setStoredProduct] = useState([]);
+  const [totalAmount, setTotalAmount] = useState(0);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [shipAddress, setShipAddress] = useState("");
+  const [landmark, setLandmark] = useState("");
+  const [pincode, setPincode] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1000);
@@ -15,9 +21,56 @@ export default function CheckoutPage() {
   useEffect(() => {
     const products = localStorage.getItem("products");
     if (products) {
-    setStoredProduct(JSON.parse(products));
+      const parsedProducts = JSON.parse(products);
+      setStoredProduct(parsedProducts);
+
+      const total = parsedProducts.reduce(
+        (sum, product) => sum + product.price,
+        0
+      );
+      setTotalAmount(total);
     }
   }, []);
+
+  async function handlePayment() {
+    try {
+      const response = await fetch("/api/razorpay", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+          amount: totalAmount,
+        }),
+      });
+
+      const order = await response.json();
+
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+        amount: order.amount,
+        currency: order.currency,
+        name: "Shopie",
+        description: "Test Transaction",
+        order_id: order.id,
+        handler: function (response) {
+          alert(
+            "Payment Successful! Payment ID: " + response.razorpay_payment_id
+          );
+          console.log(response);
+        },
+        prefill: {
+          name: name,
+          email: email,
+          contact: phone,
+        },
+        theme: { color: "#3399cc" },
+      };
+
+      const razorpay = new window.Razorpay(options);
+      razorpay.open();
+    } catch (error) {
+      console.error("Payment error:", error);
+    }
+  }
 
   if (isLoading) {
     return (
@@ -40,7 +93,10 @@ export default function CheckoutPage() {
         <div className="flex flex-col gap-4 ">
           {storedProduct.length > 0
             ? storedProduct.map((product) => (
-                <section key={product.id} className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]">
+                <section
+                  key={product.id}
+                  className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]"
+                >
                   <div className="p-2 min-h-auto w-[580px] mr-2 ml-2 flex justify-between items-center md:w-[780px]">
                     <Image
                       src={product.imageURL}
@@ -75,16 +131,63 @@ export default function CheckoutPage() {
               <p className="font-bold text-lg mb-2">Shipping Details</p>
               <form className="w-full">
                 <label
-                  htmlFor="address"
+                  htmlFor="name"
                   className="block text-sm font-medium text-gray-700 mb-1 mt-2"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter Address."
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1 mt-6"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="Enter Address."
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <label
+                  htmlFor="phoneNumber"
+                  className="block text-sm font-medium text-gray-700 mb-1 mt-6"
+                >
+                  Phone Number
+                </label>
+                <input
+                  id="phoneNumber"
+                  type="text"
+                  placeholder="Enter Address."
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
+                <label
+                  htmlFor="address"
+                  className="block text-sm font-medium text-gray-700 mb-1 mt-6"
                 >
                   Shipping address
                 </label>
-                <Input
+                <input
                   id="address"
                   type="text"
                   placeholder="Enter Address."
                   className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={shipAddress}
+                  onChange={(e) => setShipAddress(e.target.value)}
                   required
                 />
                 <label
@@ -93,11 +196,13 @@ export default function CheckoutPage() {
                 >
                   Street name/ Landmark
                 </label>
-                <Input
+                <input
                   id="streetName"
                   type="text"
                   placeholder="Enter Street name/ Landmark."
                   className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={landmark}
+                  onChange={(e) => setLandmark(e.target.value)}
                   required
                 />
                 <label
@@ -106,11 +211,13 @@ export default function CheckoutPage() {
                 >
                   Pincode
                 </label>
-                <Input
+                <input
                   id="pincode"
                   type="text"
                   placeholder="Enter Pincode."
                   className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={pincode}
+                  onChange={(e) => setPincode(e.target.value)}
                   required
                 />
               </form>
@@ -118,52 +225,15 @@ export default function CheckoutPage() {
           </section>
 
           {/*Payment method section */}
-          <section className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]">
-            <div className="p-6 w-full flex flex-col items-start">
-              <p className="font-bold text-lg mb-2">Payment Method</p>
-              <form className="w-full">
-                <label
-                  htmlFor="Card Number"
-                  className="block text-sm font-medium text-gray-700 mb-1 mt-2"
-                >
-                  Card Number
-                </label>
-                <Input
-                  id="Card Number"
-                  type="text"
-                  placeholder="0000-0000-0000-0000"
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <label
-                  htmlFor="Expiry Date"
-                  className="block text-sm font-medium text-gray-700 mb-1 mt-6"
-                >
-                  Expiry Date
-                </label>
-                <Input
-                  id="Expiry Date"
-                  type="text"
-                  placeholder="Enter expiry date."
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <label
-                  htmlFor="Cvv"
-                  className="block text-sm font-medium text-gray-700 mb-1 mt-6"
-                >
-                  Cvv
-                </label>
-                <Input
-                  id="Cvv"
-                  type="text"
-                  placeholder="Enter Cvv."
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </form>
-            </div>
-          </section>
+
+          <div>
+            <button
+              className="bg-yellow-400 hover:bg-yellow-500 text-black p-2  rounded-lg font-semibold shadow-md transition w-[200px]"
+              onClick={handlePayment}
+            >
+              Pay Now
+            </button>
+          </div>
         </div>
       </div>
     </>
