@@ -5,10 +5,18 @@ import Image from "next/image";
 
 export default function CheckoutPage() {
   const [isLoading, setIsLoading] = useState(true);
+  const [storedProduct, setStoredProduct] = useState([]);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const products = localStorage.getItem("products");
+    if (products) {
+    setStoredProduct(JSON.parse(products));
+    }
   }, []);
 
   if (isLoading) {
@@ -28,76 +36,39 @@ export default function CheckoutPage() {
       </div>
 
       <div className="flex flex-wrap justify-center gap-4 mt-6 sm:flex sm:flex-row">
+        {/*Checkout item Details section */}
         <div className="flex flex-col gap-4 ">
-          <section className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]">
-            <div className="p-2 min-h-auto w-[580px] mr-2 ml-2 flex justify-between items-center md:w-[780px]">
-              <Image
-                src="/bed.jpg"
-                width={100}
-                height={100}
-                alt="Product Image"
-                className="rounded-sm"
-              />
-              <div className="flex flex-col w-full justify-between">
-                <p className="font-semibold ml-2">
-                  Premium Wooden Bed – Elegant & Sturdy for Ultimate Comfort
-                </p>
-                <div className="flex justify-end text-right mt-2">
-                  <div>
-                    <p className="font-semibold">Price: {"\u20B9"} 20000</p>
-                    <p className="text-sm">Quantity: 1</p>
+          {storedProduct.length > 0
+            ? storedProduct.map((product) => (
+                <section key={product.id} className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]">
+                  <div className="p-2 min-h-auto w-[580px] mr-2 ml-2 flex justify-between items-center md:w-[780px]">
+                    <Image
+                      src={product.imageURL}
+                      width={100}
+                      height={100}
+                      alt="Product Image"
+                      className="rounded-sm"
+                    />
+                    <div className="flex flex-col w-full justify-between">
+                      <p className="font-semibold ml-2">
+                        {product.description}
+                      </p>
+                      <div className="flex justify-end text-right mt-2">
+                        <div>
+                          <p className="font-semibold">
+                            Price: {"\u20B9"} {product.price}
+                          </p>
+                          <p className="text-sm">Quantity: 1</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]">
-            <div className="p-2 min-h-auto w-[580px] mr-2 ml-2 flex justify-between items-center md:w-[780px]">
-              <Image
-                src="/chair.jpg"
-                width={100}
-                height={100}
-                alt="Product Image"
-                className="rounded-sm"
-              />
-              <div className="flex flex-col w-full justify-between">
-                <p className="font-semibold ml-2">
-                  Premium Wooden Bed – Elegant & Sturdy for Ultimate Comfort
-                </p>
-                <div className="flex justify-end text-right mt-2">
-                  <div>
-                    <p className="font-semibold">Price: {"\u20B9"} 20000</p>
-                    <p className="text-sm">Quantity: 1</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]">
-            <div className="p-2 min-h-auto w-[580px] mr-2 ml-2 flex justify-between items-center md:w-[780px]">
-              <Image
-                src="/blender.jpg"
-                width={100}
-                height={100}
-                alt="Product Image"
-                className="rounded-sm"
-              />
-              <div className="flex flex-col w-full justify-between">
-                <p className="font-semibold ml-2">
-                  Premium Wooden Bed – Elegant & Sturdy for Ultimate Comfort
-                </p>
-                <div className="flex justify-end text-right mt-2">
-                  <div>
-                    <p className="font-semibold">Price: {"\u20B9"} 20000</p>
-                    <p className="text-sm">Quantity: 1</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+                </section>
+              ))
+            : ""}
         </div>
+
+        {/*Shipping details Details section */}
         <div className="flex flex-col gap-4">
           <section className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]">
             <div className="p-6 w-full flex flex-col items-start">
@@ -146,6 +117,7 @@ export default function CheckoutPage() {
             </div>
           </section>
 
+          {/*Payment method section */}
           <section className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]">
             <div className="p-6 w-full flex flex-col items-start">
               <p className="font-bold text-lg mb-2">Payment Method</p>

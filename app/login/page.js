@@ -38,7 +38,14 @@ export default function Login() {
     }
   }
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500 border-solid"></div>
+      </div>
+    );
+  }
+  
   return (
     <>
       <div className="flex items-center justify-center mt-16">
@@ -87,7 +94,9 @@ export default function Login() {
               <div className="flex gap-2 md:">
                 <p>Don't have an account?</p>
                 <Link href="/signup">
-                  <button className="text-blue-600 hover:border-b-2 hover:border-blue-400">Sign-up</button>
+                  <button className="text-blue-600 hover:border-b-2 hover:border-blue-400">
+                    Sign-up
+                  </button>
                 </Link>
               </div>
             </form>

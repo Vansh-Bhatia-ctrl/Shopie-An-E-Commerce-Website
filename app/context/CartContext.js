@@ -57,7 +57,7 @@ export function CartProvider({ children }) {
   async function addToCart(item) {
     const user = auth.currentUser;
     if (!user) {
-      alert("You must be signed in to add to cart");
+      alert("You must be signed in");
       return;
     }
     const uid = user.uid;
@@ -104,7 +104,7 @@ export function CartProvider({ children }) {
   async function removeFromCart(item) {
     const user = auth.currentUser;
     if (!user) {
-      alert("You must be signed in to add to cart");
+      alert("You must be signed in");
       return;
     }
     const uid = user.uid;

@@ -1,4 +1,5 @@
 import AddToCart from "@/app/components/AddToCart";
+import BuyNow from "@/app/components/BuyNow";
 import Reviews from "@/app/components/Reviews";
 import WishList from "@/app/components/WishListIcon";
 import { db } from "@/app/lib/firebaseAdmin";
@@ -50,11 +51,8 @@ export default async function ProductsPage({ params }) {
 
           <div className="flex gap-4 mt-6">
             <AddToCart item={product_data} />
-            <Link href='/checkout'>
-              <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold shadow-md transition">
-                Buy now
-              </button>
-            </Link>
+            {/*Client component as it required interactivity*/}
+            <BuyNow product={product_data} />
             <WishList item={product_data} />
           </div>
 

@@ -49,7 +49,7 @@ export default function BannerImages() {
             height={1080}
             quality={100}
             className="w-full h-full object-fill md:object-cover flex-shrink-0 p-0 m-0"
-            style={{ width: "100vw" }} // Force full viewport width
+            style={{ width: "100vw" }}
           />
         ))}
       </div>
