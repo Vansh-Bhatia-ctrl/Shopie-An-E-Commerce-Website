@@ -36,13 +36,13 @@ export default function CheckoutPage() {
     try {
       const response = await fetch("/api/razorpay", {
         method: "POST",
-        headers: { "Content-type": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           amount: totalAmount,
         }),
       });
 
-      const order = await response.json();
+      const { order } = await response.json();
 
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
@@ -58,9 +58,9 @@ export default function CheckoutPage() {
           console.log(response);
         },
         prefill: {
-          name: name,
-          email: email,
-          contact: phone,
+          name: "Vansh Bhatia",
+          email: "vansh@example.com",
+          contact: "9999999999",
         },
         theme: { color: "#3399cc" },
       };
