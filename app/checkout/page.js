@@ -19,16 +19,25 @@ export default function CheckoutPage() {
   }, []);
 
   useEffect(() => {
-    const products = localStorage.getItem("products");
-    if (products) {
-      const parsedProducts = JSON.parse(products);
-      setStoredProduct(parsedProducts);
+    const checkoutType = localStorage.getItem("checkoutType");
 
-      const total = parsedProducts.reduce(
-        (sum, product) => sum + product.price,
-        0
-      );
-      setTotalAmount(total);
+    if (checkoutType === "buyNow") {
+      const products = localStorage.getItem("products");
+      if (products) {
+        const parsedProducts = JSON.parse(products);
+        setStoredProduct(parsedProducts);
+      }
+    } else if (checkoutType === "cartItems") {
+      const cartItems = localStorage.getItem("cartItems");
+      if (cartItems) {
+        const parsedCartItems = JSON.parse(cartItems);
+        setStoredProduct(parsedCartItems);
+        const total = parsedCartItems.reduce(
+          (sum, product) => sum + product.price,
+          0
+        );
+        setTotalAmount(total);
+      }
     }
   }, []);
 
@@ -98,8 +107,8 @@ export default function CheckoutPage() {
                   className="flex flex-col border-2 w-[600px] rounded-md md:w-[800px]"
                 >
                   <div className="p-2 min-h-auto w-[580px] mr-2 ml-2 flex justify-between items-center md:w-[780px]">
-                    <Image
-                      src={product.imageURL}
+                    <img
+                      src={product.image}
                       width={100}
                       height={100}
                       alt="Product Image"

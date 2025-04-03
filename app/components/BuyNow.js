@@ -12,6 +12,7 @@ export default function BuyNow({ product }) {
     const updatedItem = [...items, product];
     setItems(updatedItem);
     localStorage.setItem("products", JSON.stringify(updatedItem));
+    localStorage.setItem("checkoutType", "buyNow");
   }
 
   return (
