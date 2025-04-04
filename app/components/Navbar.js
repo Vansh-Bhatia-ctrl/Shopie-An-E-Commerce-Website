@@ -26,7 +26,6 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6 text-cmd lg:mt-2">
           <CartIcon />
 
-          <Link href="">My Orders</Link>
           <Link href="">Support</Link>
           <UserIcon />
           <Link href="">About us</Link>

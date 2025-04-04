@@ -70,7 +70,7 @@ export default function UserIcon() {
             </Link>
             <Link href="/myprofile">
               <button className="w-full text-left px-3 py-2 text-sm text-black font-semibold bg-white hover:bg-gray-100 rounded-md transition">
-                My Profile
+                My Orders
               </button>
             </Link>
             <button

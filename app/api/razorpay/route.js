@@ -3,7 +3,7 @@ import Razorpay from "razorpay";
 
 export async function POST(req) {
   try {
-    const { amount } = await req.json();
+    const { amount, uid } = await req.json();
 
     const razorpay = new Razorpay({
       key_id: process.env.RAZORPAY_KEY_ID,

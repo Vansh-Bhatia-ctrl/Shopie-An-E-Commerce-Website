@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import { auth } from "../lib/firebaseconfig";
 
 export default function CheckoutPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +26,7 @@ export default function CheckoutPage() {
       if (products) {
         const parsedProducts = JSON.parse(products);
         setStoredProduct(parsedProducts);
+        setTotalAmount(parsedProducts[0].price);
       }
     } else if (checkoutType === "cartItems") {
       const cartItems = localStorage.getItem("cartItems");
@@ -42,17 +43,20 @@ export default function CheckoutPage() {
   }, []);
 
   async function handlePayment() {
+    const user = auth.currentUser;
+    const uid = user.uid;
     try {
       const response = await fetch("/api/razorpay", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           amount: totalAmount,
+          uid: uid,
         }),
       });
 
-      const { order } = await response.json();
-
+      const { order}  = await response.json();
+      console.log(order);
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: order.amount,
@@ -60,11 +64,23 @@ export default function CheckoutPage() {
         name: "Shopie",
         description: "Test Transaction",
         order_id: order.id,
-        handler: function (response) {
-          alert(
-            "Payment Successful! Payment ID: " + response.razorpay_payment_id
-          );
-          console.log(response);
+        handler: async function (response) {
+          const verifypayment = await fetch("/api/verifypayment", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              payment_id: response.razorpay_payment_id,
+              orderId: order.id,
+              uid: uid,
+            }),
+          });
+
+          const result = await verifypayment.json();
+          if (result.success) {
+            alert("Payment Successful! Order placed");
+          } else {
+            alert("Payment failed please contact support");
+          }
         },
         prefill: {
           name: "Vansh Bhatia",
@@ -121,9 +137,14 @@ export default function CheckoutPage() {
                       <div className="flex justify-end text-right mt-2">
                         <div>
                           <p className="font-semibold">
-                            Price: {"\u20B9"} {product.price}
+                            Price: {"\u20B9"}{" "}
+                            {product.quantity
+                              ? product.price * product.quantity
+                              : product.price}
                           </p>
-                          <p className="text-sm">Quantity: 1</p>
+                          <p className="text-sm">
+                            Quantity: {product.quantity ? product.quantity : 1}
+                          </p>
                         </div>
                       </div>
                     </div>
