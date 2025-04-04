@@ -39,6 +39,11 @@ export default function UserIcon() {
     try {
       await signOut(auth);
       setUser(null);
+      localStorage.removeItem("cart");
+      localStorage.removeItem("cartItems");
+      localStorage.removeItem("checkoutType");
+      localStorage.removeItem("products");
+      localStorage.removeItem("wishlist");
       router.push("/login");
       console.log("User signed-out");
     } catch (error) {

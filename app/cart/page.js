@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import ProceedToBuy from "../components/ProceedToBuy";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
@@ -11,11 +10,14 @@ export default function Cart() {
   const { cartItems, removeFromCart, addToCart, setCartItems } =
     useContext(CartContext);
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (!currentUser) {
         setUser(null);
+        setCartItems([]);
+        setLoading(false);
         return;
       }
 
@@ -29,10 +31,19 @@ export default function Cart() {
       }));
 
       setCartItems(userCartData);
+      setLoading(false);
     });
 
     return () => unsubscribe();
   }, []);
+
+  if (user === null) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-lg font-semibold">Please log in to view your cart.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -43,7 +54,7 @@ export default function Cart() {
       </div>
 
       <div className="flex-1 flex flex-col items-center gap-4 mt-3 mb-20">
-        {cartItems.length > 0 ? (
+        {cartItems.length > 0? (
           cartItems.map((item) => (
             <div
               key={item.id}

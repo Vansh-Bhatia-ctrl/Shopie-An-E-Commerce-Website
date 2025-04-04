@@ -9,7 +9,6 @@ import { auth, db } from "../lib/firebaseconfig";
 import { useRouter } from "next/navigation";
 import { doc, setDoc } from "firebase/firestore";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
 
 export default function SignUp() {
   const router = useRouter();
