@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { auth } from "../lib/firebaseconfig";
+import { useRouter } from "next/navigation";
 
 export default function CheckoutPage() {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [storedProduct, setStoredProduct] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
@@ -55,7 +57,7 @@ export default function CheckoutPage() {
         }),
       });
 
-      const { order}  = await response.json();
+      const { order } = await response.json();
       console.log(order);
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
@@ -78,6 +80,7 @@ export default function CheckoutPage() {
           const result = await verifypayment.json();
           if (result.success) {
             alert("Payment Successful! Order placed");
+            router.push("/");
           } else {
             alert("Payment failed please contact support");
           }

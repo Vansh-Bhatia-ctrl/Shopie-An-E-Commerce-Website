@@ -68,7 +68,7 @@ export default function UserIcon() {
                 My Wishlist
               </button>
             </Link>
-            <Link href="/myprofile">
+            <Link href="/myorders">
               <button className="w-full text-left px-3 py-2 text-sm text-black font-semibold bg-white hover:bg-gray-100 rounded-md transition">
                 My Orders
               </button>

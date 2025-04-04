@@ -39,13 +39,13 @@ export default function SignUp() {
       );
       const user = userCredential.user;
       console.log("User signed up");
-      router.push("/login");
 
       await setDoc(doc(db, "users", user.uid), {
         email,
         phone,
         name,
       });
+      router.push("/");
     } catch (error) {
       console.error("Error adding user to the system", error.message);
     }
@@ -115,14 +115,12 @@ export default function SignUp() {
             />
           </div>
 
-          <Link href={user ? "/" : "/signup"}>
-            <button
-              type="submit"
-              className="w-full p-2 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500"
-            >
-              Sign Up
-            </button>
-          </Link>
+          <button
+            type="submit"
+            className="w-full p-2 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500"
+          >
+            Sign Up
+          </button>
         </form>
       </div>
     </div>

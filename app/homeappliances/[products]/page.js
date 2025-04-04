@@ -25,7 +25,7 @@ export default async function ProductsPage({ params }) {
             width={1000}
             height={1000}
             alt="Product image"
-            className="rounded-lg object-cover"
+            className="rounded-lg"
           />
         </div>
 
