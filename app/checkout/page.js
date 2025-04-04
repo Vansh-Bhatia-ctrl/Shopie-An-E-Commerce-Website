@@ -74,6 +74,10 @@ export default function CheckoutPage() {
               payment_id: response.razorpay_payment_id,
               orderId: order.id,
               uid: uid,
+              name: storedProduct[0].name,
+              image: storedProduct[0].image,
+              description: storedProduct[0].description,
+              price: storedProduct[0].price,
             }),
           });
 

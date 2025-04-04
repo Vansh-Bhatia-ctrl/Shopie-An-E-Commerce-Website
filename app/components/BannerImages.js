@@ -35,7 +35,7 @@ export default function BannerImages() {
   }, []);
 
   return (
-    <div className="relative w-full h-[300px] md:h-[610px] md:w-auto lg:h-[900px] overflow-hidden p-0 m-0">
+    <div className="relative w-full h-full md:h-[610px] md:w-auto lg:h-[900px] overflow-hidden p-0 m-0">
       <div
         className="flex w-full h-full transition-transform duration-700 ease-in-out p-0 m-0 bg-red-100" // Added bg-red-100 for debugging
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}

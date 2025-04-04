@@ -4,7 +4,8 @@ import Razorpay from "razorpay";
 
 export async function POST(request) {
   try {
-    const { payment_id, orderId, uid } = await request.json();
+    const { payment_id, orderId, uid, name, image, description, price } =
+      await request.json();
 
     const razorpay = new Razorpay({
       key_id: process.env.RAZORPAY_KEY_ID,
@@ -20,13 +21,13 @@ export async function POST(request) {
         orderId: orderId,
         currency: payment.currency,
         status: payment.status,
+        name: name,
+        image: image,
+        description: description,
+        price: price,
       };
 
-      await db
-        .collection("users")
-        .doc(uid)
-        .collection("orders")
-        .add(orderData);
+      await db.collection("users").doc(uid).collection("orders").add(orderData);
     }
 
     return NextResponse.json(

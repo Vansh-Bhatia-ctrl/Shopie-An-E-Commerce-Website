@@ -38,7 +38,6 @@ export default function Navbar() {
         <Link href="">Fashion</Link>
         <Link href="">Gaming</Link>
         <Link href="">Skin care</Link>
-        <Link href="">More</Link>
       </nav>
     </>
   );
