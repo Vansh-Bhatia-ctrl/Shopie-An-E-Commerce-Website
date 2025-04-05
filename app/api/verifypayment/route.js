@@ -4,8 +4,7 @@ import Razorpay from "razorpay";
 
 export async function POST(request) {
   try {
-    const { payment_id, orderId, uid, name, image, description, price } =
-      await request.json();
+    const { payment_id, orderId, uid, storedProducts } = await request.json();
 
     const razorpay = new Razorpay({
       key_id: process.env.RAZORPAY_KEY_ID,
@@ -15,19 +14,27 @@ export async function POST(request) {
     const payment = await razorpay.payments.fetch(payment_id);
 
     if (payment.status === "captured") {
-      const orderData = {
-        amount: payment.amount,
-        id: payment.id,
-        orderId: orderId,
-        currency: payment.currency,
-        status: payment.status,
-        name: name,
-        image: image,
-        description: description,
-        price: price,
-      };
-
-      await db.collection("users").doc(uid).collection("orders").add(orderData);
+      const batch = db.batch();
+      const userOrdersRef = db.collection("users").doc(uid).collection("orders");
+    
+      storedProducts.forEach((product) => {
+        const orderRef = userOrdersRef.doc();
+        batch.set(orderRef, {
+          amount: payment.amount,
+          id: payment.id,
+          orderId: orderId,
+          currency: payment.currency,
+          status: payment.status,
+          name: product.name,
+          image: product.image,
+          description: product.description,
+          price: product.price,
+          quantity: product.quantity || 1,
+          createdAt: new Date(),
+        });
+      });
+    
+      await batch.commit();
     }
 
     return NextResponse.json(

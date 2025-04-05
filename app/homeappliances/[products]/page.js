@@ -4,7 +4,6 @@ import Reviews from "@/app/components/Reviews";
 import WishList from "@/app/components/WishListIcon";
 import { db } from "@/app/lib/firebaseAdmin";
 import Image from "next/image";
-import Link from "next/link";
 
 export async function generateStaticParams() {
   const products = await db.collection("products").get();

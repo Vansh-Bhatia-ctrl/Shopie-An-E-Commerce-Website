@@ -10,7 +10,7 @@ export default function Home() {
         <Categories />
       </div>
 
-      <div className="w-full h-[479px] bg-black md:w-full md:h-auto md:object-cover">
+      <div className="w-full h-[479px] md:w-full md:h-auto md:object-cover">
         <img
           src="/home-banner.jpg"
           width={782}
