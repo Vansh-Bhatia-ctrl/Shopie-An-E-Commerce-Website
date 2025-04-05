@@ -1,6 +1,10 @@
 "use client";
 
-import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  getIdToken,
+} from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "../lib/firebaseconfig";
 import { useRouter } from "next/navigation";
@@ -31,7 +35,14 @@ export default function Login() {
         password
       );
       const user = userCredential.user;
-      console.log("user signed in");
+      const idtoken = await getIdToken(user);
+      await fetch("/api/usertoken", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ idtoken }),
+        credentials: "include",
+      });
+      
       router.push("/");
     } catch (error) {
       console.error("Error sigining in", error.message);
@@ -45,7 +56,7 @@ export default function Login() {
       </div>
     );
   }
-  
+
   return (
     <>
       <div className="flex items-center justify-center mt-16">
