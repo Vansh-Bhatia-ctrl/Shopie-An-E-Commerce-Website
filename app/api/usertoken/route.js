@@ -17,6 +17,13 @@ export async function POST(req) {
       path: "/",
     });
 
+    cookieStore.set("uid", uid, {
+      httpOnly: false,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 60 * 60 * 24 * 2,
+      path: "/",
+    });
+
     return NextResponse.json({ message: "Cookie stored successfully", uid });
   } catch (error) {
     console.error("Error verifying ID token:", error);

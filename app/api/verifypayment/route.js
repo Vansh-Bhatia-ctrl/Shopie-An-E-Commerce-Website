@@ -30,6 +30,7 @@ export async function POST(request) {
           description: product.description,
           price: product.price,
           quantity: product.quantity || 1,
+          productId: product.id,
           createdAt: new Date(),
         });
       });

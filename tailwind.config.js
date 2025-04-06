@@ -70,7 +70,9 @@ export default {
   		},
   		fontSize: {
   			cmd: '15.9px',
-  			csm: '14.8px'
+  			csm: '14.8px',
+			omd: '19px',
+			o2md:'17px'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

@@ -50,7 +50,7 @@ export default function MyOrders() {
                 <div className="flex lg:flex-row flex-col lg:items-center gap-4">
                   <Link
                     href={`/myorders/${order.productId}`}
-                    className="flex items-center justify-center"
+                    className="flex"
                   >
                     <img
                       src={order.image}
