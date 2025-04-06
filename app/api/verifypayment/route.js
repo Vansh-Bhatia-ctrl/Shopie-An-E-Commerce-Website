@@ -15,11 +15,16 @@ export async function POST(request) {
 
     if (payment.status === "captured") {
       const batch = db.batch();
-      const userOrdersRef = db.collection("users").doc(uid).collection("orders");
-    
+      const userOrdersRef = db
+        .collection("users")
+        .doc(uid)
+        .collection("orders");
+
       storedProducts.forEach((product) => {
         const orderRef = userOrdersRef.doc();
+        const orderDocId = orderRef.id;
         batch.set(orderRef, {
+          firebaseOrderId: orderDocId,
           amount: payment.amount,
           id: payment.id,
           orderId: orderId,
@@ -34,7 +39,7 @@ export async function POST(request) {
           createdAt: new Date(),
         });
       });
-    
+
       await batch.commit();
     }
 
