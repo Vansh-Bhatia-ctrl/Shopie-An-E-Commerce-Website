@@ -18,17 +18,17 @@ export default async function ProductsPage({ params }) {
   return (
     <>
       <div className="flex flex-col md:flex-row w-full min-h-screen">
-        <div className="w-full md:w-[1000px] p-4">
+        <div className="w-full md:w-[700px] p-4 h-[700px]">
           <Image
             src={product_data.imageURL}
-            width={1000}
-            height={1000}
+            width={700}
+            height={700}
             alt="Product image"
             className="rounded-lg"
           />
         </div>
 
-        <div className="w-full md:w-1/2 p-6 flex flex-col justify-start bg-white">
+        <div className="w-full p-6 flex flex-col justify-start bg-white ">
           <h2 className="text-2xl font-bold text-gray-800">
             {product_data.productName}
           </h2>
@@ -50,17 +50,16 @@ export default async function ProductsPage({ params }) {
 
           <div className="flex gap-4 mt-6">
             <AddToCart item={product_data} />
-            {/*Client component as it required interactivity*/}
+            {/*Client components as it required interactivity*/}
             <BuyNow product={product_data} />
             <WishList item={product_data} />
           </div>
+        <div>
+          <div className="border-b-2 border-gray-300 my-6" />
+          <Reviews item={product_data} />
+        </div>
         </div>
       </div>
-
-      <div className="px-4">
-  <div className="border-b-2 border-gray-300 mx-4 my-6" />
-  <Reviews item={product_data} />
-</div>
     </>
   );
 }

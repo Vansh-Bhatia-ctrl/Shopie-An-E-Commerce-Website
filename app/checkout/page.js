@@ -259,7 +259,6 @@ export default function CheckoutPage() {
           </section>
 
           {/*Payment method section */}
-
           <div>
             <button
               className="bg-yellow-400 hover:bg-yellow-500 text-black p-2  rounded-lg font-semibold shadow-md transition w-[200px]"
@@ -268,6 +267,7 @@ export default function CheckoutPage() {
               Pay Now
             </button>
           </div>
+
         </div>
       </div>
     </>

@@ -42,33 +42,11 @@ export default function Reviews({ item }) {
           setReviews("");
         }}
       >
-        <textarea
-          type="text"
-          placeholder="Share your valuable review about our product..."
-          name="review"
-          value={reviews}
-          onChange={handleChange}
-          className="border-2 border-gray-300 rounded-lg p-2 mt-4 w-full h-44"
-          required
-        />
-        <button
-          type="submit"
-          disabled={postingReview}
-          className="w-[130px] mt-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 p-2 text-md font-semibold"
-        >
-          {postingReview ? (
-              <div className="flex justify-center items-center w-[130px] h-[30px]">
-              <div className="w-8 h-8 border-b-4 rounded-full border-yellow-300 animate-spin"></div>
-            </div>
-          ) : (
-            "Add review"
-          )}
-        </button>
         {fetchedReviews.length > 0 ? (
           fetchedReviews.map((review, index) => (
             <div
               key={`${review.productId}-${index}`}
-              className="flex flex-col p-4 rounded-md shadow-md mt-4"
+              className="flex flex-col p-4 rounded-md shadow-md mt-4 mb-4"
             >
               <div className="flex gap-1 mt-2">
                 <div className="border-2 rounded-full border-solid border-gray-600">
@@ -82,8 +60,33 @@ export default function Reviews({ item }) {
             </div>
           ))
         ) : (
-          <p className="text-center mt-4 text-lg font-semibold">No reviews yet.</p>
+          <p className="text-center mt-4 text-lg font-semibold">
+            No reviews yet.
+          </p>
         )}
+
+        <textarea
+          type="text"
+          placeholder="Share your valuable review about our product..."
+          name="review"
+          value={reviews}
+          onChange={handleChange}
+          className="border-2 border-gray-300 rounded-lg p-2 mt-4 w-full h-32"
+          required
+        />
+        <button
+          type="submit"
+          disabled={postingReview}
+          className="w-[130px] mt-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 p-2 text-md font-semibold"
+        >
+          {postingReview ? (
+            <div className="flex justify-center items-center w-[130px] h-[30px]">
+              <div className="w-8 h-8 border-b-4 rounded-full border-yellow-300 animate-spin"></div>
+            </div>
+          ) : (
+            "Add review"
+          )}
+        </button>
       </form>
     </>
   );

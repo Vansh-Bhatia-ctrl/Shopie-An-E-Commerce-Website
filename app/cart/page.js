@@ -40,7 +40,9 @@ export default function Cart() {
   if (user === null) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <p className="text-lg font-semibold">Please log in to view your cart.</p>
+        <p className="text-lg font-semibold">
+          Please log in to view your cart.
+        </p>
       </div>
     );
   }
@@ -54,7 +56,7 @@ export default function Cart() {
       </div>
 
       <div className="flex-1 flex flex-col items-center gap-4 mt-3 mb-20">
-        {cartItems.length > 0? (
+        {cartItems.length > 0 ? (
           cartItems.map((item) => (
             <div
               key={item.id}
@@ -77,7 +79,7 @@ export default function Cart() {
                 </p>
                 <p className="text-cmd font-bold text-red-600 mt-4">
                   {"\u20B9"}
-                  {item.price}
+                  {item.price * item.quantity}
                 </p>
 
                 <div className="flex items-center gap-2 mt-4 md:justify-end">
