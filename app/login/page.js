@@ -19,6 +19,7 @@ export default function Login() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   const [error, setError] = useState(false);
+  const [isLogingIn, setIsLoginingIn] = useState(false);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -29,6 +30,7 @@ export default function Login() {
   }, []);
 
   async function handleSignIn(e) {
+    setIsLoginingIn(true);
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(
@@ -44,10 +46,11 @@ export default function Login() {
         body: JSON.stringify({ idtoken }),
         credentials: "include",
       });
-
+      setIsLoginingIn(false);
       router.push("/");
     } catch (error) {
       setError(true);
+      setIsLoginingIn(false);
       setTimeout(() => setError(false), 4000);
     }
   }
@@ -101,9 +104,15 @@ export default function Login() {
               </div>
               <button
                 type="submit"
-                className="w-[306px] p-2 bg-yellow-400 hover:bg-yellow-500 rounded-lg"
+                className="w-[306px] p-2 bg-yellow-400 hover:bg-yellow-500 rounded-lg flex items-center justify-center"
               >
-                Sign-in
+                 {isLogingIn ? (
+                <div className="flex justify-center items-center w-[130px] h-[24px]">
+                  <div className="w-8 h-8 border-b-4 rounded-full border-yellow-600 animate-spin"></div>
+                </div>
+              ) : (
+                "Sign In"
+              )}
               </button>
               <div className="flex gap-2 md:">
                 <p>Don't have an account?</p>

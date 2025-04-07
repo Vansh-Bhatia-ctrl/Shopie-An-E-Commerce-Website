@@ -1,4 +1,4 @@
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle } from 'lucide-react';
 
 export default function SignUpError() {
   return (
@@ -6,7 +6,7 @@ export default function SignUpError() {
       <div className="flex items-center bg-red-600 max-w-md w-full rounded-lg px-4 py-3 shadow-lg gap-3">
         <AlertTriangle className="text-white w-6 h-6" />
         <p className="text-white text-sm sm:text-base font-semibold">
-          There was an error loging-in. Please try again.
+          There was an error signing up. Please try again later.
         </p>
       </div>
     </div>
