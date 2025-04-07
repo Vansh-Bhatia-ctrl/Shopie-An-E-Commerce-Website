@@ -4,7 +4,7 @@ import BannerImages from "./components/BannerImages";
 export default function Home() {
   return (
     <>
-    <BannerImages />
+      <BannerImages />
 
       <div className="overflow-hidden">
         <Categories />
@@ -20,9 +20,7 @@ export default function Home() {
         />
       </div>
 
-
- 
-
+    
     </>
   );
 }

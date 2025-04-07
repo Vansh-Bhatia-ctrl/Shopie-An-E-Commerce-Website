@@ -10,6 +10,7 @@ import { auth } from "../lib/firebaseconfig";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import SignInError from "../components/SigninError";
 
 export default function Login() {
   const router = useRouter();
@@ -17,6 +18,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
+  const [error, setError] = useState(false);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -42,10 +44,11 @@ export default function Login() {
         body: JSON.stringify({ idtoken }),
         credentials: "include",
       });
-      
+
       router.push("/");
     } catch (error) {
-      console.error("Error sigining in", error.message);
+      setError(true);
+      setTimeout(() => setError(false), 4000);
     }
   }
 
@@ -114,6 +117,7 @@ export default function Login() {
           </div>
         </div>
       </div>
+      {error && <SignInError />}
     </>
   );
 }
