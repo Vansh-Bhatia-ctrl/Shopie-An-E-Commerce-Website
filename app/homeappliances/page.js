@@ -35,7 +35,7 @@ export default async function HomeAppliances() {
                 width={300}
                 height={300}
                 alt="Product image"
-                className="rounded-lg md:w-full md:h-[150px] lg:w-full lg:h-[300px] cursor-pointer"
+                className="rounded-lg md:w-full md:h-[150px] lg:w-full lg:h-[300px] cursor-pointer xl:w-[400px]"
               />
             </Link>
             <div className="flex-grow">

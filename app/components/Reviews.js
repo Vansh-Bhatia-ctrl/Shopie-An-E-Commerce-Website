@@ -6,7 +6,7 @@ import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../lib/firebaseconfig";
 
 export default function Reviews({ item }) {
-  const { addReview } = useContext(CartContext);
+  const { addReview, postingReview } = useContext(CartContext);
   const [reviews, setReviews] = useState("");
   const [fetchedReviews, setFetchedReviews] = useState([]);
 
@@ -35,7 +35,12 @@ export default function Reviews({ item }) {
         <p className="border-b-2 text-xl">Reviews</p>
       </div>
 
-      <form onSubmit={(event) => addReview(event, item)}>
+      <form
+        onSubmit={(event) => {
+          addReview(event, item);
+          setReviews("");
+        }}
+      >
         <textarea
           type="text"
           placeholder="Add a review..."
@@ -43,12 +48,20 @@ export default function Reviews({ item }) {
           value={reviews}
           onChange={handleChange}
           className="border-2 border-gray-300 rounded-lg p-2 mt-4 w-full"
+          required
         />
         <button
           type="submit"
+          disabled={postingReview}
           className="w-[400px] mt-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 p-4"
         >
-          Add review
+          {postingReview ? (
+            <div className="flex justify-center items-center">
+              <div className="w-8 h-8 border-b-4 rounded-full border-yellow-300 animate-spin"></div>
+            </div>
+          ) : (
+            "Add review"
+          )}
         </button>
         {fetchedReviews.length > 0 ? (
           fetchedReviews.map((review, index) => (
