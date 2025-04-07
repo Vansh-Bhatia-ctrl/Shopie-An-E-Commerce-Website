@@ -220,6 +220,7 @@ export function CartProvider({ children }) {
     const user = auth.currentUser;
     if (!user) {
       alert("You must be signed in to add reviews");
+      setPostingReview(false);
       return;
     }
     const uid = user.uid;
