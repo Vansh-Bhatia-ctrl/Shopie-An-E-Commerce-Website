@@ -54,10 +54,13 @@ export default async function ProductsPage({ params }) {
             <BuyNow product={product_data} />
             <WishList item={product_data} />
           </div>
-
-          <Reviews item={product_data} />
         </div>
       </div>
+
+      <div className="px-4">
+  <div className="border-b-2 border-gray-300 mx-4 my-6" />
+  <Reviews item={product_data} />
+</div>
     </>
   );
 }

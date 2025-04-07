@@ -33,7 +33,7 @@ export default function Reviews({ item }) {
   return (
     <>
       <div className="flex gap-4 mt-6">
-        <p className="border-b-2 text-xl">Reviews</p>
+        <p className="border-b-2 text-xl font-bold">Reviews</p>
       </div>
 
       <form
@@ -82,7 +82,7 @@ export default function Reviews({ item }) {
             </div>
           ))
         ) : (
-          <p>No reviews yet.</p>
+          <p className="text-center mt-4 text-lg font-semibold">No reviews yet.</p>
         )}
       </form>
     </>
