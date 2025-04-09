@@ -14,6 +14,13 @@ export default function CheckoutPage() {
   const [shipAddress, setShipAddress] = useState("");
   const [landmark, setLandmark] = useState("");
   const [pincode, setPincode] = useState("");
+  const [error, setError] = useState(false);
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
+  const [addressError, setAddressError] = useState(false);
+  const [landmarkError, setLandmarkError] = useState(false);
+  const [pincodeError, setPincodeError] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1000);
@@ -47,6 +54,49 @@ export default function CheckoutPage() {
   async function handlePayment() {
     const user = auth.currentUser;
     const uid = user.uid;
+
+    if (name.trim() === "") {
+      setNameError(true);
+      return;
+    } else {
+      setNameError(false);
+    }
+
+    if (email.trim() === "") {
+      setEmailError(true);
+      return;
+    } else {
+      setEmailError(false);
+    }
+
+    if (phone.trim() === "") {
+      setPhoneError(true);
+      return;
+    } else {
+      setPhoneError(false);
+    }
+
+    if (shipAddress.trim() === "") {
+      setAddressError(true);
+      return;
+    } else {
+      setAddressError(false);
+    }
+
+    if (landmark.trim() === "") {
+      setLandmarkError(true);
+      return;
+    } else {
+      setLandmarkError(false);
+    }
+
+    if (pincode.trim() === "") {
+      setPincodeError(true);
+      return;
+    } else {
+      setPincodeError(false);
+    }
+
     try {
       const response = await fetch("/api/razorpay", {
         method: "POST",
@@ -173,27 +223,41 @@ export default function CheckoutPage() {
                 <input
                   id="name"
                   type="text"
-                  placeholder="Enter Address."
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Enter Name"
+                  className={`${
+                    nameError ? "border-2 border-red-500" : ""
+                  } w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
                 />
+                {nameError && (
+                  <p className="text-red-400 h-[3px] mb-[30px]">
+                    Please enter your name.
+                  </p>
+                )}
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-1 mt-6"
                 >
-                  Email
+                  Email Address
                 </label>
                 <input
                   id="email"
-                  type="text"
-                  placeholder="Enter Address."
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="email"
+                  placeholder="Enter Email Address"
+                  className={`${
+                    emailError ? "border-2 border-red-500" : ""
+                  } w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
+                {emailError && (
+                  <p className="text-red-400 h-[3px] mb-[30px]">
+                    Please enter your email-Id.
+                  </p>
+                )}
                 <label
                   htmlFor="phoneNumber"
                   className="block text-sm font-medium text-gray-700 mb-1 mt-6"
@@ -202,13 +266,20 @@ export default function CheckoutPage() {
                 </label>
                 <input
                   id="phoneNumber"
-                  type="text"
-                  placeholder="Enter Address."
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="number"
+                  placeholder="Enter Phone Number"
+                  className={`${
+                    phoneError ? "border-2 border-red-500" : ""
+                  } w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   required
                 />
+                {phoneError && (
+                  <p className="text-red-400 h-[3px] mb-[30px]">
+                    Please enter your phone number.
+                  </p>
+                )}
                 <label
                   htmlFor="address"
                   className="block text-sm font-medium text-gray-700 mb-1 mt-6"
@@ -218,12 +289,19 @@ export default function CheckoutPage() {
                 <input
                   id="address"
                   type="text"
-                  placeholder="Enter Address."
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Enter Address"
+                  className={`${
+                    addressError ? "border-2 border-red-500" : ""
+                  } w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   value={shipAddress}
                   onChange={(e) => setShipAddress(e.target.value)}
                   required
                 />
+                {addressError && (
+                  <p className="text-red-400 h-[3px] mb-[30px]">
+                    Please enter your shipping address.
+                  </p>
+                )}
                 <label
                   htmlFor="streetName"
                   className="block text-sm font-medium text-gray-700 mb-1 mt-6"
@@ -233,12 +311,19 @@ export default function CheckoutPage() {
                 <input
                   id="streetName"
                   type="text"
-                  placeholder="Enter Street name/ Landmark."
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Enter Street name/ Landmark"
+                  className={`${
+                    landmarkError ? "border-2 border-red-500" : ""
+                  } w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   value={landmark}
                   onChange={(e) => setLandmark(e.target.value)}
                   required
                 />
+                {landmarkError && (
+                  <p className="text-red-400 h-[3px] mb-[30px]">
+                    Please enter your landmark.
+                  </p>
+                )}
                 <label
                   htmlFor="pincode"
                   className="block text-sm font-medium text-gray-700 mb-1 mt-6"
@@ -247,13 +332,20 @@ export default function CheckoutPage() {
                 </label>
                 <input
                   id="pincode"
-                  type="text"
-                  placeholder="Enter Pincode."
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="number"
+                  placeholder="Enter Pincode"
+                  className={`${
+                    pincodeError ? "border-2 border-red-500" : ""
+                  } w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   value={pincode}
                   onChange={(e) => setPincode(e.target.value)}
                   required
                 />
+                {pincodeError && (
+                  <p className="text-red-400 h-[3px] mb-[30px]">
+                    Please enter your pincode.
+                  </p>
+                )}
               </form>
             </div>
           </section>
@@ -267,7 +359,6 @@ export default function CheckoutPage() {
               Pay Now
             </button>
           </div>
-
         </div>
       </div>
     </>

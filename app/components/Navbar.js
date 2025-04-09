@@ -37,7 +37,7 @@ export default function Navbar() {
         <Link
           href="/homeappliances"
           className={`${
-            pathname === "/homeappliances"
+            pathname.startsWith("/homeappliances")
               ? "text-blue-600 font-semibold"
               : "font-semibold"
           } hover:text-blue-600`}
