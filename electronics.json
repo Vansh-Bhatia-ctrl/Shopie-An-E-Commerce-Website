@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Smart-TV",
+    "image": "/television.jpg",
+    "brand": "Sony",
+    "description": "Ultra HD 4K Smart LED TV – Cinematic Viewing Meets Smart Technology",
+    "detailed_desc": "Upgrade your entertainment setup with this 55-inch Ultra HD 4K Smart LED TV from Sony, crafted for stunning visuals, seamless connectivity, and immersive audio. Featuring Sony’s X1 4K Processor and Dolby Vision, this smart TV delivers incredible clarity, rich contrast, and lifelike colors. The Google TV interface offers access to your favorite streaming apps, voice control, and personalized content suggestions.",
+    "key_feat": [
+      "✅ 55-inch Ultra HD 4K Display – Crystal-clear resolution with vibrant, true-to-life colors",
+      "✅ Sony X1 4K Processor – Advanced processing for enhanced detail and contrast",
+      "✅ Dolby Vision & HDR10 – Superior picture quality with cinematic brightness and depth",
+      "✅ Smart Google TV OS – Seamless access to Netflix, YouTube, Disney+, and more",
+      "✅ Built-in Voice Assistant – Hands-free control with Google Assistant and Alexa",
+      "✅ Slim Bezel & Premium Finish – Modern, sleek design that elevates your living space",
+      "✅ Multiple HDMI & USB Ports – Connect gaming consoles, speakers, and media devices easily",
+
+      "Stylish, powerful, and future-ready, this Smart LED TV is your gateway to next-gen home entertainment. Order now and enjoy free shipping, fast delivery, and hassle-free returns! 📦🎉"
+    ],
+    "price": 45000
+  },
+  {
+    "id": 2,
+    "name": "Air-Conditioner",
+    "image": "/ac.jpg",
+    "brand": "Samsung",
+    "description": "Smart Inverter Split AC – Powerful Cooling with Energy Efficiency",
+    "detailed_desc": "Beat the heat in style with this 1.5 Ton Smart Inverter Split Air Conditioner, designed for superior cooling performance, energy savings, and quiet operation. Equipped with a dual inverter compressor and AI-powered auto-adjustment, it delivers fast and consistent cooling while reducing electricity consumption. Its sleek, minimalist design adds a touch of sophistication to any room.",
+    "key_feat": [
+      "✅ 1.5 Ton Capacity – Ideal for medium-sized rooms up to 180 sq. ft.",
+      "✅ Dual Inverter Compressor – Faster cooling with reduced noise and energy consumption",
+      "✅ AI+ Smart Cooling – Automatically adjusts performance based on room conditions",
+      "✅ 4-Way Air Swing – Ensures uniform airflow across the room",
+      "✅ HD Filter with Anti-Virus Protection – Cleaner, healthier air every day",
+      "✅ Wi-Fi Enabled & Smart App Control – Operate from anywhere using your smartphone",
+      "✅ Stabilizer-Free Operation – Protects the AC from voltage fluctuations",
+
+      "Efficient, elegant, and built for modern homes, this AC is the perfect solution to keep you cool all summer long. Order now and enjoy quick installation, free delivery, and peace of mind with warranty coverage! ❄️📦"
+    ],
+    "price": 40000
+  },
+  {
+    "id": 3,
+    "name": "Laptop",
+    "image": "/laptop.jpg",
+    "brand": "Apple",
+    "description": "Powerful All-Purpose Laptop – Sleek Design Meets Unmatched Performance",
+    "detailed_desc": "Elevate your productivity, creativity, and entertainment with this 15.6-inch Full HD Laptop powered by the latest Intel Core i7 processor and 16GB RAM. Designed for professionals, students, and casual users alike, it offers lightning-fast performance, ample storage, and an immersive visual experience. Whether you're multitasking, editing videos, or gaming, this laptop handles it all with ease.",
+    "key_feat": [
+      "✅ Intel Core i7 13th Gen Processor – Blazing-fast performance for demanding tasks",
+      "✅ 16GB DDR4 RAM – Smooth multitasking across multiple apps and tabs",
+      "✅ 512GB SSD Storage – Quick boot times and ample space for your files",
+      "✅ 15.6-inch Full HD IPS Display – Vibrant colors and sharp visuals from any angle",
+      "✅ Backlit Keyboard – Work comfortably even in low-light conditions",
+      "✅ Integrated Intel Iris Xe Graphics – Enhanced visuals for casual gaming and design",
+      "✅ Windows 11 Pre-installed – Modern interface with enhanced productivity features",
+
+      "Stylish, lightweight, and loaded with features, this laptop is your perfect companion for work, play, and everything in between. Order now to enjoy free shipping, fast delivery, and premium after-sales support! 💻🚚"
+    ],
+    "price": 64500
+  },
+  {
+    "id": 4,
+    "name": "Speaker",
+    "image": "/speaker.jpg",
+    "brand": "Bose",
+    "description": "Portable Bluetooth Speaker – Bold Sound, Compact Design",
+    "detailed_desc": "Bring the party wherever you go with this premium Portable Bluetooth Speaker, engineered for powerful sound, deep bass, and all-day battery life. With a rugged build and splash-proof design, it's perfect for indoor vibes or outdoor adventures. Pair seamlessly with your smartphone or laptop and enjoy crisp, immersive audio anytime, anywhere.",
+    "key_feat": [
+      "✅ Powerful 20W Output – Crystal-clear sound with punchy bass",
+      "✅ Bluetooth 5.3 Connectivity – Fast pairing with strong, stable signal",
+      "✅ 12-Hour Playtime – Non-stop music for your day or night",
+      "✅ IPX7 Waterproof Rating – Safe from spills, splashes, and rain",
+      "✅ Built-in Microphone – Hands-free calling and voice assistant support",
+      "✅ Compact & Lightweight – Easy to carry, fits in your backpack or tote",
+      "✅ Dual Pairing Mode – Connect two speakers for true stereo sound",
+
+      "Stylish, durable, and packed with sound, this speaker is your go-to for music on the move. Order now and get free delivery, quick setup, and non-stop vibes wherever you are! 🔊🎶"
+    ],
+    "price": 15499
+  },
+  {
+    "id": 5,
+    "name": "Smart Phone",
+    "image": "/phone.jpg",
+    "brand": "Apple",
+    "description": "Next-Gen 5G Smartphone – Power, Style & Innovation in Your Palm",
+    "detailed_desc": "Experience the future of mobile technology with this flagship 5G Smartphone featuring a stunning AMOLED display, pro-grade triple camera setup, and lightning-fast performance. Powered by the latest Snapdragon processor and backed by a long-lasting battery, it’s designed to keep up with your lifestyle—whether you're gaming, streaming, snapping photos, or multitasking on the go.",
+    "key_feat": [
+      "✅ 6.7-inch AMOLED Display – Ultra-smooth 120Hz refresh rate with vibrant visuals",
+      "✅ Snapdragon 8 Gen 2 Processor – Blazing-fast performance for gaming and multitasking",
+      "✅ 50MP Triple Camera Setup – Capture pro-level photos and 4K videos effortlessly",
+      "✅ 32MP Front Camera – Stunning selfies with AI enhancements",
+      "✅ 5000mAh Battery with 65W Fast Charging – All-day power in just minutes",
+      "✅ 5G Connectivity – Super-fast downloads and ultra-low latency",
+      "✅ In-display Fingerprint Sensor – Quick, secure unlocking at your fingertips",
+
+      "Sleek, powerful, and crafted for the modern user, this smartphone redefines mobile excellence. Order today and enjoy free shipping, exclusive offers, and priority delivery! 📱🚀"
+    ],
+    "price": 85000
+  }
+]

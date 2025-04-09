@@ -5,7 +5,6 @@ import Link from "next/link";
 import AddToCart from "../components/AddToCart";
 
 const playfair = Playfair_Display({ subsets: ["latin"], weight: "400" });
-const merriweather = Merriweather({ subsets: ["latin"], weight: "400" });
 
 const getProducts = async () => {
   const dataSnapshot = await db.collection("products").get();
@@ -19,7 +18,7 @@ export default async function SkinCareAppliances() {
     <>
    <div className="flex flex-col items-center pt-4">
         <div className="inline-block border-b-4">
-          <h1 className="text-2xl font-semibold">Shop for Skin Care</h1>
+          <h1 className="text-2xl font-semibold">Shop for Electronics</h1>
         </div>
       </div>
 

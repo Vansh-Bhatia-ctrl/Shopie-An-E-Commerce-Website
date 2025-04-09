@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6 text-cmd lg:mt-2">
           <CartIcon />
           <UserIcon />
-          <Link href="">About us</Link>
+          <Link href="/aboutus" className="font-semibold">About us</Link>
         </div>
       </header>
 
@@ -45,14 +45,14 @@ export default function Navbar() {
           Home appliances
         </Link>
         <Link
-          href="/kitchen"
+          href="/electronics"
           className={`${
-            pathname === "/kitchen"
+            pathname === "/electronics"
               ? "text-blue-600 font-semibold"
               : "font-semibold"
           } hover:text-blue-600`}
         >
-          Kitchen
+          Electronics
         </Link>
         <Link
           href="/fashion"
