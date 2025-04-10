@@ -23,7 +23,7 @@
     "id": 2,
     "name": "Air-Conditioner",
     "image": "/ac.jpg",
-    "brand": "Samsung",
+    "brand": "Danby",
     "description": "Smart Inverter Split AC – Powerful Cooling with Energy Efficiency",
     "detailed_desc": "Beat the heat in style with this 1.5 Ton Smart Inverter Split Air Conditioner, designed for superior cooling performance, energy savings, and quiet operation. Equipped with a dual inverter compressor and AI-powered auto-adjustment, it delivers fast and consistent cooling while reducing electricity consumption. Its sleek, minimalist design adds a touch of sophistication to any room.",
     "key_feat": [
@@ -82,7 +82,7 @@
   {
     "id": 5,
     "name": "Smart Phone",
-    "image": "/phone.jpg",
+    "image": "/iphone.jpg",
     "brand": "Apple",
     "description": "Next-Gen 5G Smartphone – Power, Style & Innovation in Your Palm",
     "detailed_desc": "Experience the future of mobile technology with this flagship 5G Smartphone featuring a stunning AMOLED display, pro-grade triple camera setup, and lightning-fast performance. Powered by the latest Snapdragon processor and backed by a long-lasting battery, it’s designed to keep up with your lifestyle—whether you're gaming, streaming, snapping photos, or multitasking on the go.",
@@ -98,5 +98,105 @@
       "Sleek, powerful, and crafted for the modern user, this smartphone redefines mobile excellence. Order today and enjoy free shipping, exclusive offers, and priority delivery! 📱🚀"
     ],
     "price": 85000
+  },
+  {
+    "id": 6,
+    "name": "DSLR Camera",
+    "image": "/camera.jpg",
+    "brand": "Canon",
+    "description": "Pro DSLR Camera – Precision, Power & Creativity in Your Hands",
+    "detailed_desc": "Unleash your inner photographer with this advanced DSLR Camera built for both professionals and enthusiasts. Featuring a high-resolution 32.5MP APS-C sensor, 4K video recording, and ultra-fast autofocus, it delivers exceptional image quality and performance. Whether you're capturing fast-paced action, low-light scenes, or cinematic videos, this camera adapts to your creative needs with ease. Compact, rugged, and Wi-Fi enabled, it's your perfect companion for every adventure.",
+    "key_feat": [
+      "✅ 32.5MP APS-C CMOS Sensor – High-resolution photography with incredible detail",
+      "✅ Dual Pixel Autofocus – Fast and accurate focus for stills and video",
+      "✅ 4K UHD Video Recording – Shoot stunning cinematic videos at 30fps",
+      "✅ Vari-Angle Touchscreen LCD – Intuitive control with flexible shooting angles",
+      "✅ ISO Range 100-51200 – Capture brilliant shots even in low light",
+      "✅ Built-in Wi-Fi & Bluetooth – Easy sharing and remote control with your devices",
+      "✅ Rugged Weather-Sealed Body – Durable design for outdoor photography",
+
+      "Perfect for travelers, vloggers, and creatives alike, this DSLR is your ticket to mastering the art of visual storytelling. Order now to elevate your photography game! 📸✨"
+    ],
+    "price": 45000
+  },
+  {
+    "id": 7,
+    "name": "Headphones",
+    "image": "/jblHeadphones.jpg",
+    "brand": "JBL",
+    "description": "Next-Gen Wireless Headphones – Immersive Sound, All-Day Comfort",
+    "detailed_desc": "Step into a world of crystal-clear audio with these premium wireless headphones designed for music lovers, gamers, and professionals alike. Featuring cutting-edge Active Noise Cancellation, powerful 40mm drivers, and ultra-low latency, they deliver deep bass, crisp highs, and everything in between. With a plush over-ear design and up to 40 hours of playtime, you'll enjoy unmatched comfort and uninterrupted sound—whether you're commuting, working, or relaxing at home.",
+    "key_feat": [
+      "✅ Active Noise Cancellation (ANC) – Block out distractions and focus on pure sound",
+      "✅ 40mm Dynamic Drivers – Rich, immersive audio with deep bass and sharp clarity",
+      "✅ Up to 40 Hours Battery Life – Enjoy days of wireless playback on a single charge",
+      "✅ Bluetooth 5.3 – Fast, stable connection with ultra-low latency",
+      "✅ Comfortable Over-Ear Design – Plush memory foam cushions for extended wear",
+      "✅ Built-in Mic with ENC – Clear voice calls and virtual meetings, anywhere",
+      "✅ Foldable & Travel-Friendly – Compact design with carry case included",
+
+      "Where style meets performance—these headphones are engineered for those who demand the best in sound and comfort. Grab yours today and enjoy free shipping and exclusive launch offers! 🎧🔥"
+    ],
+    "price": 32000
+  },
+  {
+    "id": 8,
+    "name": "Home Threater",
+    "image": "/homethreater.jpg",
+    "brand": "Boat",
+    "description": "Cinematic Home Theater System – Elevate Your Living Room Experience",
+    "detailed_desc": "Transform your living space into a full-fledged cinema with this powerful home theater system. Featuring a 5.1 surround sound setup, 4K pass-through, and Bluetooth connectivity, it delivers breathtaking audio and visual immersion for movies, games, sports, and music. Whether you're watching a blockbuster or hosting a party, this system surrounds you with deep bass, crisp dialogue, and room-filling sound—making every moment unforgettable.",
+    "key_feat": [
+      "✅ 5.1 Channel Surround Sound – Immersive audio experience with rear satellite speakers",
+      "✅ 1000W Peak Output – Thunderous sound with rich bass and crystal-clear highs",
+      "✅ Dolby Digital & DTS Support – Cinematic sound precision in every scene",
+      "✅ 4K Ultra HD Pass-Through – Stunning visuals with zero quality loss",
+      "✅ Bluetooth & HDMI ARC – Seamless connectivity with TVs, phones, and consoles",
+      "✅ Stylish Wireless Subwoofer – Deep, booming bass without cable clutter",
+      "✅ Easy Setup with Remote Control – Plug-and-play with intuitive operation",
+
+      "Bring movies to life and feel every beat—this home theater system redefines home entertainment. Order now and enjoy free shipping, installation support, and limited-time offers! 🎬🔊"
+    ],
+    "price": 42633
+  },
+  {
+    "id": 9,
+    "name": "Samsung Tablet",
+    "image": "/tablet.jpg",
+    "brand": "Samsung",
+    "description": "Ultra-Slim Tablet – Power, Portability & Performance Redefined",
+    "detailed_desc": "Experience next-level productivity and entertainment with this ultra-slim tablet, engineered for seamless multitasking and immersive visuals. Equipped with a stunning 11-inch 2K display, an octa-core processor, and long battery life, it’s perfect for work, streaming, gaming, or sketching on the go. With support for a smart stylus and detachable keyboard, this tablet adapts to your lifestyle—whether you're in the office, at home, or on the move.",
+    "key_feat": [
+      "✅ 11-inch 2K IPS Display – Vivid colors and sharp clarity for all your content",
+      "✅ Octa-Core Processor – Smooth performance for apps, games, and multitasking",
+      "✅ 8GB RAM + 128GB Storage – Ample space and speed for everything you need",
+      "✅ 13MP Rear + 8MP Front Camera – Capture memories and join crystal-clear video calls",
+      "✅ 7500mAh Battery – All-day power with fast USB-C charging",
+      "✅ Stylus & Keyboard Support – Turn your tablet into a productivity powerhouse",
+      "✅ Slim Metal Body – Sleek, premium design that’s lightweight and durable",
+
+      "Versatile, stylish, and powerful—this tablet is your ultimate everyday companion. Order now and enjoy free shipping, launch-day offers, and bonus accessories! 💻✨"
+    ],
+    "price": 76499
+  },
+  {
+    "id": 10,
+    "name": "Smart Watch",
+    "image": "/samsungwatch.jpg",
+    "brand": "Samsung",
+    "description": "Smartwatch – Style Meets Smart Living on Your Wrist",
+    "detailed_desc": "Stay connected, active, and ahead of your goals with this stylish and feature-packed smartwatch. Boasting a vibrant AMOLED display, advanced health tracking, and up to 14 days of battery life, it’s designed to keep up with your lifestyle. From monitoring your heart rate and sleep to receiving calls, texts, and app notifications on the go—this smartwatch is your personal assistant, fitness coach, and timekeeper all in one.",
+    "key_feat": [
+      "✅ 1.43-inch AMOLED Display – Always-on, ultra-bright screen for clear visibility",
+      "✅ Heart Rate, SpO2 & Sleep Monitoring – Advanced health tracking at your fingertips",
+      "✅ Built-in GPS & Workout Modes – Accurate tracking for running, cycling, and more",
+      "✅ Call, Text & App Notifications – Stay updated without reaching for your phone",
+      "✅ 5ATM Water Resistance – Swim-proof and shower-friendly",
+      "✅ Up to 14 Days Battery Life – Power that lasts, even with daily use",
+      "✅ Customizable Watch Faces – Match your mood, style, or activity",
+
+      "From fitness to fashion, this smartwatch elevates your everyday. Order now and enjoy exclusive discounts, fast delivery, and a free extra strap! ⌚🔥"
+    ],
+    "price": 76499
   }
 ]
