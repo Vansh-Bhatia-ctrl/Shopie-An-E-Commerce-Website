@@ -4,9 +4,10 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const { uid, id, name, description, price, image } = await request.json();
+    const { uid, id, name, description, price, image, route } =
+      await request.json();
 
-    if (!uid || !id || !name || !description || !price || !image) {
+    if (!uid || !id || !name || !description || !price || !image || !route) {
       return NextResponse.json({ error: "Invalid request" }, { status: 400 });
     }
 
@@ -16,6 +17,7 @@ export async function POST(request) {
       name: name,
       description: description,
       price: price,
+      route: route,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 

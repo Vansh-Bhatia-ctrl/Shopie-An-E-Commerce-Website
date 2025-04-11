@@ -1,0 +1,371 @@
+[
+  {
+    "id": "41",
+    "name": "Plays Station 5",
+    "image": "/playstation.jpg",
+    "brand": "Sony",
+    "description": "PlayStation Console – Next-Level Gaming Performance & Immersion",
+    "detailed_desc": "Step into the future of gaming with the PlayStation console, delivering lightning-fast load times, stunning graphics, and ultra-immersive gameplay. With a powerful custom processor, advanced graphics engine, and a vast library of exclusive titles, PlayStation is built for gamers who want performance, realism, and unforgettable adventures. Perfect for solo campaigns, online battles, or local multiplayer fun.",
+    "key_feat": [
+      "✅ Ultra-Fast SSD – Minimal load times for seamless gameplay",
+      "✅ Ray Tracing & 4K Graphics – Breathtaking visuals with lifelike detail",
+      "✅ DualSense Controller – Adaptive triggers and haptic feedback for immersive play",
+      "✅ Backward Compatibility – Play thousands of PS4 games",
+      "✅ Expansive Game Library – Access exclusive hits and popular third-party titles",
+      "✅ Online Multiplayer & Streaming – Join friends and stream gameplay with ease",
+
+      "Level up your gaming world with the PlayStation experience. Order now for fast delivery & limited-time offers! 🎮⚡"
+    ],
+    "price": 55000,
+    "route": "gaming"
+  },
+  {
+    "id": "42",
+    "name": "DualSense Wireless Controller",
+    "image": "/dualshock.jpg",
+    "description": "Next-Gen Wireless Controller for PlayStation 5 – Immersive Haptics & Adaptive Triggers",
+    "detailed_desc": "Experience a deeper, highly immersive gaming experience with the innovative new PS5 controller, featuring haptic feedback and dynamic adaptive triggers. The DualSense Wireless Controller brings gaming worlds to life with responsive tactile sensations, a built-in microphone, and a comfortable, ergonomic design. It’s more than just a controller—it’s your gateway to next-gen play.",
+    "key_feat": [
+      "✅ Haptic Feedback – Feel the impact and effects of your in-game actions",
+      "✅ Adaptive Triggers – Varying force and tension for realistic gameplay",
+      "✅ Built-in Microphone & Headset Jack – Talk with friends online easily",
+      "✅ Iconic Comfortable Design – Enhanced grip and intuitive layout",
+      "✅ USB-C Charging – Faster and more efficient power-up",
+      "✅ Compatible with PS5 & PC – Versatile and seamless connectivity",
+      "Take full control and elevate your gaming with the DualSense experience. Grab yours today!"
+    ],
+    "price": 6499,
+    "route": "gaming"
+  },
+  {
+    "id": "43",
+    "name": "Zebronics Gaming Headphones",
+    "image": "/zebronicsheadphones.jpg",
+    "description": "Immersive Wired Gaming Headphones with RGB Lights & Boom Mic",
+    "detailed_desc": "Level up your gameplay with Zebronics Zeb-Rush wired gaming headphones designed for comfort, clarity, and powerful audio. Experience immersive sound with 40mm drivers, vibrant RGB lighting, and a noise-isolating boom microphone—perfect for voice chats, competitive sessions, and long gaming marathons. Built to win and styled to flex.",
+    "key_feat": [
+      "✅ 40mm Neodymium Drivers – Crisp, powerful sound for immersive gameplay",
+      "✅ RGB Lighting – Stylish RGB effects for your gaming vibe",
+      "✅ Boom Microphone – Noise-isolating mic for clear communication",
+      "✅ Soft Cushion Earcups – Enhanced comfort for long sessions",
+      "✅ Adjustable Headband – Flexible fit for all head sizes",
+      "✅ Multi-Platform Support – Compatible with PC, PS5, Xbox, and mobiles",
+      "Dominate the battlefield with the Zeb-Rush headset. Get yours now!"
+    ],
+    "price": 4799,
+    "route": "gaming"
+  },
+  {
+    "id": "44",
+    "name": "Logitech Gaming keyboard",
+    "image": "/gamingkeyboard.jpg",
+    "brand": "Logitech",
+    "description": "Performance-Tuned Gaming Keyboard with RGB Lighting & Media Controls",
+    "detailed_desc": "Take your gaming and productivity to the next level with the Logitech G213 Prodigy. Designed for gamers who demand precision, durability, and style, it features tactile Mech-Dome keys, customizable RGB lighting, and integrated media controls. Whether you're battling online or working late, the G213 is your perfect companion.",
+    "key_feat": [
+      "✅ Mech-Dome Keys – Responsive keys for fast, accurate typing and gaming",
+      "✅ RGB Backlighting – Customize lighting across 5 zones with up to 16.8 million colors",
+      "✅ Spill-Resistant Design – Durable build to withstand accidental spills",
+      "✅ Integrated Palm Rest – Game longer with improved ergonomic comfort",
+      "✅ Dedicated Media Controls – Easily play, pause, and adjust volume without leaving your game",
+      "✅ Logitech G HUB Support – Personalize settings and lighting easily",
+      "Upgrade your setup with the Logitech G213. Style meets performance!"
+    ],
+    "price": 4499,
+    "route": "gaming"
+  },
+  {
+    "id": "45",
+    "name": "Redragon M602 Mouse",
+    "image": "/gamingmouse.jpg",
+    "brand": "Redragon",
+    "description": "Ergonomic RGB Gaming Mouse for Precision & Comfort",
+    "detailed_desc": "The Redragon M602 is a high-precision RGB backlit gaming mouse built for both casual and professional gamers. With an ergonomic design, 7200 DPI, and customizable buttons, it offers the speed and accuracy required for competitive gaming. Ideal for FPS, MOBA, and MMO genres.",
+    "key_feat": [
+      "✅ 7200 DPI – Adjustable for precision control",
+      "✅ Ergonomic Design – Comfortable grip for long sessions",
+      "✅ RGB Lighting – Dynamic color modes for style",
+      "✅ 7 Programmable Buttons – For personalized gameplay",
+      "✅ Durable Build – Tested for 10 million clicks",
+      "✅ Plug & Play – No software needed"
+    ],
+    "price": 3499,
+    "route": "gaming"
+  },
+  {
+    "id": "46",
+    "name": "Xbox Series X",
+    "image": "/xbox.jpg",
+    "brand": "Microsoft",
+    "description": "Xbox Series X – Power Your Dreams",
+    "detailed_desc": "Experience true 4K gaming with the Xbox Series X – the fastest, most powerful Xbox ever. Equipped with a custom SSD for lightning-fast load times, DirectX ray tracing, and up to 120FPS gameplay, the Series X brings immersive gaming to the next level. Enjoy a massive game library with backward compatibility and Xbox Game Pass.",
+    "key_feat": [
+      "✅ 4K Gaming – Up to 120 FPS for ultra-smooth visuals",
+      "✅ 1TB Custom SSD – Quick Resume and fast load times",
+      "✅ Ray Tracing – Cinematic lighting and shadow effects",
+      "✅ Xbox Velocity Architecture – Performance redefined",
+      "✅ Backward Compatibility – Play 1000s of older titles",
+      "✅ Xbox Game Pass – Access to 100+ high-quality games"
+    ],
+    "price": 55990,
+    "route": "gaming"
+  },
+  {
+    "id": "47",
+    "name": "Xbox Wireless Controller ",
+    "image": "/xboxcontroller.jpg",
+    "brand": "Microsoft",
+    "description": "Xbox Wireless Controller – Seamless Performance and Next-Gen Comfort",
+    "detailed_desc": "Experience the modernized Xbox Wireless Controller, designed for enhanced comfort and precision across Xbox Series X|S, Xbox One, Windows PCs, and mobile devices. Featuring a textured grip, hybrid D-pad, and a dedicated Share button, it offers immersive control whether you're in a solo campaign or battling online.",
+    "key_feat": [
+      "✅ Hybrid D-Pad – Improved input accuracy and ergonomic design",
+      "✅ Textured Grips – Enhanced grip on triggers, bumpers, and back-case",
+      "✅ Share Button – Easily capture and share content",
+      "✅ Bluetooth Support – Connect wirelessly across Xbox consoles, PC, and mobile",
+      "✅ Long Battery Life – Up to 40 hours of gameplay",
+      "Level up your game with the iconic Xbox controller – built for all platforms and styles. 🎮"
+    ],
+    "price": 5800,
+    "route": "gaming"
+  },
+  {
+    "id": "48",
+    "name": "God Of War Ragnarok (PS5)",
+    "image": "/gowragnarok.jpg",
+    "brand": "Sony",
+    "description": "Epic Norse Saga Continues – Battle gods, monsters & fate.",
+    "detailed_desc": "Join Kratos and Atreus as they journey across the Nine Realms in God of War Ragnarök, a gripping narrative-driven action-adventure game. Experience heart-pounding combat, stunning visuals, and emotional storytelling as father and son confront their destiny during the end times of Norse mythology.",
+    "key_feat": [
+      "✅ Epic Storytelling – Deep, emotional narrative with powerful themes",
+      "✅ Intense Combat – Fluid axe and blade gameplay with brutal finishers",
+      "✅ Norse Mythology – Explore realms filled with gods, beasts, and legends",
+      "✅ Stunning Visuals – Immersive graphics optimized for PS5",
+      "✅ Adaptive Triggers – Enhanced gameplay with DualSense controller support",
+      "✅ New Characters – Meet iconic Norse figures like Thor and Odin",
+      "Claim vengeance and discover your fate – Ragnarök awaits ⚔️🔥"
+    ],
+    "price": 4999,
+    "route": "gaming"
+  },
+  {
+    "id": "49",
+    "name": "Xbox Series S",
+    "image": "/xboxseriess.jpg",
+    "brand": "Microsoft",
+    "description": "Next-Gen Performance in the Smallest Xbox Ever",
+    "detailed_desc": "The Xbox Series S delivers powerful next-gen performance in a compact and all-digital design. Enjoy lightning-fast load times, rich visuals with support for up to 120FPS, and seamless gameplay across generations. Perfect for gamers who want cutting-edge features at an affordable price.",
+    "key_feat": [
+      "✅ All-Digital Console – Streamlined and disc-free gaming experience",
+      "✅ 512GB SSD – Faster load times and quick resume feature",
+      "✅ 1440p Gaming @ up to 120FPS – Ultra-smooth performance",
+      "✅ Xbox Velocity Architecture – Enhanced speed and performance",
+      "✅ Game Pass Ready – Access to hundreds of games at launch",
+      "✅ Backward Compatibility – Play thousands of older Xbox titles",
+      "Get next-gen speed and value with Xbox Series S 🕹️⚡"
+    ],
+    "price": 37990,
+    "route": "gaming"
+  },
+  {
+    "id": "50",
+    "name": "Nintendo Switch",
+    "image": "/nintendoswitch.jpg",
+    "brand": "Nintendo",
+    "description": "Versatile Console for Gaming Anytime, Anywhere",
+    "detailed_desc": "The Nintendo Switch offers a unique hybrid gaming experience—play at home on your TV or on the go in handheld mode. With its exclusive titles, multiplayer fun, and portability, the Switch is perfect for families, casual gamers, and fans of Nintendo classics.",
+    "key_feat": [
+      "✅ Hybrid Console – Seamlessly switch between handheld and TV mode",
+      "✅ Joy-Con Controllers – Motion control, HD rumble, and multiplayer capability",
+      "✅ Nintendo Exclusives – Play titles like Zelda, Mario, Pokémon, and more",
+      "✅ Online Services – Access cloud saves, classic NES/SNES games, and online play",
+      "✅ Expandable Storage – Support for microSD cards",
+      "✅ Parental Controls – Manage screen time and content for younger gamers",
+      "Enjoy epic adventures and endless fun with the Nintendo Switch! 🎮🌍"
+    ],
+    "price": 32990,
+    "route": "gaming"
+  },
+  {
+    "id": "51",
+    "name": "PlayStation 5 Vertical Stand",
+    "image": "/psstand.jpg",
+    "brand": "Sony",
+    "description": "Secure and Stylish Vertical Stand for PS5 Console",
+    "detailed_desc": "Keep your PlayStation 5 standing tall and stable with the official vertical stand. Designed for a snug fit, this stand ensures optimal airflow and saves space in your setup. Easy to install and essential for showcasing your PS5 in style.",
+    "key_feat": [
+      "✅ Stable Design – Prevents accidental tipping or shifting",
+      "✅ Space-Saving – Keeps your gaming area neat and organized",
+      "✅ Enhanced Cooling – Supports better airflow to avoid overheating",
+      "✅ Sleek Aesthetic – Complements the futuristic design of the PS5",
+      "✅ Easy Installation – Simple to attach, no tools required",
+      "✅ Official Accessory – Designed specifically for PlayStation 5",
+      "Level up your PS5 setup with this must-have stand. 🚀📦"
+    ],
+    "price": 1990,
+    "route": "gaming"
+  },
+  {
+    "id": "52",
+    "name": "DualSense Charging Station",
+    "image": "/ps5controllercharger.jpg",
+    "brand": "Sony",
+    "description": "Fast & Convenient Charging Dock for DualSense Controllers",
+    "detailed_desc": "Charge up to two DualSense wireless controllers simultaneously without having to connect them to your PlayStation 5 console. This sleek and compact charging station ensures your controllers are always ready for action, keeping your setup clean and your gaming non-stop.",
+    "key_feat": [
+      "✅ Dual Charging – Power up two controllers at once",
+      "✅ Click-In Design – Easy docking without cables",
+      "✅ Fast Charging – Full charge in under 3 hours",
+      "✅ Compact & Sleek – Minimalist design fits your setup",
+      "✅ LED Indicators – Know when your controllers are charged",
+      "✅ Official Sony Accessory – Built for DualSense controllers",
+      "Stay powered and ready with this essential PS5 accessory ⚡🎮"
+    ],
+    "price": 2890,
+    "route": "gaming"
+  },
+  {
+    "id": "53",
+    "name": "Sekiro: Shadows Die Twice (PS4)",
+    "image": "/sekiro.jpg",
+    "brand": "FromSoftware",
+    "description": "Action-Adventure Game Set in Sengoku Era Japan",
+    "detailed_desc": "From the creators of Dark Souls comes *Sekiro: Shadows Die Twice*, a brutal and beautiful action-adventure game set in a mythical version of late 1500s Japan. Play as a shinobi known as Wolf and embark on a mission of revenge and redemption. Face towering foes, deadly samurai, and mythical beasts with precise swordplay and stealth mechanics.",
+    "key_feat": [
+      "✅ Award-Winning Gameplay – 2019 Game of the Year",
+      "✅ Unique Combat System – Parry, counter, and stealth mechanics",
+      "✅ Stunning World – Explore a beautifully dark version of feudal Japan",
+      "✅ Rich Storytelling – Immersive narrative and intense atmosphere",
+      "✅ High Replay Value – Multiple endings and deep progression",
+      "Forge your destiny with steel and stealth. A must-play for every action gamer ⚔️🔥"
+    ],
+    "price": 3199,
+    "route": "gaming"
+  },
+  {
+    "id": "54",
+    "name": "Xbox Rechargeable Battery + USB-C Cable",
+    "image": "/xboxchargeables.jpg",
+    "brand": "Microsoft",
+    "description": "Stay Powered Up with Xbox Rechargeable Battery Pack",
+    "detailed_desc": "Never miss a moment of gaming with the Xbox Rechargeable Battery + USB-C Cable. This convenient power solution lets you recharge while you play or afterwards, even when your Xbox is in standby mode. Say goodbye to disposable batteries and game uninterrupted with this official Microsoft accessory.",
+    "key_feat": [
+      "✅ Long Battery Life – Up to 30 hours of gameplay per charge",
+      "✅ Fast Charging – Fully charges in under 4 hours",
+      "✅ USB-C Compatible – Recharge via USB-C cable included",
+      "✅ Play While Charging – No need to pause your game",
+      "✅ Eco-Friendly – Reduce waste with a rechargeable solution",
+      "Power your controller the smart way. Reliable, rechargeable, and ready for every session 🔋🎮"
+    ],
+    "price": 1799,
+    "route": "gaming"
+  },
+  {
+    "id": "55",
+    "name": "Elden Ring (PS5)",
+    "image": "/eldenring.jpg",
+    "brand": "FromSoftware",
+    "description": "Elden Ring – An Epic Fantasy Action RPG Adventure",
+    "detailed_desc": "Enter the vast, dark fantasy world of Elden Ring, created by Hidetaka Miyazaki in collaboration with George R. R. Martin. Explore a massive open world filled with danger, magic, and mystery. Forge your path, uncover hidden secrets, and face brutal enemies in this critically acclaimed action RPG that redefines the genre.",
+    "key_feat": [
+      "✅ Open World Exploration – Discover the Lands Between at your own pace",
+      "✅ Deep Lore – A story co-created by George R. R. Martin",
+      "✅ Customizable Characters – Build your own hero with unique skills",
+      "✅ Brutal Combat – Master challenging battles and boss fights",
+      "✅ Multiplayer Support – Summon allies or invade others’ worlds",
+      "Embark on a journey like no other. Forge your destiny in the realm of Elden Ring ⚔️🌌"
+    ],
+    "price": 3999,
+    "route": "gaming"
+  },
+  {
+    "id": "56",
+    "name": "DualSense Edge Wireless Controller",
+    "image": "/edgecontroller.jpg",
+    "brand": "Sony",
+    "description": "DualSense Edge – Pro-Level Customization for PlayStation 5",
+    "detailed_desc": "Designed for competitive gamers and those seeking the ultimate control, the DualSense Edge Wireless Controller offers advanced personalization with remappable buttons, adjustable triggers, and swappable stick modules. Experience elite performance and signature PlayStation haptics in one premium package.",
+    "key_feat": [
+      "✅ Fully Customizable Controls – Remap buttons and fine-tune settings",
+      "✅ Adjustable Trigger Stops – Perfect for quick response in shooters",
+      "✅ Swappable Stick Modules – Replaceable sticks to extend controller life",
+      "✅ Pro-Level Back Buttons – For added versatility during gameplay",
+      "✅ Signature Haptics & Adaptive Triggers – Same immersive PlayStation experience",
+      "Upgrade your competitive edge with the most advanced PlayStation controller yet 🎮🔥"
+    ],
+    "price": 18999,
+    "route": "gaming"
+  },
+  {
+    "id": "57",
+    "name": "Blue Yeti USB Microphone",
+    "image": "/streamersmic.jpg",
+    "brand": "Blue",
+    "description": "Blue Yeti – Professional Streaming & Recording Microphone",
+    "detailed_desc": "The Blue Yeti USB Microphone is a top choice for streamers, podcasters, and content creators. With studio-quality sound, multiple pickup patterns, and simple USB connectivity, it’s perfect for high-quality streaming, game commentary, and more. Plug it in, and start sounding pro instantly.",
+    "key_feat": [
+      "✅ Four Pickup Patterns – Cardioid, Omni, Bidirectional & Stereo modes",
+      "✅ Studio-Quality Sound – Crisp, clear audio for professional recordings",
+      "✅ Plug & Play – Easy USB connection with no drivers required",
+      "✅ Real-Time Monitoring – Built-in headphone jack for zero-latency monitoring",
+      "✅ Adjustable Stand & Design – Position it exactly how you need",
+      "🎙️ Take your streaming and content creation to the next level with Yeti’s legendary performance"
+    ],
+    "price": 10999,
+    "route": "gaming"
+  },
+  {
+    "id": "58",
+    "name": "PlayStation 5 HD Camera",
+    "image": "/pscamera.jpg",
+    "brand": "Sony",
+    "description": "PS5 HD Camera – Stream Yourself in Full HD",
+    "detailed_desc": "The PlayStation 5 HD Camera lets you put yourself in the spotlight during gameplay streams and recordings. With dual wide-angle lenses and seamless background removal tools, it's perfect for content creators and streamers. Designed specifically for the PS5, it integrates smoothly with your console for easy use.",
+    "key_feat": [
+      "✅ Full HD 1080p Capture – Stream high-quality video with clarity",
+      "✅ Dual Wide-Angle Lenses – Capture a wide field of view",
+      "✅ Built-in Stand – Adjustable for optimal angles",
+      "✅ Background Removal Tools – Create a clean stream look",
+      "✅ Seamless Integration – Designed specifically for the PS5",
+      "🎥 Enhance your content and connect with your audience like never before"
+    ],
+    "price": 5490,
+    "route": "gaming"
+  },
+  {
+    "id": "59",
+    "name": "Black Myth: Wukong (PS5)",
+    "image": "/wukong.jpg",
+    "brand": "Game Science",
+    "description": "Black Myth: Wukong – Mythical Soulslike Action Adventure",
+    "detailed_desc": "Embark on an epic journey in Black Myth: Wukong, an action RPG inspired by the classic tale of Journey to the West. Experience fast-paced combat, stunning visuals powered by Unreal Engine 5, and a deep narrative rooted in Chinese mythology. Play as the Destined One and harness the power of transformation to battle mythical creatures and ancient gods.",
+    "key_feat": [
+      "✅ Soulslike Combat – Master challenging battles with fluid mechanics",
+      "✅ Unreal Engine 5 Graphics – Jaw-dropping environments and realistic animations",
+      "✅ Transformational Abilities – Shape-shift to gain advantages in combat",
+      "✅ Deep Lore & Mythology – A rich world inspired by Journey to the West",
+      "✅ Next-Gen Experience – Optimized for modern consoles and PC",
+      "🐒 Become the legend and rise as the Destined One in Black Myth: Wukong"
+    ],
+    "price": 4999,
+    "route": "gaming"
+  },
+  {
+    "id": "60",
+    "name": "PlayStation Portal Remote Player",
+    "image": "/psportal.jpg",
+    "brand": "Sony",
+    "description": "PlayStation Portal – Stream Your PS5 Games Anywhere",
+    "detailed_desc": "Experience next-gen gaming on the go with the PlayStation Portal Remote Player. Designed for gamers who want the power of their PS5 console in the palm of their hands, this handheld device lets you stream and play your favorite PS5 games over Wi-Fi with stunning visuals and responsive gameplay.",
+    "key_feat": [
+      "✅ 8-inch LCD Display – Crisp 1080p visuals at 60fps",
+      "✅ Seamless PS5 Streaming – Connect directly to your console via Wi-Fi",
+      "✅ DualSense Controller Integration – Includes adaptive triggers and haptics",
+      "✅ Lightweight & Portable – Play from anywhere in your home",
+      "✅ Long Battery Life – Extended sessions without interruptions",
+      "✅ Ideal for Shared Spaces – Keep gaming even when the TV is occupied",
+      "Level up your freedom and keep your PS5 games within reach wherever you are!"
+    ],
+    "price": 25000,
+    "route": "gaming"
+  }
+]

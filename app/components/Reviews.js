@@ -14,7 +14,7 @@ export default function Reviews({ item }) {
   useEffect(() => {
     if (!item?.id) return;
 
-    const reviewRef = doc(db, "reviews", toString(item.id));
+    const reviewRef = doc(db, "reviews", item.id);
     const unsubscribe = onSnapshot(reviewRef, (snapshot) => {
       if (snapshot.exists()) {
         setFetchedReviews(snapshot.data().reviews || []);

@@ -7,8 +7,6 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { auth, db } from "../lib/firebaseconfig";
 import Link from "next/link";
 
-
-
 export default function Wishlists() {
   const { wishlist, setWishlist } = useContext(CartContext);
 
@@ -39,7 +37,7 @@ export default function Wishlists() {
 
   return (
     <>
-       <div className="flex flex-col items-center pt-4">
+      <div className="flex flex-col items-center pt-4">
         <div className="inline-block border-b-4">
           <h1 className="text-2xl font-semibold">My Wishlist</h1>
         </div>
@@ -51,7 +49,7 @@ export default function Wishlists() {
             <div key={item.id || index} className="flex flex-col gap-4">
               <Card className="p-4">
                 <div className="flex lg:flex-row flex-col lg:items-center gap-4">
-                  <Link href={`/homeappliances/${item.id}`}>
+                  <Link href={`${item.route}/${item.id}`}>
                     <img
                       src={item.image}
                       width={200}

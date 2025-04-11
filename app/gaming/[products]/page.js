@@ -1,18 +1,19 @@
 import AddToCart from "@/app/components/AddToCart";
 import BuyNow from "@/app/components/BuyNow";
 import Reviews from "@/app/components/Reviews";
+
 import WishList from "@/app/components/WishListIcon";
 import { db } from "@/app/lib/firebaseAdmin";
 import Image from "next/image";
 
 export async function generateStaticParams() {
-  const products = await db.collection("products").get();
+  const products = await db.collection("gaming").get();
   return products.docs.map((product) => ({ products: product.id }));
 }
 
 export default async function ProductsPage({ params }) {
-  const { products } =  params;
-  const productsSnapshot = await db.collection("products").doc(products).get();
+  const { products } = await params;
+  const productsSnapshot = await db.collection("gaming").doc(products).get();
   const product_data = productsSnapshot.data();
 
   return (

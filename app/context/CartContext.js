@@ -198,6 +198,7 @@ export function CartProvider({ children }) {
             id: selectedItem.id,
             description: selectedItem.description,
             price: selectedItem.price,
+            route: selectedItem.route,
           }),
         });
 
@@ -207,9 +208,7 @@ export function CartProvider({ children }) {
 
         const data = await resp.json();
         setWishlist((prev) => [...prev, selectedItem]);
-      } catch (error) {
-        
-      }
+      } catch (error) {}
     }
   }
 

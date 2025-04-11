@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "21",
     "name": "Smart-TV",
     "image": "/television.jpg",
     "brand": "Sony",
@@ -17,10 +17,11 @@
 
       "Stylish, powerful, and future-ready, this Smart LED TV is your gateway to next-gen home entertainment. Order now and enjoy free shipping, fast delivery, and hassle-free returns! 📦🎉"
     ],
-    "price": 45000
+    "price": 45000,
+    "route":"electronics"
   },
   {
-    "id": "2",
+    "id": "22",
     "name": "Air-Conditioner",
     "image": "/ac.jpg",
     "brand": "Danby",
@@ -37,10 +38,11 @@
 
       "Efficient, elegant, and built for modern homes, this AC is the perfect solution to keep you cool all summer long. Order now and enjoy quick installation, free delivery, and peace of mind with warranty coverage! ❄️📦"
     ],
-    "price": 40000
+    "price": 40000,
+    "route":"electronics"
   },
   {
-    "id": "3",
+    "id": "23",
     "name": "Laptop",
     "image": "/laptop.jpg",
     "brand": "Apple",
@@ -57,10 +59,11 @@
 
       "Stylish, lightweight, and loaded with features, this laptop is your perfect companion for work, play, and everything in between. Order now to enjoy free shipping, fast delivery, and premium after-sales support! 💻🚚"
     ],
-    "price": 64500
+    "price": 64500,
+    "route":"electronics"
   },
   {
-    "id": "4",
+    "id": "24",
     "name": "Speaker",
     "image": "/speaker.jpg",
     "brand": "Bose",
@@ -77,10 +80,11 @@
 
       "Stylish, durable, and packed with sound, this speaker is your go-to for music on the move. Order now and get free delivery, quick setup, and non-stop vibes wherever you are! 🔊🎶"
     ],
-    "price": 15499
+    "price": 15499,
+    "route":"electronics"
   },
   {
-    "id": "5",
+    "id": "25",
     "name": "Smart Phone",
     "image": "/iphone.jpg",
     "brand": "Apple",
@@ -97,10 +101,11 @@
 
       "Sleek, powerful, and crafted for the modern user, this smartphone redefines mobile excellence. Order today and enjoy free shipping, exclusive offers, and priority delivery! 📱🚀"
     ],
-    "price": 85000
+    "price": 85000,
+    "route":"electronics"
   },
   {
-    "id": "6",
+    "id": "26",
     "name": "DSLR Camera",
     "image": "/camera.jpg",
     "brand": "Canon",
@@ -117,10 +122,11 @@
 
       "Perfect for travelers, vloggers, and creatives alike, this DSLR is your ticket to mastering the art of visual storytelling. Order now to elevate your photography game! 📸✨"
     ],
-    "price": 45000
+    "price": 45000,
+    "route":"electronics"
   },
   {
-    "id": "7",
+    "id": "27",
     "name": "Headphones",
     "image": "/jblHeadphones.jpg",
     "brand": "JBL",
@@ -137,10 +143,11 @@
 
       "Where style meets performance—these headphones are engineered for those who demand the best in sound and comfort. Grab yours today and enjoy free shipping and exclusive launch offers! 🎧🔥"
     ],
-    "price": 32000
+    "price": 32000,
+    "route":"electronics"
   },
   {
-    "id": "8",
+    "id": "28",
     "name": "Home Threater",
     "image": "/homethreater.jpg",
     "brand": "Boat",
@@ -157,10 +164,11 @@
 
       "Bring movies to life and feel every beat—this home theater system redefines home entertainment. Order now and enjoy free shipping, installation support, and limited-time offers! 🎬🔊"
     ],
-    "price": 42633
+    "price": 42633,
+    "route":"electronics"
   },
   {
-    "id": "9",
+    "id": "29",
     "name": "Samsung Tablet",
     "image": "/tablet.jpg",
     "brand": "Samsung",
@@ -177,10 +185,11 @@
 
       "Versatile, stylish, and powerful—this tablet is your ultimate everyday companion. Order now and enjoy free shipping, launch-day offers, and bonus accessories! 💻✨"
     ],
-    "price": 76499
+    "price": 76499,
+    "route":"electronics"
   },
   {
-    "id": "10",
+    "id": "30",
     "name": "Smart Watch",
     "image": "/samsungwatch.jpg",
     "brand": "Samsung",
@@ -197,10 +206,11 @@
 
       "From fitness to fashion, this smartwatch elevates your everyday. Order now and enjoy exclusive discounts, fast delivery, and a free extra strap! ⌚🔥"
     ],
-    "price": 76499
+    "price": 76499,
+    "route":"electronics"
   },
   {
-    "id": "11",
+    "id": "31",
     "name": "Washing Machine",
     "image": "/washing.jpg",
     "brand": "Godrej",
@@ -216,10 +226,11 @@
 
       "Upgrade your laundry routine with this efficient and powerful washing machine. Order now for fast delivery & exciting discounts! 🚚"
     ],
-    "price": 62000
+    "price": 62000,
+    "route":"electronics"
   },
   {
-    "id": "12",
+    "id": "32",
     "name": "Refrigerator",
     "image": "/refrigerator2.jpg",
     "brand": "Samsung",
@@ -235,10 +246,11 @@
 
       "Sleek, modern, and built to last, this refrigerator is the perfect addition to any home. Order now and enjoy free shipping & hassle-free returns! 🚚✨"
     ],
-    "price": 56000
+    "price": 56000,
+    "route":"electronics"
   },
   {
-    "id": "13",
+    "id": "33",
     "name": "Microwave",
     "image": "/microw.jpg",
     "brand": "Haier",
@@ -253,10 +265,11 @@
 
       "Experience next-level cooling with this high-performance refrigerator—perfect for preserving ingredients, beverages, and frozen foods efficiently. Order now for fast delivery & exciting offers! 🚚✨"
     ],
-    "price": 25000
+    "price": 25000,
+    "route":"electronics"
   },
   {
-    "id": "14",
+    "id": "34",
     "name": "Air Pods",
     "image": "/airpods.jpg",
     "brand": "Apple",
@@ -272,10 +285,11 @@
 
       "Upgrade your listening with Apple AirPods. Order now and enjoy next-gen wireless audio with fast delivery! 🎧📦"
     ],
-    "price": 25399
+    "price": 25399,
+    "route":"electronics"
   },
   {
-    "id": "15",
+    "id": "35",
     "name": "Hair dryer",
     "image": "/hairdryer.jpg",
     "brand": "Revlon",
@@ -291,10 +305,11 @@
 
       "Style like a pro with this high-performance hair dryer. Order now for fast delivery & special discounts! 💇‍♀️🚚"
     ],
-    "price": 1599
+    "price": 1599,
+    "route":"electronics"
   },
   {
-    "id": "16",
+    "id": "36",
     "name": "Hair Straightener",
     "image": "/hairs.jpg",
     "brand": "Ikonic",
@@ -310,10 +325,11 @@
 
       "Transform your hair styling routine with this easy-to-use hair straightener. Order now for fast delivery & exciting offers! 💁‍♀️🔥"
     ],
-    "price": 5399
+    "price": 5399,
+    "route":"electronics"
   },
   {
-    "id": "17",
+    "id": "37",
     "name": "Mechanical Keyboard",
     "image": "/keyboard.jpg",
     "brand": "Zebronics",
@@ -329,10 +345,11 @@
 
       "Level up your productivity or gaming with this pro-grade mechanical keyboard. Order now for fast delivery & exclusive deals! ⌨️⚡"
     ],
-    "price": 2599
+    "price": 2599,
+    "route":"electronics"
   },
   {
-    "id": "18",
+    "id": "38",
     "name": "Mouse",
     "image": "/mouselogitech.jpg",
     "brand": "Logitech",
@@ -348,10 +365,11 @@
 
       "Upgrade your workspace or gaming setup with this versatile wireless mouse. Order now for fast delivery & great deals! 🖱️🚀"
     ],
-    "price": 1599
+    "price": 1599,
+    "route":"electronics"
   },
   {
-    "id": "19",
+    "id": "39",
     "name": "Toaster",
     "image": "/toast.jpg",
     "brand": "Havells",
@@ -367,10 +385,11 @@
 
       "Enjoy hassle-free breakfast preparation with this efficient and stylish toaster. Order now for fast delivery & exclusive discounts! 🚚🍞"
     ],
-    "price": 2547
+    "price": 2547,
+    "route":"electronics"
   },
   {
-    "id": "20",
+    "id": "40",
     "name": "Plays Station 5",
     "image": "/playstation.jpg",
     "brand": "Sony",
@@ -386,6 +405,7 @@
 
       "Level up your gaming world with the PlayStation experience. Order now for fast delivery & limited-time offers! 🎮⚡"
     ],
-    "price": 55000
+    "price": 55000,
+    "route":"electronics"
   }
 ]

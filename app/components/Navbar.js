@@ -29,7 +29,6 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6 text-cmd lg:mt-2">
           <CartIcon />
           <UserIcon />
-         
         </div>
       </header>
 
@@ -43,6 +42,16 @@ export default function Navbar() {
           } hover:text-blue-600`}
         >
           Home appliances
+        </Link>
+        <Link
+          href="/gaming"
+          className={`${
+            pathname.startsWith("/gaming")
+              ? "text-blue-600 font-semibold"
+              : "font-semibold"
+          } hover:text-blue-600`}
+        >
+          Gaming
         </Link>
         <Link
           href="/electronics"
@@ -63,16 +72,6 @@ export default function Navbar() {
           } hover:text-blue-600`}
         >
           Fashion
-        </Link>
-        <Link
-          href="/gaming"
-          className={`${
-            pathname === "/gaming"
-              ? "text-blue-600 font-semibold"
-              : "font-semibold"
-          } hover:text-blue-600`}
-        >
-          Gaming
         </Link>
         <Link
           href="skincare"

@@ -16,7 +16,8 @@
 
       "Sleek, modern, and built to last, this refrigerator is the perfect addition to any home. Order now and enjoy free shipping & hassle-free returns! 🚚✨"
     ],
-    "price": 56000
+    "price": 56000,
+    "route": "homeappliances"
   },
   {
     "id": "2",
@@ -34,7 +35,8 @@
 
       "Experience next-level cooling with this high-performance refrigerator—perfect for preserving ingredients, beverages, and frozen foods efficiently. Order now for fast delivery & exciting offers! 🚚✨"
     ],
-    "price": 25000
+    "price": 25000,
+    "route": "homeappliances"
   },
   {
     "id": "3",
@@ -52,7 +54,8 @@
 
       "Enjoy fresh, aromatic coffee whenever you want with this versatile and easy-to-use coffee machine. Order now for fast delivery & exclusive deals! 🚚☕"
     ],
-    "price": 33000
+    "price": 33000,
+    "route": "homeappliances"
   },
   {
     "id": "4",
@@ -70,7 +73,8 @@
 
       "Experience luxury and comfort with this beautifully designed bed. Order now for fast delivery & special offers! 🚚🛏️"
     ],
-    "price": 48000
+    "price": 48000,
+    "route": "homeappliances"
   },
   {
     "id": "5",
@@ -89,7 +93,8 @@
 
       "Upgrade your laundry routine with this efficient and powerful washing machine. Order now for fast delivery & exciting discounts! 🚚"
     ],
-    "price": 62000
+    "price": 62000,
+    "route": "homeappliances"
   },
   {
     "id": "6",
@@ -108,7 +113,8 @@
 
       "Wake up refreshed and pain-free with the Wakefit Orthopedic Mattress. Order now for doorstep delivery & exclusive discounts! 🚚🛏️"
     ],
-    "price": 17000
+    "price": 17000,
+    "route": "homeappliances"
   },
   {
     "id": "7",
@@ -127,7 +133,8 @@
 
       "Enhance your culinary skills with this versatile and long-lasting kadhai. Order now for fast delivery & special discounts! 🚚🔥"
     ],
-    "price": 2500
+    "price": 2500,
+    "route": "homeappliances"
   },
   {
     "id": "8",
@@ -146,7 +153,8 @@
 
       "Bring home style and comfort with this beautifully designed luxury fabric sofa. Order now for fast delivery & exciting discounts! "
     ],
-    "price": 53000
+    "price": 53000,
+    "route": "homeappliances"
   },
   {
     "id": "9",
@@ -165,7 +173,8 @@
 
       "Upgrade your workspace with this ergonomically designed chair, perfect for office use, gaming, or study sessions. Order now for fast delivery & exclusive discounts! 🚚🪑"
     ],
-    "price": 14500
+    "price": 14500,
+    "route": "homeappliances"
   },
   {
     "id": "10",
@@ -184,7 +193,8 @@
 
       "Upgrade your dining experience with this beautifully designed dining table. Order now for fast delivery & special discounts! 🚚🍽️"
     ],
-    "price": 23000
+    "price": 23000,
+    "route": "homeappliances"
   },
   {
     "id": "11",
@@ -203,7 +213,8 @@
 
       "Upgrade your storage game with this versatile and stylish almirah. Order now for fast delivery & special discounts! 🚚🚪"
     ],
-    "price": 25000
+    "price": 25000,
+    "route": "homeappliances"
   },
   {
     "id": "12",
@@ -222,7 +233,8 @@
 
       "Upgrade your home organization with this functional and stylish shoe rack. Order now for fast delivery & special discounts! 🚚👞"
     ],
-    "price": 2699
+    "price": 2699,
+    "route": "homeappliances"
   },
   {
     "id": "13",
@@ -241,7 +253,8 @@
 
       "Upgrade your interiors with these stylish and functional curtains. Order now for fast delivery & exclusive discounts! 🚚🏡"
     ],
-    "price": 1659
+    "price": 1659,
+    "route": "homeappliances"
   },
   {
     "id": "14",
@@ -260,7 +273,8 @@
 
       "Upgrade your sleep experience with these luxurious and supportive pillows. Order now for fast delivery & exclusive discounts! 🚚🛏️"
     ],
-    "price": 1999
+    "price": 1999,
+    "route": "homeappliances"
   },
   {
     "id": "15",
@@ -279,7 +293,8 @@
 
       "Enjoy hassle-free breakfast preparation with this efficient and stylish toaster. Order now for fast delivery & exclusive discounts! 🚚🍞"
     ],
-    "price": 2547
+    "price": 2547,
+    "route": "homeappliances"
   },
   {
     "id": "16",
@@ -298,7 +313,8 @@
 
       "Make healthy drinks and meals effortlessly with this efficient and durable blender. Order now for fast delivery & special discounts! 🚚🥤"
     ],
-    "price": 5759
+    "price": 5759,
+    "route": "homeappliances"
   },
   {
     "id": "17",
@@ -317,7 +333,8 @@
 
       "Switch to a healthier way of cooking with this versatile and efficient air fryer. Order now for fast delivery & special discounts! 🚚🍟"
     ],
-    "price": 9165
+    "price": 9165,
+    "route": "homeappliances"
   },
   {
     "id": "18",
@@ -336,7 +353,8 @@
 
       "Upgrade your cleaning routine with this efficient and powerful vacuum cleaner. Order now for fast delivery & exclusive discounts! 🚚🏠"
     ],
-    "price": 7237
+    "price": 7237,
+    "route": "homeappliances"
   },
   {
     "id": "19",
@@ -355,7 +373,8 @@
 
       "Beat the heat with this efficient and stylish ceiling fan. Order now for fast delivery & special discounts! 🚚🌬️"
     ],
-    "price": 2377
+    "price": 2377,
+    "route": "homeappliances"
   },
   {
     "id": "20",
@@ -374,6 +393,7 @@
 
       "Upgrade your cleaning routine with this efficient and eco-friendly steam mop. Order now for fast delivery & exclusive discounts! 🚚🧼"
     ],
-    "price": 2736
+    "price": 2736,
+    "route": "homeappliances"
   }
 ]

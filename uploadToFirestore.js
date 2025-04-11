@@ -16,38 +16,38 @@ const serviceAccount = {
   client_x509_cert_url: process.env.FIREBASE_SERVICE_ACCOUNT_CLIENT_X509_CERT_URL,
 };
 
+// Initialize Firebase Admin SDK
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
 const db = admin.firestore();
 
-const rawData = fs.readFileSync("electronics.json", "utf8");
+// Read data from homeappliances.json
+const rawData = fs.readFileSync("products.json", "utf8");
 const products = JSON.parse(rawData);
 
-const uploadData = async () => {
+// 🧠 Configuration for this run
+const COLLECTION_NAME = "products";
+const ROUTE_VALUE = "homeappliances";
+
+const updateHomeAppliancesRouteInFirestore = async () => {
   try {
     const batch = db.batch();
 
-    for (let product of products) {
-      const stringId = product.id?.toString();
+    products.forEach((product, index) => {
+      const docId = product.id ? String(product.id) : `product-${index}`;
+      const docRef = db.collection(COLLECTION_NAME).doc(docId);
 
-      if (!stringId) {
-        console.warn(`⚠️ Skipping product without ID:`, product);
-        continue;
-      }
-
-      const docRef = db.collection("electronics").doc(stringId);
-
-      // Use merge to **update** without wiping existing data
-      batch.set(docRef, { ...product, id: stringId }, { merge: true });
-    }
+      // Add or update only the "route" field
+      batch.set(docRef, { route: ROUTE_VALUE }, { merge: true });
+    });
 
     await batch.commit();
-    console.log("✅ All products updated successfully to Firestore!");
+    console.log(`✅ Successfully updated 'route: "${ROUTE_VALUE}"' in '${COLLECTION_NAME}' collection!`);
   } catch (error) {
-    console.error("❌ Error uploading data to Firestore:", error);
+    console.error("❌ Error updating route in Firestore:", error);
   }
 };
 
-uploadData();
+updateHomeAppliancesRouteInFirestore();

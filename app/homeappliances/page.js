@@ -31,7 +31,7 @@ export default async function HomeAppliances() {
           >
             <Link href={`/homeappliances/${product.id}`}>
               <Image
-                src={product.imageURL}
+                src={product.image}
                 width={300}
                 height={300}
                 alt="Product image"
@@ -40,7 +40,7 @@ export default async function HomeAppliances() {
             </Link>
             <div className="flex-grow">
               <p className="text-lg font-semibold mt-2">
-                {product.productName}
+                {product.name}
               </p>
               <p className="text-gold-100">By - {product.brand}</p>
               <p className="text-sm text-black">{product.description}</p>
