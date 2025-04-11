@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6 text-cmd lg:mt-2">
           <CartIcon />
           <UserIcon />
-          <Link href="/aboutus" className="font-semibold">About us</Link>
+         
         </div>
       </header>
 
@@ -47,7 +47,7 @@ export default function Navbar() {
         <Link
           href="/electronics"
           className={`${
-            pathname === "/electronics"
+            pathname.startsWith("/electronics")
               ? "text-blue-600 font-semibold"
               : "font-semibold"
           } hover:text-blue-600`}

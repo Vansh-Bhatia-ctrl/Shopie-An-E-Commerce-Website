@@ -165,10 +165,10 @@ export function CartProvider({ children }) {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            image: selectedItem.imageURL,
+            image: selectedItem.image,
             id: selectedItem.id,
             uid: user.uid,
-            name: selectedItem.productName,
+            name: selectedItem.name,
             description: selectedItem.description,
             price: selectedItem.price,
           }),
@@ -192,9 +192,9 @@ export function CartProvider({ children }) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            image: selectedItem.imageURL,
+            image: selectedItem.image,
             uid: user.uid,
-            name: selectedItem.productName,
+            name: selectedItem.name,
             id: selectedItem.id,
             description: selectedItem.description,
             price: selectedItem.price,
@@ -208,7 +208,7 @@ export function CartProvider({ children }) {
         const data = await resp.json();
         setWishlist((prev) => [...prev, selectedItem]);
       } catch (error) {
-        console.error("Error adding item to wishlist", error.message);
+        
       }
     }
   }

@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Smart-TV",
     "image": "/television.jpg",
     "brand": "Sony",
@@ -20,7 +20,7 @@
     "price": 45000
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Air-Conditioner",
     "image": "/ac.jpg",
     "brand": "Danby",
@@ -40,7 +40,7 @@
     "price": 40000
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Laptop",
     "image": "/laptop.jpg",
     "brand": "Apple",
@@ -60,7 +60,7 @@
     "price": 64500
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "Speaker",
     "image": "/speaker.jpg",
     "brand": "Bose",
@@ -80,7 +80,7 @@
     "price": 15499
   },
   {
-    "id": 5,
+    "id": "5",
     "name": "Smart Phone",
     "image": "/iphone.jpg",
     "brand": "Apple",
@@ -100,7 +100,7 @@
     "price": 85000
   },
   {
-    "id": 6,
+    "id": "6",
     "name": "DSLR Camera",
     "image": "/camera.jpg",
     "brand": "Canon",
@@ -120,7 +120,7 @@
     "price": 45000
   },
   {
-    "id": 7,
+    "id": "7",
     "name": "Headphones",
     "image": "/jblHeadphones.jpg",
     "brand": "JBL",
@@ -140,7 +140,7 @@
     "price": 32000
   },
   {
-    "id": 8,
+    "id": "8",
     "name": "Home Threater",
     "image": "/homethreater.jpg",
     "brand": "Boat",
@@ -160,7 +160,7 @@
     "price": 42633
   },
   {
-    "id": 9,
+    "id": "9",
     "name": "Samsung Tablet",
     "image": "/tablet.jpg",
     "brand": "Samsung",
@@ -180,7 +180,7 @@
     "price": 76499
   },
   {
-    "id": 10,
+    "id": "10",
     "name": "Smart Watch",
     "image": "/samsungwatch.jpg",
     "brand": "Samsung",
@@ -198,5 +198,194 @@
       "From fitness to fashion, this smartwatch elevates your everyday. Order now and enjoy exclusive discounts, fast delivery, and a free extra strap! ⌚🔥"
     ],
     "price": 76499
+  },
+  {
+    "id": "11",
+    "name": "Washing Machine",
+    "image": "/washing.jpg",
+    "brand": "Godrej",
+    "description": "High-Efficiency Washing Machine – Powerful & Gentle on Clothes",
+    "detailed_desc": "Make laundry day easier with our advanced washing machine, designed for powerful cleaning, energy efficiency, and fabric care. Featuring multiple wash programs, a high-speed motor, and smart technology, this machine ensures deep cleaning while protecting your clothes. Whether you have delicate fabrics or heavily soiled laundry, this washing machine delivers perfect results every time.",
+    "key_feat": [
+      "✅ Multiple Wash Programs – Customized settings for all fabric types",
+      "✅ High-Speed Motor – Faster washing with powerful stain removal",
+      "✅ Energy-Efficient & Water-Saving – Reduces electricity and water usage",
+      "✅ Large Capacity Drum – Perfect for families and heavy loads",
+      "✅ Smart Controls & LED Display – Easy operation with modern features",
+      "✅ Low Noise & Vibration-Free – Enjoy a quiet and smooth washing experience",
+
+      "Upgrade your laundry routine with this efficient and powerful washing machine. Order now for fast delivery & exciting discounts! 🚚"
+    ],
+    "price": 62000
+  },
+  {
+    "id": "12",
+    "name": "Refrigerator",
+    "image": "/refrigerator2.jpg",
+    "brand": "Samsung",
+    "description": "Modern Energy-Efficient Refrigerator – Spacious & Stylish",
+    "detailed_desc": "Upgrade your kitchen with this 350L Frost-Free Double Door Refrigerator, designed for efficiency, durability, and style. Featuring advanced multi-airflow cooling, this refrigerator ensures even cooling throughout, keeping your food fresh for longer. The energy-efficient inverter compressor reduces power consumption while maintaining optimal temperature.",
+    "key_feat": [
+      "✅ Frost-Free Technology – No manual defrosting required",
+      "✅ Multi-Airflow System – Uniform cooling for maximum freshness",
+      "✅ Spacious 350L Capacity – Perfect for families & large storage needs",
+      "✅ Adjustable Shelves & Large Crisper Drawer – Organize your groceries with ease",
+      "✅ LED Touch Display & Smart Controls – Effortless temperature adjustment",
+      "✅ Energy Efficient & Low Noise Operation – Saves electricity and runs quietly",
+
+      "Sleek, modern, and built to last, this refrigerator is the perfect addition to any home. Order now and enjoy free shipping & hassle-free returns! 🚚✨"
+    ],
+    "price": 56000
+  },
+  {
+    "id": "13",
+    "name": "Microwave",
+    "image": "/microw.jpg",
+    "brand": "Haier",
+    "description": "High-Performance Microwave Oven – Fast & Even Heating",
+    "detailed_desc": "Upgrade your kitchen with our energy-efficient Frost-Free Refrigerator, designed for superior cooling, durability, and modern aesthetics. Featuring multi-airflow cooling technology, it ensures even temperature distribution, keeping your food fresh for longer. With adjustable storage, a large crisper drawer, and a sleek design, this refrigerator is the perfect addition to any home.",
+    "key_feat": [
+      "✅ Frost-Free Technology – No manual defrosting required",
+      "✅ Spacious Storage – Adjustable shelves & large compartments",
+      "✅ Energy-Efficient Compressor – Saves power while maintaining optimal cooling",
+      "✅ Multi-Airflow System – Ensures consistent freshness throughout",
+      "✅ Sleek & Modern Design – Complements any kitchen interior",
+
+      "Experience next-level cooling with this high-performance refrigerator—perfect for preserving ingredients, beverages, and frozen foods efficiently. Order now for fast delivery & exciting offers! 🚚✨"
+    ],
+    "price": 25000
+  },
+  {
+    "id": "14",
+    "name": "Air Pods",
+    "image": "/airpods.jpg",
+    "brand": "Apple",
+    "description": "Apple AirPods – Seamless Wireless Audio Experience",
+    "detailed_desc": "Experience true wireless freedom with Apple AirPods, engineered for crystal-clear sound, effortless connectivity, and all-day comfort. Whether you're listening to music, taking calls, or interacting with Siri, AirPods deliver premium audio with intelligent features. With automatic ear detection, quick pairing, and long battery life, they’re the perfect everyday companion for Apple users.",
+    "key_feat": [
+      "✅ High-Quality Audio – Rich, immersive sound with deep bass",
+      "✅ Instant Pairing – Connects instantly with all Apple devices",
+      "✅ Long Battery Life – Up to 24 hours with the charging case",
+      "✅ Adaptive Fit – Lightweight, comfortable, and secure for all-day wear",
+      "✅ Touch Controls & Siri Integration – Hands-free control for calls, music, and more",
+      "✅ Wireless Charging Case – Convenient and cable-free charging",
+
+      "Upgrade your listening with Apple AirPods. Order now and enjoy next-gen wireless audio with fast delivery! 🎧📦"
+    ],
+    "price": 25399
+  },
+  {
+    "id": "15",
+    "name": "Hair dryer",
+    "image": "/hairdryer.jpg",
+    "brand": "Revlon",
+    "description": "Professional Hair Dryer – Fast Drying with Salon-Quality Results",
+    "detailed_desc": "Achieve sleek, smooth, and voluminous hair with our powerful hair dryer designed for fast drying and frizz control. With multiple heat and speed settings, ionic technology, and a lightweight ergonomic design, this dryer delivers salon-quality styling right at home. Whether you're in a rush or going for a glam look, it's your go-to tool for perfect hair days.",
+    "key_feat": [
+      "✅ Powerful Motor – Fast drying with strong airflow for quick results",
+      "✅ Ionic Technology – Reduces frizz and enhances shine",
+      "✅ Multiple Heat & Speed Settings – Custom styling for all hair types",
+      "✅ Cool Shot Button – Locks in styles with a blast of cool air",
+      "✅ Lightweight & Ergonomic – Easy to handle and perfect for daily use",
+      "✅ Includes Styling Attachments – Comes with concentrator and diffuser",
+
+      "Style like a pro with this high-performance hair dryer. Order now for fast delivery & special discounts! 💇‍♀️🚚"
+    ],
+    "price": 1599
+  },
+  {
+    "id": "16",
+    "name": "Hair Straightener",
+    "image": "/hairs.jpg",
+    "brand": "Ikonic",
+    "description": "Professional Hair Straightener – Sleek, Smooth Hair in Minutes",
+    "detailed_desc": "Get salon-smooth hair at home with our professional-grade hair straightener. Designed with advanced ceramic plates and rapid heat-up technology, it delivers flawless straightening with less damage. Whether you're going for pin-straight styles or soft waves, this straightener glides through your hair effortlessly, giving you long-lasting results with shine and volume.",
+    "key_feat": [
+      "✅ Ceramic-Coated Plates – Even heat distribution for smooth, shiny hair",
+      "✅ Fast Heat-Up – Ready to style in seconds with consistent temperature",
+      "✅ Adjustable Temperature Settings – Safe and effective for all hair types",
+      "✅ Sleek & Lightweight Design – Easy to handle and travel-friendly",
+      "✅ Anti-Frizz Technology – Reduces static and tames flyaways",
+      "✅ Swivel Cord & Auto Shut-Off – Tangle-free use and added safety",
+
+      "Transform your hair styling routine with this easy-to-use hair straightener. Order now for fast delivery & exciting offers! 💁‍♀️🔥"
+    ],
+    "price": 5399
+  },
+  {
+    "id": "17",
+    "name": "Mechanical Keyboard",
+    "image": "/keyboard.jpg",
+    "brand": "Zebronics",
+    "description": "Mechanical Keyboard – Precision Typing with Tactile Feedback",
+    "detailed_desc": "Enhance your typing and gaming experience with our high-performance mechanical keyboard, built for speed, accuracy, and durability. Featuring tactile switches, customizable RGB lighting, and an ergonomic layout, this keyboard is perfect for both work and play. With solid build quality and responsive keys, every keystroke feels satisfying and precise.",
+    "key_feat": [
+      "✅ Tactile Mechanical Switches – Responsive typing with satisfying feedback",
+      "✅ Customizable RGB Backlighting – Personalize your setup with vibrant lighting effects",
+      "✅ Durable Build Quality – Built to last with a sturdy, premium design",
+      "✅ Anti-Ghosting & N-Key Rollover – Every keystroke registers perfectly, even during intense gaming",
+      "✅ Ergonomic Layout – Comfortable typing experience for long hours",
+      "✅ Detachable USB Cable – Easy portability and convenient cable management",
+
+      "Level up your productivity or gaming with this pro-grade mechanical keyboard. Order now for fast delivery & exclusive deals! ⌨️⚡"
+    ],
+    "price": 2599
+  },
+  {
+    "id": "18",
+    "name": "Mouse",
+    "image": "/mouselogitech.jpg",
+    "brand": "Logitech",
+    "description": "Ergonomic Wireless Mouse – Smooth, Precise & Comfortable Control",
+    "detailed_desc": "Work or play with ease using our high-precision wireless mouse, designed for comfort, responsiveness, and long-lasting performance. With an ergonomic design, adjustable DPI, and smooth tracking on any surface, this mouse enhances your productivity and gaming experience. Ideal for laptops, desktops, and travel, it delivers seamless wireless connectivity and all-day comfort.",
+    "key_feat": [
+      "✅ High-Precision Optical Sensor – Smooth and accurate cursor control",
+      "✅ Adjustable DPI Settings – Switch sensitivity for work or gaming",
+      "✅ Ergonomic Design – Comfortable grip for long hours of use",
+      "✅ Wireless Connectivity – Hassle-free connection with long-range performance",
+      "✅ Long Battery Life – Extended usage with power-saving features",
+      "✅ Silent Clicks – Quiet operation for office or shared spaces",
+
+      "Upgrade your workspace or gaming setup with this versatile wireless mouse. Order now for fast delivery & great deals! 🖱️🚀"
+    ],
+    "price": 1599
+  },
+  {
+    "id": "19",
+    "name": "Toaster",
+    "image": "/toast.jpg",
+    "brand": "Havells",
+    "description": "High-Performance 2-Slice Toaster – Quick & Even Toasting",
+    "detailed_desc": "Start your mornings with delicious, evenly toasted bread using our high-performance electric toaster. Designed for fast heating, multiple browning levels, and easy operation, this toaster ensures perfectly crispy toast in minutes. Whether you prefer a light golden crisp or a deep crunch, the adjustable settings cater to your taste.",
+    "key_feat": [
+      "✅ 2/4-Slice Capacity – Ideal for quick & efficient toasting",
+      "✅ Adjustable Browning Control – Customize your toast’s crispiness",
+      "✅ Quick & Even Heating – Perfect results every time",
+      "✅ Auto Shut-Off & Pop-Up Function – Prevents burning & ensures safety",
+      "✅ Removable Crumb Tray – Easy cleaning & maintenance",
+      "✅ Compact & Stylish Design – Saves space & enhances kitchen aesthetics",
+
+      "Enjoy hassle-free breakfast preparation with this efficient and stylish toaster. Order now for fast delivery & exclusive discounts! 🚚🍞"
+    ],
+    "price": 2547
+  },
+  {
+    "id": "20",
+    "name": "Plays Station 5",
+    "image": "/playstation.jpg",
+    "brand": "Sony",
+    "description": "PlayStation Console – Next-Level Gaming Performance & Immersion",
+    "detailed_desc": "Step into the future of gaming with the PlayStation console, delivering lightning-fast load times, stunning graphics, and ultra-immersive gameplay. With a powerful custom processor, advanced graphics engine, and a vast library of exclusive titles, PlayStation is built for gamers who want performance, realism, and unforgettable adventures. Perfect for solo campaigns, online battles, or local multiplayer fun.",
+    "key_feat": [
+      "✅ Ultra-Fast SSD – Minimal load times for seamless gameplay",
+      "✅ Ray Tracing & 4K Graphics – Breathtaking visuals with lifelike detail",
+      "✅ DualSense Controller – Adaptive triggers and haptic feedback for immersive play",
+      "✅ Backward Compatibility – Play thousands of PS4 games",
+      "✅ Expansive Game Library – Access exclusive hits and popular third-party titles",
+      "✅ Online Multiplayer & Streaming – Join friends and stream gameplay with ease",
+
+      "Level up your gaming world with the PlayStation experience. Order now for fast delivery & limited-time offers! 🎮⚡"
+    ],
+    "price": 55000
   }
 ]

@@ -7,11 +7,11 @@ import AddToCart from "../components/AddToCart";
 const playfair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 
 const getProducts = async () => {
-  const dataSnapshot = await db.collection("products").get();
+  const dataSnapshot = await db.collection("electronics").get();
   return dataSnapshot.docs.map((doc) => doc.data());
 };
 
-export default async function SkinCareAppliances() {
+export default async function Electronics() {
   const data = await getProducts();
 
   return (
@@ -28,9 +28,9 @@ export default async function SkinCareAppliances() {
             className={`flex flex-col items-center text-center border-2 rounded-lg p-4 mb-10 transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 ${playfair.className}`}
             key={product.id}
           >
-            <Link href={`/homeappliances/${product.id}`}>
+            <Link href={`/electronics/${product.id}`}>
               <Image
-                src={product.imageURL}
+                src={product.image}
                 width={300}
                 height={300}
                 alt="Product image"
@@ -39,7 +39,7 @@ export default async function SkinCareAppliances() {
             </Link>
             <div className="flex-grow">
               <p className="text-lg font-semibold mt-2">
-                {product.productName}
+                {product.name}
               </p>
               <p className="text-gold-100">By - {product.brand}</p>
               <p className="text-sm text-black">{product.description}</p>
