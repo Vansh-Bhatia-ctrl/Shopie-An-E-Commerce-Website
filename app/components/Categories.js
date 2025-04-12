@@ -1,88 +1,180 @@
 "use client";
 import { Raleway } from "next/font/google";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["300", "700"] });
 
 export default function Categories() {
   const categories = [
     {
-      title: "Fashion",
+      title: "Home Appliances",
+      route: "homeappliances",
       items: [
-        { src: "/jackets.jpg", alt: "Jacket", label: "Jackets" },
-        { src: "/jean.jpg", alt: "Jeans", label: "Jeans" },
-        { src: "/informalshirt.jpg", alt: "Shirts", label: "Shirts" },
-        { src: "/glasses.jpg", alt: "Sunglasses", label: "Sunglasses" },
+        {
+          src: "/refrigerator2.jpg",
+          alt: "Refrigerator",
+          label: "Refrigerator",
+          id: "32",
+          route: "electronics",
+        },
+        {
+          src: "/toast.jpg",
+          alt: "Toaster",
+          label: "Toaster",
+          id: "39",
+          route: "electronics",
+        },
+        {
+          src: "/washing.jpg",
+          alt: "Washing Machine",
+          label: "Washing Machine",
+          id: "31",
+          route: "electronics",
+        },
+        {
+          src: "/microw.jpg",
+          alt: "Microwave",
+          label: "Microwave",
+          id: "33",
+          route: "electronics",
+        },
       ],
     },
     {
       title: "Gaming",
+      route: "gaming",
       items: [
-        { src: "/gamingmonitor.jpg", alt: "Gaming monitor", label: "Monitors" },
-        { src: "/mouse.jpg", alt: "Gaming mouse", label: "Mouse" },
         {
-          src: "/play-station5.jpg",
-          alt: "Dual shock controller",
-          label: "Controllers",
+          src: "/playstation.jpg",
+          alt: "PlayStation 5",
+          label: "PlayStation 5",
+          id: "41",
+          route: "gaming",
         },
-        { src: "/headset.jpg", alt: "Gaming headphones", label: "Headphones" },
-      ],
-    },
-    {
-      title: "Formals",
-      items: [
-        { src: "/shirt.jpg", alt: "Shirt", label: "Shirt" },
-        { src: "/pants.jpg", alt: "Pants", label: "Pants" },
-        { src: "/formaltshirt.jpg", alt: "T-shirts", label: "T-shirts" },
-        { src: "/tie.jpg", alt: "Tie", label: "Tie" },
+        {
+          src: "/xbox.jpg",
+          alt: "XBox Series X",
+          label: "XBox Series X",
+          id: "46",
+          route: "gaming",
+        },
+        {
+          src: "/nintendoswitch.jpg",
+          alt: "Nintendo Switch",
+          label: "Nintendo Switch",
+          id: "50",
+          route: "gaming",
+        },
+        {
+          src: "/xboxseriess.jpg",
+          alt: "XBox Series S",
+          label: "XBox Series S",
+          id: "49",
+          route: "gaming",
+        },
       ],
     },
     {
       title: "Electronics",
+      route: "electronics",
       items: [
-        { src: "/mobile.jpg", alt: "Mobile phone", label: "Smart Phones" },
-        { src: "/smartwatch.jpg", alt: "Smart watch", label: "Smart watches" },
-        { src: "/earpods.jpg", alt: "Earpods", label: "Ear phones" },
-        { src: "/tv.jpg", alt: "Television", label: "Televisions" },
+        {
+          src: "/ac.jpg",
+          alt: "Air-Conditioner",
+          label: "Air-Conditioner",
+          id: "22",
+          route: "electronics",
+        },
+        {
+          src: "/laptop.jpg",
+          alt: "Laptop",
+          label: "Laptop",
+          id: "23",
+          route: "electronics",
+        },
+        {
+          src: "/iphone.jpg",
+          alt: "Smart Phone",
+          label: "Smart Phone",
+          id: "25",
+          route: "electronics",
+        },
+        {
+          src: "/jblHeadphones.jpg",
+          alt: "Headphones",
+          label: "Headphones",
+          id: "27",
+          route: "electronics",
+        },
       ],
     },
     {
-      title: "Home Appliances",
+      title: "Clothing",
+      route: "clothing",
       items: [
-        { src: "/fridge.jpg", alt: "Refrigerator", label: "Refrigerators" },
         {
-          src: "/washingmachine.jpg",
-          alt: "Washing machine",
-          label: "Washing machines",
+          src: "/jeans.jpg",
+          alt: "Jeans",
+          label: "Jeans",
+          id: "65",
+          route: "clothing",
         },
         {
-          src: "/coffeemachine.jpg",
-          alt: "Coffee machine",
-          label: "Coffee maker",
+          src: "/formalshirt.jpg",
+          alt: "Formal Shirt",
+          label: "Formal Shirt",
+          id: "64",
+          route: "clothing",
         },
-        { src: "/microwave.jpg", alt: "Micro wave", label: "Micro waves" },
+        {
+          src: "/womentshirt.jpg",
+          alt: "Women's Shirt",
+          label: "Women's Shirt",
+          id: "72",
+          route: "clothing",
+        },
+        {
+          src: "/jeggings.jpg",
+          alt: "Jeggings",
+          label: "Jeggings",
+          id: "74",
+          route: "clothing",
+        },
       ],
     },
     {
-      title: "Readings",
+      title: "Skin Care",
+      route: "skincare",
       items: [
         {
-          src: "/fiction.jpg",
-          alt: "Fictional novel",
-          label: "Fictional novels",
+          src: "/micellar_water.jpg",
+          alt: "Micellar Water",
+          label: "Micellar Water",
+          id: "102",
+          route: "skincare",
         },
         {
-          src: "/autobiography.jpg",
-          alt: "Autobiography",
-          label: "Autobiographies",
+          src: "/vitamin_c_serum.jpg",
+          alt: "Vitamin C Serum",
+          label: "Vitamin C Serum",
+          id: "106",
+          route: "skincare",
         },
         {
-          src: "/selfhelp.jpg",
-          alt: "Self help book",
-          label: "Self-help books",
+          src: "/retinol_serum.jpg",
+          alt: "Retonil Serum",
+          label: "Retonil Serum",
+          id: "109",
+          route: "skincare",
         },
-        { src: "/maths.jpg", alt: "School books", label: "School books" },
+        {
+          src: "/aloe_gel.jpg",
+          alt: "Aloe Vera Gel",
+          label: "Aloe Vera Gel",
+          id: "113",
+          route: "skincare",
+        },
       ],
     },
   ];
@@ -96,39 +188,47 @@ export default function Categories() {
       </div>
 
       <div className="relative flex items-center overflow-hidden">
-  <div className="w-full h-[297px] flex flex-row overflow-x-auto scroll-smooth md:h-[480px] md:w-[1500px] lg:w-[2200px] lg:justify-start no-scrollbar xl:h-[470px]">
-    {categories.map((category, index) => (
-      <section
-        key={index}
-        className={`bg-white-300 h-[270px] w-[250px] my-3 mx-2 border-2 rounded p-2 md:h-[440px] md:w-[300px] lg:w-[350px] lg:h-[450px] flex-shrink-0 ${
-          index === 0 ? "ml-3" : ""
-        } xl:h-[430px]`}
-      >
-        <h1
-          className={`text-blue-500 font-bold ${raleway.className} md:text-lg md:p-3 lg:text-xl`}
-        >
-          {category.title}
-        </h1>
+        <div className="w-full h-[297px] flex flex-row overflow-x-auto scroll-smooth md:h-[480px] md:w-[1500px] lg:w-[2200px] lg:justify-start no-scrollbar xl:h-[470px]">
+          {categories.map((category, index) => (
+            <section
+              key={index}
+              className={`h-[270px] w-[250px] my-3 mx-2 border-2 rounded p-2 md:h-[440px] md:w-[300px] xl:w-[363px] lg:h-[450px] flex-shrink-0 ${
+                index === 0 ? "ml-3" : ""
+              } xl:h-[430px]`}
+            >
+              <Link href={`/${category.route}`}>
+                <h1
+                  className={`text-blue-500 font-bold ${raleway.className} md:text-lg md:p-3 lg:text-xl`}
+                >
+                  {category.title}
+                </h1>
+              </Link>
 
-        <div className="grid grid-cols-2 gap-5 sm:gap-4">
-          {category.items.map((item, idx) => (
-            <div key={idx} className="p-1 flex items-center flex-col md:p-1">
-              <Image
-                src={item.src}
-                width={270}
-                height={270}
-                alt={item.alt}
-                className="rounded p-0.5 h-[70px] md:w-[270px] md:h-[120px] lg:w-[270px]"
-              />
-              <p className="text-sm md:text-lg">{item.label}</p>
-            </div>
+              <div className="grid grid-cols-2 gap-5 sm:gap-4">
+                {category.items.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="p-1 flex items-center flex-col md:p-1"
+                  >
+                    <Link href={`/${item.route}/${item.id}`}>
+                      <Image
+                        src={item.src}
+                        width={270}
+                        height={270}
+                        alt={item.alt}
+                        className="rounded p-0.5 h-[70px] md:w-[270px] md:h-[120px] lg:w-[270px]"
+                      />
+                    </Link>
+                    <p className="text-sm md:text-lg font-semibold text-gray-600">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
-      </section>
-    ))}
-  </div>
-</div>
-
+      </div>
     </div>
   );
 }

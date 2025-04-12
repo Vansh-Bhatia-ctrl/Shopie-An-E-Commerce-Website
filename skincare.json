@@ -1,0 +1,342 @@
+[
+  {
+    "id": "101",
+    "name": "Gentle Foaming Face Wash",
+    "image": "/facewash.jpg",
+    "brand": "Cetaphil",
+    "description": "Mild foaming cleanser for daily use – suits all skin types.",
+    "detailed_desc": "Formulated for sensitive skin, this gentle foaming face wash effectively removes dirt, oil, and impurities without over-drying. Soap-free, fragrance-free, and pH balanced for everyday use.",
+    "key_feat": [
+      "✅ Dermatologist Recommended",
+      "✅ Soap-Free Formula",
+      "✅ Hydrates While Cleansing",
+      "✅ Removes Impurities Gently",
+      "✅ Suitable for All Skin Types"
+    ],
+    "price": 499,
+    "route": "skincare"
+  },
+  {
+    "id": "102",
+    "name": "Oil-Free Micellar Water",
+    "image": "/micellar_water.jpg",
+    "brand": "Garnier",
+    "description": "Micellar water that removes makeup, dirt, and excess oil without rinsing.",
+    "detailed_desc": "Garnier's Micellar Cleansing Water is a multipurpose product that removes makeup, cleanses, and refreshes skin. Ideal for sensitive and oily skin types, it's gentle and alcohol-free.",
+    "key_feat": [
+      "✅ Removes Waterproof Makeup",
+      "✅ No Rinsing Required",
+      "✅ Alcohol-Free",
+      "✅ Suitable for Oily & Sensitive Skin",
+      "✅ Dermatologically Tested"
+    ],
+    "price": 349,
+    "route": "skincare"
+  },
+  {
+    "id": "103",
+    "name": "Hydrating Rose Toner",
+    "image": "/rose_toner.jpg",
+    "brand": "Plum",
+    "description": "Alcohol-free toner that hydrates and tightens pores.",
+    "detailed_desc": "Enriched with rose water and hyaluronic acid, this toner soothes, refreshes, and restores pH balance while minimizing the appearance of pores.",
+    "key_feat": [
+      "✅ Alcohol-Free Formula",
+      "✅ Hydrates & Tones",
+      "✅ Minimizes Pores",
+      "✅ Soothes Skin",
+      "✅ Vegan & Cruelty-Free"
+    ],
+    "price": 399,
+    "route": "skincare"
+  },
+  {
+    "id": "104",
+    "name": "Oil-Free Gel Moisturizer",
+    "image": "/gel_moisturizer.jpg",
+    "brand": "Neutrogena",
+    "description": "Lightweight, non-greasy moisturizer for oily & combination skin.",
+    "detailed_desc": "This water-based gel moisturizer is packed with hyaluronic acid for intense hydration without clogging pores. It's ideal for hot climates and oily skin.",
+    "key_feat": [
+      "✅ Water-Based Formula",
+      "✅ Oil-Free & Non-Comedogenic",
+      "✅ Fast-Absorbing",
+      "✅ Hydrates Up to 24 Hours",
+      "✅ Dermatologist Tested"
+    ],
+    "price": 675,
+    "route": "skincare"
+  },
+  {
+    "id": "105",
+    "name": "Daily SPF 50+ Sunscreen",
+    "image": "/spf50.jpg",
+    "brand": "Minimalist",
+    "description": "Broad-spectrum sunscreen with no white cast.",
+    "detailed_desc": "Minimalist’s SPF 50 sunscreen offers PA+++ protection from UVA/UVB rays with lightweight, fast-absorbing texture. It blends seamlessly, leaving no greasy residue or white cast.",
+    "key_feat": [
+      "✅ Broad Spectrum (UVA + UVB)",
+      "✅ SPF 50 PA+++",
+      "✅ No White Cast",
+      "✅ Suitable for All Skin Types",
+      "✅ Fragrance-Free"
+    ],
+    "price": 599,
+    "route": "skincare"
+  },
+  {
+    "id": "106",
+    "name": "Vitamin C Brightening Serum",
+    "image": "/vitamin_c_serum.jpg",
+    "brand": "The Ordinary",
+    "description": "Potent Vitamin C serum for radiant, even-toned skin.",
+    "detailed_desc": "Packed with 10% Vitamin C and antioxidants, this serum targets dullness, dark spots, and uneven skin tone to reveal visibly brighter and healthier skin.",
+    "key_feat": [
+      "✅ 10% Pure Vitamin C",
+      "✅ Boosts Radiance",
+      "✅ Fades Dark Spots",
+      "✅ Lightweight & Non-Sticky",
+      "✅ Best Used With Sunscreen"
+    ],
+    "price": 950,
+    "route": "skincare"
+  },
+  {
+    "id": "107",
+    "name": "AHA+BHA Peeling Solution",
+    "image": "/chemical_exfoliant.jpg",
+    "brand": "Dot & Key",
+    "description": "Chemical exfoliator that unclogs pores and refines skin texture.",
+    "detailed_desc": "This exfoliating solution with 10% AHA and 2% BHA helps remove dead skin cells, clear pores, and improve skin texture. Ideal for oily and acne-prone skin.",
+    "key_feat": [
+      "✅ Exfoliates Dead Skin",
+      "✅ Clears Blackheads & Acne",
+      "✅ Refines Texture",
+      "✅ Reduces Pigmentation",
+      "✅ Use Only at Night"
+    ],
+    "price": 699,
+    "route": "skincare"
+  },
+  {
+    "id": "108",
+    "name": "Hydrating Sheet Mask (Pack of 5)",
+    "image": "/sheet_mask.jpg",
+    "brand": "TonyMoly",
+    "description": "Nourishing sheet masks for instant glow and hydration.",
+    "detailed_desc": "These Korean sheet masks provide deep hydration and glow with ingredients like green tea, aloe, and hyaluronic acid. Use weekly for refreshed, glowing skin.",
+    "key_feat": [
+      "✅ Includes 5 Variants",
+      "✅ Deeply Hydrating",
+      "✅ Instant Glow",
+      "✅ Easy to Use",
+      "✅ Travel-Friendly"
+    ],
+    "price": 499,
+    "route": "skincare"
+  },
+  {
+    "id": "109",
+    "name": "Retinol 0.3% Night Serum",
+    "image": "/retinol_serum.jpg",
+    "brand": "Re'equil",
+    "description": "Anti-aging serum with retinol to reduce fine lines & acne.",
+    "detailed_desc": "This gentle retinol serum improves skin elasticity, reduces wrinkles, and controls acne. Enriched with peptides and antioxidants, it's perfect for night care routines.",
+    "key_feat": [
+      "✅ Reduces Wrinkles",
+      "✅ Boosts Collagen",
+      "✅ Controls Acne",
+      "✅ Non-Irritating Formula",
+      "✅ Apply Only at Night"
+    ],
+    "price": 899,
+    "route": "skincare"
+  },
+  {
+    "id": "110",
+    "name": "Under Eye Cream with Caffeine",
+    "image": "/eye_cream.jpg",
+    "brand": "mCaffeine",
+    "description": "Revitalizing eye cream that reduces puffiness and dark circles.",
+    "detailed_desc": "Infused with caffeine and hyaluronic acid, this eye cream helps depuff tired eyes and brighten dark circles while keeping the under-eye area hydrated.",
+    "key_feat": [
+      "✅ Reduces Puffiness",
+      "✅ Brightens Dark Circles",
+      "✅ Hydrates Under-Eye Area",
+      "✅ Lightweight Gel-Cream",
+      "✅ Suitable for All Skin Types"
+    ],
+    "price": 499,
+    "route": "skincare"
+  },
+  {
+    "id": "111",
+    "name": "Lip Sleeping Mask Berry",
+    "image": "/lip_mask.jpg",
+    "brand": "Laneige",
+    "description": "Overnight lip mask that nourishes and softens lips.",
+    "detailed_desc": "This cult-favorite sleeping lip mask contains berry extracts and vitamin C to intensely hydrate and repair dry, chapped lips overnight.",
+    "key_feat": [
+      "✅ Overnight Repair",
+      "✅ Sweet Berry Scent",
+      "✅ Softens Dry Lips",
+      "✅ Long-Lasting Hydration",
+      "✅ A Little Goes a Long Way"
+    ],
+    "price": 699,
+    "route": "skincare"
+  },
+  {
+    "id": "112",
+    "name": "Acne Spot Patch",
+    "image": "/acne_patch.jpg",
+    "brand": "COSRX",
+    "description": "Invisible hydrocolloid patches that flatten pimples overnight.",
+    "detailed_desc": "These thin acne patches absorb pus and protect breakouts from bacteria. Stick them on overnight and wake up with visibly reduced pimples.",
+    "key_feat": [
+      "✅ Works Overnight",
+      "✅ Invisible Finish",
+      "✅ Heals Faster",
+      "✅ Prevents Scarring",
+      "✅ Hypoallergenic"
+    ],
+    "price": 299,
+    "route": "skincare"
+  },
+  {
+    "id": "113",
+    "name": "Aloe Vera Soothing Gel",
+    "image": "/aloe_gel.jpg",
+    "brand": "WOW Skin Science",
+    "description": "100% pure aloe gel for soothing, cooling, and hydrating skin.",
+    "detailed_desc": "A multi-purpose aloe gel that calms irritation, heals minor cuts, hydrates skin, and even works as a post-sun treatment.",
+    "key_feat": [
+      "✅ 100% Pure Aloe Vera",
+      "✅ Soothes & Cools",
+      "✅ Non-Sticky",
+      "✅ Can Be Used on Face, Hair, & Body",
+      "✅ Free from Parabens & Silicones"
+    ],
+    "price": 249,
+    "route": "skincare"
+  },
+  {
+    "id": "114",
+    "name": "Charcoal Clay Mask",
+    "image": "/charcoal_mask.jpg",
+    "brand": "Mamaearth",
+    "description": "Detoxifying clay mask that deeply cleanses and purifies skin.",
+    "detailed_desc": "Formulated with charcoal, kaolin clay, and coffee, this mask pulls out dirt and impurities, controls oil, and improves skin clarity after just one use.",
+    "key_feat": [
+      "✅ Deep Pore Cleansing",
+      "✅ Oil Control",
+      "✅ Refreshes Dull Skin",
+      "✅ Made Safe Certified",
+      "✅ Suitable for Normal to Oily Skin"
+    ],
+    "price": 549,
+    "route": "skincare"
+  },
+  {
+    "id": "115",
+    "name": "Niacinamide 10% Serum",
+    "image": "/niacinamide_serum.jpg",
+    "brand": "The Derma Co",
+    "description": "Serum that regulates oil and reduces acne marks.",
+    "detailed_desc": "A potent serum with 10% niacinamide and 1% zinc that targets acne marks, regulates sebum production, and brightens skin tone.",
+    "key_feat": [
+      "✅ Fades Acne Scars",
+      "✅ Controls Oil",
+      "✅ Refines Pores",
+      "✅ Brightens Skin",
+      "✅ Safe for Daily Use"
+    ],
+    "price": 599,
+    "route": "skincare"
+  },
+  {
+    "id": "116",
+    "name": "Cica Calming Cream",
+    "image": "/cica_cream.jpg",
+    "brand": "Dr. Sheth's",
+    "description": "Soothing cream for irritated and sensitive skin.",
+    "detailed_desc": "Infused with Centella Asiatica, this calming cream helps reduce redness, inflammation, and boosts skin repair. Ideal for reactive and sensitive skin.",
+    "key_feat": [
+      "✅ Reduces Redness",
+      "✅ Heals Irritated Skin",
+      "✅ Strengthens Skin Barrier",
+      "✅ Non-Greasy Formula",
+      "✅ Suitable for Eczema-Prone Skin"
+    ],
+    "price": 649,
+    "route": "skincare"
+  },
+  {
+    "id": "117",
+    "name": "Tea Tree Face Wash",
+    "image": "/tea_tree_facewash.jpg",
+    "brand": "The Body Shop",
+    "description": "Cleansing face wash with antibacterial tea tree oil.",
+    "detailed_desc": "Enriched with purifying tea tree oil, this face wash deeply cleanses skin, reduces acne, and leaves skin feeling refreshed without over-drying.",
+    "key_feat": [
+      "✅ Deep Cleansing",
+      "✅ Antibacterial Formula",
+      "✅ Reduces Acne",
+      "✅ Refreshing Scent",
+      "✅ Ideal for Oily Skin"
+    ],
+    "price": 595,
+    "route": "skincare"
+  },
+  {
+    "id": "118",
+    "name": "Rice Water Bright Cleansing Foam",
+    "image": "/rice_cleansing.jpg",
+    "brand": "The Face Shop",
+    "description": "Brightening face cleanser made with rice water extract.",
+    "detailed_desc": "This creamy foam cleanser removes impurities while brightening skin tone using natural rice water extracts. Leaves skin soft, supple, and glowing.",
+    "key_feat": [
+      "✅ Rich Lather",
+      "✅ Gently Brightens Skin",
+      "✅ Removes Impurities",
+      "✅ Nourishing Rice Extract",
+      "✅ Paraben-Free"
+    ],
+    "price": 699,
+    "route": "skincare"
+  },
+  {
+    "id": "119",
+    "name": "Hydrating Night Cream",
+    "image": "/night_cream.jpg",
+    "brand": "Olay",
+    "description": "Intense night cream for deep hydration and repair.",
+    "detailed_desc": "Olay's night cream is designed to hydrate and replenish the skin overnight. It reduces fine lines and helps repair skin barrier with peptides and glycerin.",
+    "key_feat": [
+      "✅ Deep Overnight Hydration",
+      "✅ Repairs Skin Barrier",
+      "✅ Reduces Fine Lines",
+      "✅ Soft, Supple Finish",
+      "✅ Dermatologist Approved"
+    ],
+    "price": 899,
+    "route": "skincare"
+  },
+  {
+    "id": "120",
+    "name": "Vitamin C Glow Boosting Moisturizer",
+    "image": "/vitamin_c_moisturizer.jpg",
+    "brand": "The Body Shop",
+    "description": "Daily moisturizer enriched with Vitamin C for radiant skin.",
+    "detailed_desc": "Infused with Amazonian camu camu berries, this glow-boosting moisturizer helps improve skin tone, energize dull complexions, and provide hydration throughout the day.",
+    "key_feat": [
+      "✅ Brightens Dull Skin",
+      "✅ Lightweight Gel Formula",
+      "✅ Enriched with Vitamin C",
+      "✅ 24-Hour Hydration",
+      "✅ Vegan and Cruelty-Free"
+    ],
+    "price": 1195,
+    "route": "skincare"
+  }
+]

@@ -23,31 +23,25 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-// Read data from clothing.json
-const rawData = fs.readFileSync("clothing.json", "utf8");
-const clothingData = JSON.parse(rawData);
+// Read data from skincare.json
+const rawData = fs.readFileSync("skincare.json", "utf8");
+const skincareData = JSON.parse(rawData);
 
-// 🧠 Configuration for this run
-const COLLECTION_NAME = "clothing";
+// 🔧 Configuration
+const COLLECTION_NAME = "skincare";
 
-const uploadClothingDataToFirestore = async () => {
+const uploadSkincareDataToFirestore = async () => {
   try {
     const batch = db.batch();
 
-    clothingData.forEach((product, index) => {
-      // Correct image path for the product (jeans in this case)
-      if (product.name === "Men's Slim Fit Stretchable Jeans") {
-        product.image = "/jeans.jpg";
-      }
-
+    skincareData.forEach((product, index) => {
       const docId = product.id ? String(product.id) : `product-${index}`;
       const docRef = db.collection(COLLECTION_NAME).doc(docId);
 
-      // Set product data to Firestore
+      // Upload product data
       batch.set(docRef, product, { merge: true });
     });
 
-    // Commit the batch write to Firestore
     await batch.commit();
     console.log(`✅ Successfully uploaded data to '${COLLECTION_NAME}' collection!`);
   } catch (error) {
@@ -55,4 +49,4 @@ const uploadClothingDataToFirestore = async () => {
   }
 };
 
-uploadClothingDataToFirestore();
+uploadSkincareDataToFirestore();
