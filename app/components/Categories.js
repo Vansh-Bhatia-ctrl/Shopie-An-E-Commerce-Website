@@ -15,29 +15,29 @@ export default function Categories() {
           src: "/refrigerator2.jpg",
           alt: "Refrigerator",
           label: "Refrigerator",
-          id: "32",
-          route: "electronics",
+          id: "1",
+          route: "homeappliances",
         },
         {
           src: "/toast.jpg",
           alt: "Toaster",
           label: "Toaster",
-          id: "39",
-          route: "electronics",
+          id: "15",
+          route: "homeappliances",
         },
         {
           src: "/washing.jpg",
           alt: "Washing Machine",
-          label: "Washing Machine",
-          id: "31",
-          route: "electronics",
+          label: "Washing-Machine",
+          id: "5",
+          route: "homeappliances",
         },
         {
           src: "/microw.jpg",
           alt: "Microwave",
           label: "Microwave",
-          id: "33",
-          route: "electronics",
+          id: "2",
+          route: "homeappliances",
         },
       ],
     },
@@ -180,7 +180,8 @@ export default function Categories() {
   ];
 
   return (
-    <div className="relative">
+    
+    <div className="relative flex flex-col">
       <div className="my-3 p-1 mb-[2px] mx-1 md:mx-3 md:mt-8 md:flex md:items-center">
         <p className="font-bold text-orange-500 text-xl md:text-xl lg:text-2xl">
           Choose by category
@@ -230,5 +231,6 @@ export default function Categories() {
         </div>
       </div>
     </div>
+
   );
 }

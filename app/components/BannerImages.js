@@ -37,7 +37,7 @@ export default function BannerImages() {
   return (
     <div className="relative w-full h-full md:h-[610px] md:w-auto lg:h-[900px] overflow-hidden p-0 m-0">
       <div
-        className="flex w-full h-full transition-transform duration-700 ease-in-out p-0 m-0 bg-red-100" // Added bg-red-100 for debugging
+        className="flex w-full h-full transition-transform duration-700 ease-in-out p-0 m-0" // Added bg-red-100 for debugging
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {banners.map((banner, index) => (
@@ -48,7 +48,7 @@ export default function BannerImages() {
             width={1920}
             height={1080}
             quality={100}
-            className="w-full h-full object-fill md:object-cover flex-shrink-0 p-0 m-0"
+            className="w-full h-[320px] object-fill md:object-cover flex-shrink-0 p-0 m-0 md:h-[600px] lg:h-[1000px]"
             style={{ width: "100vw" }}
           />
         ))}

@@ -36,15 +36,14 @@ export default function CartIcon() {
   );
 
   return (
-    <Link href="/cart" className="relative">
-      <ShoppingCart size={28} className="text-gray-700" />
-      {user
-        ? totalItems > 0 && (
-            <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full shadow-md">
-              {totalItems}
-            </div>
-          )
-        : ""}
+    <Link href="/cart" className="relative inline-block">
+      <ShoppingCart size={28} className="text-white md:text-gray-700" />
+
+      {user && totalItems > 0 && (
+        <div className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full shadow-md">
+          {totalItems}
+        </div>
+      )}
     </Link>
   );
 }

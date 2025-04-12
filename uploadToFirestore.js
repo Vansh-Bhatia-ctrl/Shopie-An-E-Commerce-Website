@@ -1,6 +1,7 @@
 require("dotenv").config();
 const admin = require("firebase-admin");
 const fs = require("fs");
+const path = require("path");
 
 // Firebase credentials from .env
 const serviceAccount = {
@@ -23,30 +24,42 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-// Read data from skincare.json
-const rawData = fs.readFileSync("skincare.json", "utf8");
-const skincareData = JSON.parse(rawData);
+// File and collection settings
+const FILE_PATH = path.join(__dirname, "products.json");
+const COLLECTION_NAME = "products";
 
-// 🔧 Configuration
-const COLLECTION_NAME = "skincare";
-
-const uploadSkincareDataToFirestore = async () => {
+const updateProductImages = async () => {
   try {
+    if (!fs.existsSync(FILE_PATH)) {
+      console.error(`❌ File '${FILE_PATH}' not found.`);
+      return;
+    }
+
+    const rawData = fs.readFileSync(FILE_PATH, "utf8");
+    const products = JSON.parse(rawData);
+
     const batch = db.batch();
 
-    skincareData.forEach((product, index) => {
+    products.forEach((product, index) => {
       const docId = product.id ? String(product.id) : `product-${index}`;
       const docRef = db.collection(COLLECTION_NAME).doc(docId);
 
-      // Upload product data
-      batch.set(docRef, product, { merge: true });
+      // Update both `image` and `imageURL`
+      batch.set(
+        docRef,
+        {
+          image: product.image,
+          imageURL: product.image, // You can also customize this separately if needed
+        },
+        { merge: true }
+      );
     });
 
     await batch.commit();
-    console.log(`✅ Successfully uploaded data to '${COLLECTION_NAME}' collection!`);
+    console.log(`✅ Successfully updated 'image' and 'imageURL' in '${COLLECTION_NAME}' collection!`);
   } catch (error) {
-    console.error("❌ Error uploading data to Firestore:", error);
+    console.error("❌ Error updating Firestore:", error);
   }
 };
 
-uploadSkincareDataToFirestore();
+updateProductImages();

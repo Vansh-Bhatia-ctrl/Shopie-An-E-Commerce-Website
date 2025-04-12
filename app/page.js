@@ -1,5 +1,6 @@
 import Categories from "./components/Categories";
 import BannerImages from "./components/BannerImages";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
         <Categories />
       </div>
 
-      <div className="w-full h-[479px] md:w-full md:h-auto md:object-cover">
+      <Link href="/homeappliances">
+      <div className="w-full h-[572.3px] md:w-full md:h-auto md:object-cover">
         <img
           src="/home-banner.jpg"
           width={782}
@@ -19,8 +21,7 @@ export default function Home() {
           className="w-[782px] h-full md:w-full md:h-[650px] md:object-cover"
         />
       </div>
-
-    
+      </Link>
     </>
   );
 }

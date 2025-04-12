@@ -58,7 +58,7 @@ export default function UserIcon() {
       {user ? (
         <Popover.Root>
           <Popover.Trigger asChild>
-            <button className="cursor-pointer font-bold text-gray-700 hover:text-gray-500 transition">
+            <button className="cursor-pointer font-bold md:text-gray-700 hover:text-gray-200 md:hover:text-gray-500 text-white-100 transition">
               {user.name}
             </button>
           </Popover.Trigger>
