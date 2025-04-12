@@ -12,13 +12,13 @@ export default function Home() {
       </div>
 
       <Link href="/homeappliances">
-      <div className="w-full h-[572.3px] md:w-full md:h-auto md:object-cover">
+      <div className="xs:h-[642px] xs:w-screen w-full h-[572.3px] md:w-full md:h-auto md:object-cover">
         <img
           src="/home-banner.jpg"
           width={782}
           height={370}
           alt="Home appliances banner"
-          className="w-[782px] h-full md:w-full md:h-[650px] md:object-cover"
+          className="xs:h-full w-[782px] h-full md:w-full md:h-[650px] md:object-cover"
         />
       </div>
       </Link>

@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
   	extend: {
+		screens: {
+			xs: "356px",  
+		  },
   		colors: {
   			white: {
   				'100': '#E0E0E0',

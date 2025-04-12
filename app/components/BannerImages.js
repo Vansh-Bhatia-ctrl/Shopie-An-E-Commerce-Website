@@ -48,7 +48,7 @@ export default function BannerImages() {
             width={1920}
             height={1080}
             quality={100}
-            className="w-full h-[320px] object-fill md:object-cover flex-shrink-0 p-0 m-0 md:h-[600px] lg:h-[1000px]"
+            className="xs:h-[250px] xs:w-full w-full h-[320px] object-fill md:object-cover flex-shrink-0 p-0 m-0 md:h-[600px] lg:h-[1000px]"
             style={{ width: "100vw" }}
           />
         ))}
