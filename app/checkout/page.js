@@ -358,7 +358,7 @@ export default function CheckoutPage() {
           </section>
 
           {/* Payment Button */}
-          <div className="flex justify-center sm:justify-start">
+          <div className="flex justify-center sm:justify-start mb-2">
             <button
               className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded-lg font-semibold shadow-md transition w-full sm:w-[200px]"
               onClick={handlePayment}
