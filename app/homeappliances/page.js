@@ -29,7 +29,7 @@ export default async function HomeAppliances() {
             className={`flex flex-col items-center text-center border-2 rounded-lg p-4 mb-10 transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 ${playfair.className}`}
             key={product.id}
           >
-            <Link href={`/clothing/${product.id}`}>
+            <Link href={`/homeappliances/${product.id}`}>
               <Image
                 src={product.image}
                 width={300}
