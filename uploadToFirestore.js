@@ -23,31 +23,36 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-// Read data from homeappliances.json
-const rawData = fs.readFileSync("products.json", "utf8");
-const products = JSON.parse(rawData);
+// Read data from clothing.json
+const rawData = fs.readFileSync("clothing.json", "utf8");
+const clothingData = JSON.parse(rawData);
 
 // 🧠 Configuration for this run
-const COLLECTION_NAME = "products";
-const ROUTE_VALUE = "homeappliances";
+const COLLECTION_NAME = "clothing";
 
-const updateHomeAppliancesRouteInFirestore = async () => {
+const uploadClothingDataToFirestore = async () => {
   try {
     const batch = db.batch();
 
-    products.forEach((product, index) => {
+    clothingData.forEach((product, index) => {
+      // Correct image path for the product (jeans in this case)
+      if (product.name === "Men's Slim Fit Stretchable Jeans") {
+        product.image = "/jeans.jpg";
+      }
+
       const docId = product.id ? String(product.id) : `product-${index}`;
       const docRef = db.collection(COLLECTION_NAME).doc(docId);
 
-      // Add or update only the "route" field
-      batch.set(docRef, { route: ROUTE_VALUE }, { merge: true });
+      // Set product data to Firestore
+      batch.set(docRef, product, { merge: true });
     });
 
+    // Commit the batch write to Firestore
     await batch.commit();
-    console.log(`✅ Successfully updated 'route: "${ROUTE_VALUE}"' in '${COLLECTION_NAME}' collection!`);
+    console.log(`✅ Successfully uploaded data to '${COLLECTION_NAME}' collection!`);
   } catch (error) {
-    console.error("❌ Error updating route in Firestore:", error);
+    console.error("❌ Error uploading data to Firestore:", error);
   }
 };
 
-updateHomeAppliancesRouteInFirestore();
+uploadClothingDataToFirestore();

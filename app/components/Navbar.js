@@ -64,19 +64,19 @@ export default function Navbar() {
           Electronics
         </Link>
         <Link
-          href="/fashion"
+          href="/clothing"
           className={`${
-            pathname === "/fashion"
+            pathname.startsWith("/clothing")
               ? "text-blue-600 font-semibold"
               : "font-semibold"
           } hover:text-blue-600`}
         >
-          Fashion
+          Clothing
         </Link>
         <Link
-          href="skincare"
+          href="/skincare"
           className={`${
-            pathname === "/skincare"
+            pathname.startsWith("/skincare")
               ? "text-blue-600 font-semibold"
               : "font-semibold"
           } hover:text-blue-600`}

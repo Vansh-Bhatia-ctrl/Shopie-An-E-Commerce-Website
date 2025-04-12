@@ -1,0 +1,359 @@
+[
+  {
+    "id": "61",
+    "name": "Classic Cotton Round-Neck T-Shirt",
+    "image": "/tshirt.jpg",
+    "brand": "H&M",
+    "description": "Stylish & breathable cotton t-shirt for everyday wear.",
+    "detailed_desc": "Crafted from premium 100% cotton, this classic round-neck t-shirt offers the perfect combination of comfort and style. Its breathable fabric and versatile fit make it suitable for casual outings, gym sessions, or layering under a jacket. Designed to withstand multiple washes without losing shape or color.",
+    "key_feat": [
+      "✅ 100% Pure Cotton – Soft, breathable, and comfortable",
+      "✅ Classic Fit – Not too tight, not too loose",
+      "✅ Reinforced Neckline – Keeps its shape after washes",
+      "✅ Machine Washable – Easy care and long-lasting durability",
+      "✅ Available in Multiple Colors – Choose your vibe"
+    ],
+    "price": 599,
+    "route": "clothing"
+  },
+  {
+    "id": "62",
+    "name": "Men's Premium Cotton Polo T-Shirt",
+    "image": "/polo.jpg",
+    "brand": "U.S. Polo Assn.",
+    "description": "Smart & casual polo t-shirt – perfect for every occasion.",
+    "detailed_desc": "Step up your smart casual game with this premium polo t-shirt from U.S. Polo Assn. Made from a soft cotton blend, it features a ribbed collar, short sleeves, and the signature logo embroidery. Ideal for office casuals, weekend hangouts, or layering under a blazer.",
+    "key_feat": [
+      "✅ Soft Cotton Blend – Comfortable and durable fabric",
+      "✅ Signature Polo Collar – Timeless design with button placket",
+      "✅ Embroidered Brand Logo – Subtle yet classy",
+      "✅ Versatile Styling – Pair it with jeans, chinos, or shorts",
+      "✅ Available in Multiple Sizes & Colors – Your perfect fit awaits"
+    ],
+    "price": 999,
+    "route": "clothing"
+  },
+  {
+    "id": "62",
+    "name": "Men's Premium Cotton Polo T-Shirt",
+    "image": "/polo.jpg",
+    "brand": "U.S. Polo Assn.",
+    "description": "Smart & casual polo t-shirt – perfect for every occasion.",
+    "detailed_desc": "Step up your smart casual game with this premium polo t-shirt from U.S. Polo Assn. Made from a soft cotton blend, it features a ribbed collar, short sleeves, and the signature logo embroidery. Ideal for office casuals, weekend hangouts, or layering under a blazer.",
+    "key_feat": [
+      "✅ Soft Cotton Blend – Comfortable and durable fabric",
+      "✅ Signature Polo Collar – Timeless design with button placket",
+      "✅ Embroidered Brand Logo – Subtle yet classy",
+      "✅ Versatile Styling – Pair it with jeans, chinos, or shorts",
+      "✅ Available in Multiple Sizes & Colors – Your perfect fit awaits"
+    ],
+    "price": 999,
+    "route": "clothing"
+  },
+  {
+    "id": "63",
+    "name": "Men's Checked Casual Shirt",
+    "image": "/casualshirt.jpg",
+    "brand": "Allen Solly",
+    "description": "Trendy checked casual shirt – comfortable, breathable, and versatile.",
+    "detailed_desc": "This men's checked shirt from Allen Solly offers the perfect blend of style and comfort. Made from breathable cotton fabric, it features full sleeves, a button-down front, and a tailored fit that flatters all body types. Ideal for everyday wear, casual Fridays, and weekend outings.",
+    "key_feat": [
+      "✅ 100% Pure Cotton – Lightweight & breathable",
+      "✅ Trendy Checked Pattern – Classic yet modern style",
+      "✅ Full Sleeves with Buttoned Cuffs – Smart and versatile look",
+      "✅ Tailored Fit – Sharp silhouette without compromising comfort",
+      "✅ Easy to Pair – Looks great with jeans, chinos, or shorts"
+    ],
+    "price": 1299,
+    "route": "clothing"
+  },
+  {
+    "id": "64",
+    "name": "Men's Slim Fit Formal Shirt",
+    "image": "/formalshirt.jpg",
+    "brand": "Van Heusen",
+    "description": "Premium formal shirt for men – perfect for office, meetings, and events.",
+    "detailed_desc": "This slim fit formal shirt by Van Heusen is crafted for professionals who value both elegance and comfort. Tailored from high-quality cotton-blend fabric, it features a crisp collar, button-down front, and a subtle sheen. Ideal for business meetings, interviews, and formal occasions.",
+    "key_feat": [
+      "✅ Slim Fit Design – Sharp, modern silhouette",
+      "✅ Premium Cotton Blend – Soft, durable, and breathable",
+      "✅ Semi-Cutaway Collar – Stylish and versatile",
+      "✅ Easy Care Fabric – Wrinkle-resistant and machine washable",
+      "✅ Ideal for Formal Events – Office, conferences, or weddings"
+    ],
+    "price": 1799,
+    "route": "clothing"
+  },
+  {
+    "id": "65",
+    "name": "Men's Slim Fit Stretchable Jeans",
+    "image": "/jeans.jpg",
+    "brand": "Levi's",
+    "description": "Stylish and stretchable slim fit jeans – comfort meets modern fashion.",
+    "detailed_desc": "These slim fit jeans by Levi’s combine durability with urban style. Crafted from stretch denim, they provide all-day comfort with a flattering fit. Designed with classic five-pocket styling and a mid-rise waist, these jeans are a versatile addition to any wardrobe, perfect for daily wear or casual outings.",
+    "key_feat": [
+      "✅ Slim Fit – Modern cut that sits close to the body",
+      "✅ Stretchable Fabric – Enhanced flexibility and comfort",
+      "✅ Five-Pocket Design – Classic denim detailing",
+      "✅ Mid-Rise Waist – Balanced fit for most body types",
+      "✅ Durable Stitching – Built to last for everyday use"
+    ],
+    "price": 2499,
+    "route": "clothing"
+  },
+  {
+    "id": "66",
+    "name": "Men's Classic Fit Formal Trousers",
+    "image": "/trousers.jpg",
+    "brand": "Van Heusen",
+    "description": "Elegant and professional formal trousers – a must-have for your workwear wardrobe.",
+    "detailed_desc": "Upgrade your formalwear collection with these classic fit trousers from Van Heusen. Tailored with precision, these trousers are crafted from premium fabric for superior comfort and breathability. Perfect for business meetings, office wear, or formal events, they feature a flat front, zip fly with button closure, and a structured waistband for a clean, sophisticated look.",
+    "key_feat": [
+      "✅ Classic Fit – Provides comfort with a polished silhouette",
+      "✅ Premium Fabric – Soft, breathable, and wrinkle-resistant",
+      "✅ Flat Front – Modern styling for a sleek appearance",
+      "✅ Zip Fly with Button Closure – Secure and comfortable fit",
+      "✅ Ideal for Office & Events – Versatile formal essential"
+    ],
+    "price": 1899,
+    "route": "clothing"
+  },
+  {
+    "id": "67",
+    "name": "Men's Cotton Casual Shorts",
+    "image": "/shorts.jpg",
+    "brand": "Jack & Jones",
+    "description": "Stay cool and stylish with these comfortable cotton shorts – made for casual days.",
+    "detailed_desc": "Crafted from soft, breathable cotton, these Jack & Jones casual shorts are your go-to essential for warm days. Featuring a relaxed fit, multiple pockets, and a comfortable waistband, these shorts blend practicality with laid-back style. Pair them with tees or polos for a complete summer look.",
+    "key_feat": [
+      "✅ 100% Cotton – Soft, breathable, and lightweight",
+      "✅ Relaxed Fit – Built for comfort and mobility",
+      "✅ Multiple Pockets – Functional style for everyday use",
+      "✅ Elastic Waistband with Drawstring – Personalized fit and comfort",
+      "✅ Versatile Look – Perfect for casual outings, travel, or lounging"
+    ],
+    "price": 1099,
+    "route": "clothing"
+  },
+  {
+    "id": "68",
+    "name": "Men's Cotton Trackpants",
+    "image": "/trackpants.jpg",
+    "brand": "Puma",
+    "description": "Ultra-comfy cotton trackpants for workouts, travel, or just chilling in style.",
+    "detailed_desc": "These Puma trackpants are designed with comfort and performance in mind. Made from premium cotton blend fabric, they offer breathability, flexibility, and a sleek look. Whether you're training, lounging, or running errands, these trackpants have you covered. Features include an adjustable drawstring waist, ribbed cuffs, and deep side pockets.",
+    "key_feat": [
+      "✅ Premium Cotton Blend – Soft and breathable for all-day comfort",
+      "✅ Tapered Fit – Athletic style with a clean silhouette",
+      "✅ Ribbed Cuffs – Keeps the pants snug around the ankle",
+      "✅ Adjustable Drawstring Waist – Customizable comfort",
+      "✅ Deep Pockets – Carry your phone, wallet, and keys with ease"
+    ],
+    "price": 1399,
+    "route": "clothing"
+  },
+  {
+    "id": "69",
+    "name": "Men's Winter Jacket",
+    "image": "/jacket.jpg",
+    "brand": "North Face",
+    "description": "Stay warm and stylish with this premium winter jacket, designed for cold weather adventures.",
+    "detailed_desc": "This North Face winter jacket is engineered for ultimate warmth and comfort. Featuring advanced insulation and water-resistant fabric, it's perfect for outdoor activities in the coldest conditions. The jacket comes with an adjustable hood, multiple pockets, and a sleek design to ensure you stay cozy and fashionable. Whether you're skiing, hiking, or simply braving the winter chill, this jacket is your perfect companion.",
+    "key_feat": [
+      "✅ Advanced Insulation – Keeps you warm in the coldest conditions",
+      "✅ Water-Resistant Fabric – Protects you from rain and snow",
+      "✅ Adjustable Hood – Customizable coverage for added warmth",
+      "✅ Multiple Pockets – Store your essentials securely",
+      "✅ Sleek, Modern Design – Perfect for outdoor activities or casual wear"
+    ],
+    "price": 5999,
+    "route": "clothing"
+  },
+  {
+    "id": "70",
+    "name": "Men's Fleece Hoodie",
+    "image": "/hoodie.jpg",
+    "brand": "Adidas",
+    "description": "Stay cozy and stylish with this soft fleece hoodie, perfect for everyday wear and workouts.",
+    "detailed_desc": "This Adidas fleece hoodie combines comfort and performance. Made from a high-quality fleece fabric, it provides a warm, soft feel against the skin. With a roomy hood, ribbed cuffs, and a front kangaroo pocket, it’s designed for both style and function. Ideal for lounging, running errands, or layering up for your workout, this hoodie is your go-to for cooler days.",
+    "key_feat": [
+      "✅ Soft Fleece Fabric – Keeps you warm and comfortable all day long",
+      "✅ Adjustable Hood – Offers customizable warmth and protection",
+      "✅ Front Kangaroo Pocket – Convenient for storing small items",
+      "✅ Ribbed Cuffs and Hem – Ensures a snug fit and keeps the cold out",
+      "✅ Classic Adidas Design – Timeless style for any occasion"
+    ],
+    "price": 1699,
+    "route": "clothing"
+  },
+  {
+    "id": "71",
+    "name": "Women's Casual Top",
+    "image": "/top.jpg",
+    "brand": "Zara",
+    "description": "A chic and versatile casual top, perfect for day-to-night wear with a comfortable fit.",
+    "detailed_desc": "This Zara women's top is designed for effortless style. Made from soft, breathable fabric, it features a relaxed fit that flatters all body types. The top has a round neckline, short sleeves, and a subtle, elegant print. Whether you're going for a casual look or dressing it up for a night out, this top will keep you comfortable and stylish all day long.",
+    "key_feat": [
+      "✅ Soft, Breathable Fabric – Perfect for all-day wear",
+      "✅ Relaxed Fit – Flattering for all body shapes",
+      "✅ Elegant Design – Subtle print adds a touch of style",
+      "✅ Versatile – Can be dressed up or down for any occasion",
+      "✅ Short Sleeves – Ideal for warmer weather"
+    ],
+    "price": 1999,
+    "route": "clothing"
+  },
+  {
+    "id": "72",
+    "name": "Women's Graphic T-Shirt",
+    "image": "/womentshirt.jpg",
+    "brand": "H&M",
+    "description": "A trendy graphic t-shirt with a bold design, perfect for casual outings and everyday wear.",
+    "detailed_desc": "This H&M women's graphic t-shirt brings together comfort and style in one. Made from high-quality cotton, it features a bold and artistic graphic print on the front. With a classic crew neck and relaxed fit, this t-shirt is versatile enough to pair with jeans, shorts, or skirts. Whether you're running errands or hanging out with friends, this t-shirt will keep you looking stylish and feeling comfortable.",
+    "key_feat": [
+      "✅ Soft Cotton Fabric – Comfortable and breathable for everyday wear",
+      "✅ Bold Graphic Design – Makes a statement with a trendy print",
+      "✅ Classic Crew Neck – Timeless and versatile style",
+      "✅ Relaxed Fit – Offers comfort and freedom of movement",
+      "✅ Easy to Pair – Goes perfectly with jeans, shorts, or skirts"
+    ],
+    "price": 1799,
+    "route": "clothing"
+  },
+  {
+    "id": "73",
+    "name": "Women's Floral Midi Dress",
+    "image": "/dress.jpg",
+    "brand": "Mango",
+    "description": "A beautiful floral midi dress, perfect for both casual and semi-formal occasions.",
+    "detailed_desc": "This Mango women's floral midi dress exudes elegance and charm. Made from lightweight, breathable fabric, it features a flattering midi length and a vibrant floral print that brings a pop of color to your wardrobe. The dress has a relaxed fit, short sleeves, and a cinched waistline for a feminine silhouette. Whether you're attending a garden party, brunch, or a casual outing, this dress offers both comfort and style.",
+    "key_feat": [
+      "✅ Lightweight, Breathable Fabric – Ideal for warm weather and comfort",
+      "✅ Vibrant Floral Print – Adds a pop of color and feminine appeal",
+      "✅ Midi Length – A stylish and flattering cut",
+      "✅ Cinched Waistline – Accentuates the natural waist for a flattering fit",
+      "✅ Versatile – Suitable for both casual and semi-formal occasions"
+    ],
+    "price": 2499,
+    "route": "clothing"
+  },
+  {
+    "id": "74",
+    "name": "Women's Jeggings",
+    "image": "/jeggings.jpg",
+    "brand": "Levi's",
+    "description": "Comfortable and stylish jeggings that combine the look of jeans with the comfort of leggings.",
+    "detailed_desc": "These Levi's women's jeggings offer the perfect blend of style and comfort. Made with a stretchy cotton blend fabric, they hug your body and offer a smooth, flattering fit. The jeggings feature a classic 5-pocket design with a zip fly and button closure, providing a denim-like look with the flexibility and comfort of leggings. Whether you're dressing up for a casual day out or lounging at home, these jeggings will keep you looking great and feeling comfortable.",
+    "key_feat": [
+      "✅ Stretchy Cotton Blend – Offers comfort and flexibility for all-day wear",
+      "✅ Slim Fit – Hugs the body and creates a flattering silhouette",
+      "✅ Classic 5-Pocket Design – Gives the look of denim with the comfort of leggings",
+      "✅ Versatile – Perfect for dressing up or down for any occasion",
+      "✅ Easy to Pair – Pairs well with t-shirts, blouses, and jackets"
+    ],
+    "price": 1299,
+    "route": "clothing"
+  },
+  {
+    "id": "75",
+    "name": "Women's Cotton Kurti",
+    "image": "/kurti.jpg",
+    "brand": "Biba",
+    "description": "A stylish and comfortable cotton kurti, perfect for daily wear and casual outings.",
+    "detailed_desc": "This Biba women's cotton kurti combines traditional design with modern comfort. Made from soft, breathable cotton, it features a relaxed fit with a flattering A-line silhouette. The kurti has elegant embroidery along the neckline and hem, adding a touch of sophistication. Whether you're heading to work, meeting friends, or attending a casual event, this kurti offers both style and comfort in one.",
+    "key_feat": [
+      "✅ Soft, Breathable Cotton – Ideal for comfort during warm weather",
+      "✅ Elegant Embroidery – Adds a traditional touch of style",
+      "✅ A-Line Fit – Flattering for all body types",
+      "✅ Versatile Design – Suitable for daily wear, casual outings, or office wear",
+      "✅ Easy to Pair – Pairs perfectly with leggings, churidars, or jeans"
+    ],
+    "price": 1499,
+    "route": "clothing"
+  },
+  {
+    "id": "76",
+    "name": "Women's Ethnic Set",
+    "image": "/ethnicset.jpg",
+    "brand": "Fabindia",
+    "description": "A beautiful ethnic set that blends traditional and contemporary designs, perfect for festivals and celebrations.",
+    "detailed_desc": "This Fabindia women's ethnic set is crafted with intricate details and rich fabric to make you look elegant at any traditional or festive occasion. The set includes a beautifully embroidered kurta with matching palazzo pants and a dupatta. The kurta is made from soft cotton with delicate thread work, while the palazzo pants offer comfort and a stylish flow. The lightweight dupatta completes the look, adding grace and charm to your outfit. Whether it’s a family gathering or a festive celebration, this ethnic set is sure to make you stand out.",
+    "key_feat": [
+      "✅ Intricate Embroidery – Adds a traditional touch of elegance",
+      "✅ Soft, Breathable Fabric – Keeps you comfortable all day long",
+      "✅ Relaxed Fit – Flattering for all body types",
+      "✅ Versatile – Ideal for festivals, weddings, and special occasions",
+      "✅ Matching Set – Includes a kurta, palazzo pants, and dupatta for a complete look"
+    ],
+    "price": 3999,
+    "route": "clothing"
+  },
+  {
+    "id": "77",
+    "name": "Women's Traditional Saree",
+    "image": "/saree.jpg",
+    "brand": "Sabyasachi",
+    "description": "A timeless traditional saree with intricate design and premium fabric, perfect for weddings and festive occasions.",
+    "detailed_desc": "This Sabyasachi women's traditional saree is crafted from luxurious silk and adorned with intricate handwoven patterns that exude elegance and grace. The saree features a rich combination of vibrant colors and delicate embroidery along the borders, making it ideal for weddings, festivals, and other grand celebrations. The set includes the saree, a matching blouse piece, and a beautiful pallu that drapes perfectly, giving you a royal and sophisticated look.",
+    "key_feat": [
+      "✅ Luxurious Silk Fabric – Soft, smooth, and perfect for festive occasions",
+      "✅ Intricate Handwoven Design – Traditional craftsmanship at its finest",
+      "✅ Elegant Embroidery – Adds a touch of sophistication and glamour",
+      "✅ Vibrant Color Palette – Perfect for weddings and celebrations",
+      "✅ Complete Set – Includes saree, blouse piece, and pallu"
+    ],
+    "price": 9999,
+    "route": "clothing"
+  },
+  {
+    "id": "78",
+    "name": "Women's Bridal Lehenga",
+    "image": "/lehenga.jpg",
+    "brand": "Manish Malhotra",
+    "description": "A stunning bridal lehenga designed for the most special occasions, featuring intricate embroidery and premium fabric.",
+    "detailed_desc": "This Manish Malhotra bridal lehenga is the epitome of luxury and tradition. Made from rich satin silk and adorned with intricate hand-embroidery, sequins, and beadwork, this lehenga exudes elegance and charm. The lehenga comes with a beautifully embellished choli and a matching dupatta, making it the perfect outfit for weddings and festive events. The voluminous lehenga skirt creates a graceful, dramatic look, while the choli offers a fitted, flattering silhouette. This lehenga is designed to make you feel like royalty on your special day.",
+    "key_feat": [
+      "✅ Premium Satin Silk Fabric – Soft and luxurious for the ultimate bridal look",
+      "✅ Intricate Hand-Embroidery – Featuring delicate beadwork, sequins, and threads",
+      "✅ Flattering Choli – Fitted to enhance your silhouette",
+      "✅ Dramatic Lehenga Skirt – Voluminous design for an elegant, graceful look",
+      "✅ Complete Set – Includes lehenga, choli, and matching dupatta"
+    ],
+    "price": 24999,
+    "route": "clothing"
+  },
+  {
+    "id": "79",
+    "name": "Women's Sports Shoes",
+    "image": "/shoes.jpg",
+    "brand": "Nike",
+    "description": "High-performance sports shoes designed for comfort and durability, perfect for running, training, and casual wear.",
+    "detailed_desc": "These Nike women's sports shoes are engineered to provide maximum comfort, support, and durability during any activity. Featuring a lightweight, breathable mesh upper and cushioned sole, they ensure optimal airflow and cushioning for your feet. The rubber outsole provides superior traction, whether you’re running on the treadmill, hitting the gym, or walking outdoors. These shoes also have a sleek design that can easily be worn for casual outings, making them versatile for both fitness and everyday wear.",
+    "key_feat": [
+      "✅ Lightweight Mesh Upper – Offers breathability and keeps feet cool",
+      "✅ Cushioned Sole – Provides support and comfort during intense workouts",
+      "✅ Rubber Outsole – Superior grip and traction for stability",
+      "✅ Versatile Design – Suitable for running, training, or casual wear",
+      "✅ Sleek and Modern Look – Stylish design that pairs well with athletic or casual attire"
+    ],
+    "price": 4999,
+    "route": "clothing"
+  },
+  {
+    "id": "80",
+    "name": "Women's Knit Shrug",
+    "image": "/shrug.jpg",
+    "brand": "Forever 21",
+    "description": "A cozy and stylish knit shrug, perfect for layering over casual or semi-formal outfits.",
+    "detailed_desc": "This Forever 21 women's knit shrug is designed to provide the perfect layer for cooler days or evenings. Made from soft, stretchable knit fabric, it features an open-front design that can be easily paired with tops, dresses, or even tees. The long sleeves offer warmth without being too heavy, making it ideal for layering. Whether you’re heading to work or going out for a casual meet-up, this shrug adds a chic touch to any outfit.",
+    "key_feat": [
+      "✅ Soft, Stretchable Knit Fabric – Comfortable and flexible for all-day wear",
+      "✅ Open-Front Design – Easy to pair with different outfits",
+      "✅ Long Sleeves – Offers warmth and coverage",
+      "✅ Versatile – Perfect for layering over casual and semi-formal outfits",
+      "✅ Stylish and Minimalistic – Adds a chic, effortless touch to your wardrobe"
+    ],
+    "price": 1299,
+    "route": "clothing"
+  }
+]

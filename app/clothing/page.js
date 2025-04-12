@@ -7,18 +7,18 @@ import AddToCart from "../components/AddToCart";
 const playfair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 
 const getProducts = async () => {
-  const dataSnapshot = await db.collection("gaming").get();
+  const dataSnapshot = await db.collection("clothing").get();
   return dataSnapshot.docs.map((doc) => doc.data());
 };
 
-export default async function Gaming() {
+export default async function Clothing() {
   const data = await getProducts();
 
   return (
     <>
    <div className="flex flex-col items-center pt-4">
         <div className="inline-block border-b-4">
-          <h1 className="text-2xl font-semibold">Shop for Gaming</h1>
+          <h1 className="text-2xl font-semibold">Shop for Clothes</h1>
         </div>
       </div>
 
@@ -28,7 +28,7 @@ export default async function Gaming() {
             className={`flex flex-col items-center text-center border-2 rounded-lg p-4 mb-10 transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 ${playfair.className}`}
             key={product.id}
           >
-            <Link href={`/gaming/${product.id}`}>
+            <Link href={`/clothing/${product.id}`}>
               <Image
                 src={product.image}
                 width={300}
